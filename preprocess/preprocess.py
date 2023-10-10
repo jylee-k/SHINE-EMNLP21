@@ -307,7 +307,7 @@ def make_node2id_eng_text(dataset_name, remove_StopWord=False):
     print('err in word count', err_count)
     pkl.dump(np.array(embs, dtype=np.float64), open('./{}_data/word_emb.pkl'.format(dataset_name), 'wb'))
 
-dataset_name='snippets'
+dataset_name='trec'
 if dataset_name in ['mr', 'snippets', 'tagmynews']:
     remove_StopWord = True
 else:
