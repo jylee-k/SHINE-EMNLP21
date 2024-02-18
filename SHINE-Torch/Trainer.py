@@ -62,7 +62,7 @@ class Trainer(object):
         best_acc = 0
         best_f1 = 0
         for i in range(1, self.max_epoch + 1):
-            t=time.time()
+            t = time.time()
             output = self.model(i)
             train_scores = output[self.train_idx]
             train_labels = self.labels[self.train_idx]
@@ -160,7 +160,7 @@ class Trainer(object):
         
         train_set = json.load(open(self.data_path + './train_idx.json'))
         test_set = json.load(open(self.data_path + './test_idx.json'))
-        labels = json.load(open(self.data_path + './labels.json'))
+        labels = json.load(open(self.data_path + './fine_labels.json'))
         
         data_index = train_set + test_set
         Sumofquery = len(data_index)

@@ -1,0 +1,1467 @@
+/home/lee-j/github/SHINE-EMNLP21/SHINE-Torch/utils.py:9: UserWarning: To copy construct from a tensor, it is recommended to use sourceTensor.clone().detach() or sourceTensor.clone().detach().requires_grad_(True), rather than torch.tensor(sourceTensor).
+  return torch.tensor(dicts[dict_type], dtype=torch.float, device=device)
+120
+120
+5712
+data process time: 9.741880893707275
+261,806 training parameters.
+Epoch 1  loss: 1.7922 acc: 0.1167 time0.4459
+Epoch 2  loss: 1.7903 acc: 0.2000 time0.1080
+Epoch 3  loss: 1.7927 acc: 0.1500 time0.1024
+Epoch 4  loss: 1.7861 acc: 0.2000 time0.0988
+Epoch 5  loss: 1.7888 acc: 0.2000 time0.0956
+Epoch 5  loss: 1.7887 acc: 0.1667 Valid  loss: 1.7893  acc: 0.1750  f1: 0.0638
+Test  loss: 1.7966 acc: 0.1535 f1: 0.0501 time: 0.0489
+Epoch 6  loss: 1.7783 acc: 0.3083 time0.0934
+Epoch 7  loss: 1.7838 acc: 0.2167 time0.0933
+Epoch 8  loss: 1.7657 acc: 0.4000 time0.0935
+Epoch 9  loss: 1.7582 acc: 0.4417 time0.0934
+Epoch 10  loss: 1.7457 acc: 0.4333 time0.0932
+Epoch 10  loss: 1.7209 acc: 0.4583 Valid  loss: 1.7252  acc: 0.4917  f1: 0.3928
+Test  loss: 1.7534 acc: 0.3239 f1: 0.2465 time: 0.0459
+Epoch 11  loss: 1.7250 acc: 0.5167 time0.0939
+Epoch 12  loss: 1.7006 acc: 0.4917 time0.0932
+Epoch 13  loss: 1.6830 acc: 0.4500 time0.0932
+Epoch 14  loss: 1.6484 acc: 0.4917 time0.0934
+Epoch 15  loss: 1.5914 acc: 0.5167 time0.0930
+Epoch 15  loss: 1.5259 acc: 0.5000 Valid  loss: 1.5522  acc: 0.4833  f1: 0.4112
+Test  loss: 1.6212 acc: 0.3739 f1: 0.2946 time: 0.0463
+Epoch 16  loss: 1.5527 acc: 0.5000 time0.0934
+Epoch 17  loss: 1.4959 acc: 0.5333 time0.0935
+Epoch 18  loss: 1.4223 acc: 0.4833 time0.0933
+Epoch 19  loss: 1.3416 acc: 0.5417 time0.0931
+Epoch 20  loss: 1.2728 acc: 0.5500 time0.0940
+Epoch 20  loss: 1.1855 acc: 0.5417 Valid  loss: 1.2968  acc: 0.4917  f1: 0.4349
+Test  loss: 1.5018 acc: 0.3820 f1: 0.2933 time: 0.0457
+Epoch 21  loss: 1.2002 acc: 0.5333 time0.0936
+Epoch 22  loss: 1.1305 acc: 0.5583 time0.0930
+Epoch 23  loss: 1.1113 acc: 0.5583 time0.0929
+Epoch 24  loss: 0.9629 acc: 0.6083 time0.0925
+Epoch 25  loss: 0.9026 acc: 0.6833 time0.0933
+Epoch 25  loss: 0.8011 acc: 0.6750 Valid  loss: 1.0979  acc: 0.5750  f1: 0.5425
+Test  loss: 1.4805 acc: 0.4606 f1: 0.3859 time: 0.0466
+Epoch 26  loss: 0.8488 acc: 0.7083 time0.0936
+Epoch 27  loss: 0.8540 acc: 0.6583 time0.0937
+Epoch 28  loss: 0.7025 acc: 0.7667 time0.0935
+Epoch 29  loss: 0.6667 acc: 0.7167 time0.0931
+Epoch 30  loss: 0.5367 acc: 0.8500 time0.0934
+Epoch 30  loss: 0.4241 acc: 0.8500 Valid  loss: 1.1536  acc: 0.6083  f1: 0.6092
+Test  loss: 1.8029 acc: 0.4806 f1: 0.4586 time: 0.0460
+Epoch 31  loss: 0.4919 acc: 0.8917 time0.0936
+Epoch 32  loss: 0.4161 acc: 0.8917 time0.0935
+Epoch 33  loss: 0.4457 acc: 0.8417 time0.0932
+Epoch 34  loss: 0.4224 acc: 0.8417 time0.0934
+Epoch 35  loss: 0.3101 acc: 0.9250 time0.0931
+Epoch 35  loss: 0.2491 acc: 0.9083 Valid  loss: 1.5381  acc: 0.6917  f1: 0.6871
+Test  loss: 2.2379 acc: 0.5560 f1: 0.5061 time: 0.0461
+Epoch 36  loss: 0.3188 acc: 0.9083 time0.0942
+Epoch 37  loss: 0.2502 acc: 0.9250 time0.0935
+Epoch 38  loss: 0.2025 acc: 0.9667 time0.0933
+Epoch 39  loss: 0.2091 acc: 0.9167 time0.0937
+Epoch 40  loss: 0.1528 acc: 0.9750 time0.0934
+Epoch 40  loss: 0.1291 acc: 0.9500 Valid  loss: 1.9821  acc: 0.6667  f1: 0.6610
+Test  loss: 2.7834 acc: 0.5704 f1: 0.5156 time: 0.0458
+Epoch 41  loss: 0.1824 acc: 0.9417 time0.0938
+Epoch 42  loss: 0.2085 acc: 0.9250 time0.0943
+Epoch 43  loss: 0.1283 acc: 0.9667 time0.0937
+Epoch 44  loss: 0.1258 acc: 0.9500 time0.0942
+Epoch 45  loss: 0.2014 acc: 0.8833 time0.0941
+Epoch 45  loss: 0.1562 acc: 0.9417 Valid  loss: 2.4074  acc: 0.6500  f1: 0.6296
+Test  loss: 3.4613 acc: 0.5243 f1: 0.4794 time: 0.0465
+Epoch 46  loss: 0.1233 acc: 0.9667 time0.0937
+Epoch 47  loss: 0.2288 acc: 0.9000 time0.0938
+Epoch 48  loss: 0.1462 acc: 0.9500 time0.0936
+Epoch 49  loss: 0.1012 acc: 0.9667 time0.0930
+Epoch 50  loss: 0.1681 acc: 0.9250 time0.0936
+Epoch 50  loss: 0.1323 acc: 0.9500 Valid  loss: 2.8752  acc: 0.6333  f1: 0.6383
+Test  loss: 4.3154 acc: 0.5103 f1: 0.4688 time: 0.0463
+VALID: VALID ACC 0.6916667222976685  VALID F1 0.6871467946072206 EPOCH 35
+VALID: TEST ACC 0.5560224056243896 TEST F1 0.5061174441941989 EPOCH 35
+GLOBAL: TEST ACC 0.5703781843185425 TEST F1 0.5155843564156827 EPOCH 40
+Epoch 51  loss: 0.1146 acc: 0.9583 time0.0930
+Epoch 52  loss: 0.0618 acc: 0.9917 time0.0930
+Epoch 53  loss: 0.1088 acc: 0.9417 time0.0935
+Epoch 54  loss: 0.1351 acc: 0.9417 time0.0936
+Epoch 55  loss: 0.1250 acc: 0.9583 time0.0932
+Epoch 55  loss: 0.1726 acc: 0.9167 Valid  loss: 2.8797  acc: 0.6750  f1: 0.6581
+Test  loss: 4.4919 acc: 0.4800 f1: 0.4625 time: 0.0459
+Epoch 56  loss: 0.0619 acc: 0.9917 time0.0932
+Epoch 57  loss: 0.5221 acc: 0.8083 time0.0934
+Epoch 58  loss: 0.0740 acc: 0.9667 time0.0935
+Epoch 59  loss: 0.4034 acc: 0.8667 time0.0940
+Epoch 60  loss: 0.0716 acc: 0.9833 time0.0938
+Epoch 60  loss: 0.2376 acc: 0.9000 Valid  loss: 3.4780  acc: 0.6167  f1: 0.5979
+Test  loss: 4.6062 acc: 0.4858 f1: 0.4417 time: 0.0467
+Epoch 61  loss: 0.1742 acc: 0.9250 time0.0935
+Epoch 62  loss: 0.2406 acc: 0.9167 time0.0934
+Epoch 63  loss: 0.1439 acc: 0.9500 time0.0933
+Epoch 64  loss: 0.0707 acc: 0.9583 time0.0933
+Epoch 65  loss: 0.0714 acc: 0.9667 time0.0933
+Epoch 65  loss: 0.2815 acc: 0.8917 Valid  loss: 4.3375  acc: 0.5500  f1: 0.5470
+Test  loss: 6.0549 acc: 0.4918 f1: 0.4204 time: 0.0466
+Epoch 66  loss: 0.1782 acc: 0.9250 time0.0934
+Epoch 67  loss: 0.0705 acc: 0.9750 time0.0936
+Epoch 68  loss: 0.0898 acc: 0.9667 time0.0935
+Epoch 69  loss: 0.1362 acc: 0.9500 time0.0931
+Epoch 70  loss: 0.0897 acc: 0.9583 time0.0934
+Epoch 70  loss: 0.0429 acc: 0.9917 Valid  loss: 3.4993  acc: 0.6500  f1: 0.6362
+Test  loss: 4.6396 acc: 0.5462 f1: 0.5011 time: 0.0458
+Epoch 71  loss: 0.0705 acc: 0.9667 time0.0933
+Epoch 72  loss: 0.0476 acc: 0.9833 time0.0939
+Epoch 73  loss: 0.0855 acc: 0.9667 time0.0936
+Epoch 74  loss: 0.0811 acc: 0.9667 time0.0937
+Epoch 75  loss: 0.0856 acc: 0.9500 time0.0935
+Epoch 75  loss: 0.0466 acc: 0.9750 Valid  loss: 3.5751  acc: 0.6667  f1: 0.6618
+Test  loss: 4.7618 acc: 0.5340 f1: 0.4916 time: 0.0460
+Epoch 76  loss: 0.0820 acc: 0.9750 time0.0936
+Epoch 77  loss: 0.0609 acc: 0.9833 time0.0942
+Epoch 78  loss: 0.1172 acc: 0.9500 time0.0937
+Epoch 79  loss: 0.0524 acc: 0.9917 time0.0939
+Epoch 80  loss: 0.0943 acc: 0.9750 time0.0944
+Epoch 80  loss: 0.0636 acc: 0.9750 Valid  loss: 3.6845  acc: 0.6417  f1: 0.6304
+Test  loss: 5.0945 acc: 0.5576 f1: 0.4997 time: 0.0462
+Epoch 81  loss: 0.0728 acc: 0.9583 time0.0936
+Epoch 82  loss: 0.0819 acc: 0.9667 time0.0935
+Epoch 83  loss: 0.1302 acc: 0.9250 time0.0942
+Epoch 84  loss: 0.0450 acc: 0.9750 time0.0936
+Epoch 85  loss: 0.0464 acc: 0.9833 time0.0933
+Epoch 85  loss: 0.1508 acc: 0.9500 Valid  loss: 3.8089  acc: 0.6500  f1: 0.6355
+Test  loss: 5.2311 acc: 0.4956 f1: 0.4665 time: 0.0462
+Epoch 86  loss: 0.0650 acc: 0.9833 time0.0937
+Epoch 87  loss: 0.1106 acc: 0.9583 time0.0941
+Epoch 88  loss: 0.0650 acc: 0.9750 time0.0935
+Epoch 89  loss: 0.0737 acc: 0.9833 time0.0938
+Epoch 90  loss: 0.0556 acc: 0.9750 time0.0944
+Epoch 90  loss: 0.1406 acc: 0.9667 Valid  loss: 4.1223  acc: 0.6083  f1: 0.6081
+Test  loss: 5.3293 acc: 0.5550 f1: 0.4993 time: 0.0470
+Epoch 91  loss: 0.0701 acc: 0.9750 time0.0939
+Epoch 92  loss: 0.0613 acc: 0.9833 time0.0936
+Epoch 93  loss: 0.0447 acc: 0.9750 time0.0937
+Epoch 94  loss: 0.0375 acc: 0.9917 time0.0937
+Epoch 95  loss: 0.0766 acc: 0.9583 time0.0936
+Epoch 95  loss: 0.0774 acc: 0.9917 Valid  loss: 3.8948  acc: 0.6333  f1: 0.6276
+Test  loss: 4.9082 acc: 0.5530 f1: 0.5100 time: 0.0456
+Epoch 96  loss: 0.0582 acc: 0.9750 time0.0941
+Epoch 97  loss: 0.0389 acc: 0.9917 time0.0940
+Epoch 98  loss: 0.0305 acc: 0.9833 time0.0939
+Epoch 99  loss: 0.0334 acc: 0.9917 time0.0936
+Epoch 100  loss: 0.0415 acc: 0.9833 time0.0936
+Epoch 100  loss: 0.0480 acc: 0.9667 Valid  loss: 4.2348  acc: 0.6167  f1: 0.6147
+Test  loss: 5.5992 acc: 0.5460 f1: 0.4875 time: 0.0459
+VALID: VALID ACC 0.6916667222976685  VALID F1 0.6871467946072206 EPOCH 35
+VALID: TEST ACC 0.5560224056243896 TEST F1 0.5061174441941989 EPOCH 35
+GLOBAL: TEST ACC 0.5703781843185425 TEST F1 0.5155843564156827 EPOCH 40
+Epoch 101  loss: 0.0565 acc: 0.9833 time0.0937
+Epoch 102  loss: 0.0455 acc: 0.9833 time0.0934
+Epoch 103  loss: 0.0693 acc: 0.9750 time0.0934
+Epoch 104  loss: 0.0453 acc: 0.9833 time0.0938
+Epoch 105  loss: 0.0844 acc: 0.9750 time0.0941
+Epoch 105  loss: 0.0777 acc: 0.9667 Valid  loss: 3.8452  acc: 0.6750  f1: 0.6674
+Test  loss: 5.0991 acc: 0.5450 f1: 0.5065 time: 0.0461
+Epoch 106  loss: 0.1270 acc: 0.9583 time0.0937
+Epoch 107  loss: 0.0358 acc: 0.9833 time0.0940
+Epoch 108  loss: 0.0626 acc: 0.9667 time0.0940
+Epoch 109  loss: 0.0397 acc: 0.9833 time0.0943
+Epoch 110  loss: 0.0409 acc: 0.9833 time0.0939
+Epoch 110  loss: 0.0304 acc: 0.9917 Valid  loss: 3.9974  acc: 0.6417  f1: 0.6337
+Test  loss: 5.2286 acc: 0.5474 f1: 0.5027 time: 0.0458
+Epoch 111  loss: 0.0206 acc: 0.9917 time0.0939
+Epoch 112  loss: 0.0275 acc: 0.9917 time0.0937
+Epoch 113  loss: 0.0697 acc: 0.9833 time0.0939
+Epoch 114  loss: 0.0136 acc: 1.0000 time0.0934
+Epoch 115  loss: 0.0564 acc: 0.9750 time0.0932
+Epoch 115  loss: 0.0377 acc: 0.9833 Valid  loss: 4.0579  acc: 0.6500  f1: 0.6374
+Test  loss: 5.1848 acc: 0.5488 f1: 0.5029 time: 0.0464
+Epoch 116  loss: 0.0239 acc: 0.9833 time0.0943
+Epoch 117  loss: 0.0083 acc: 1.0000 time0.0937
+Epoch 118  loss: 0.0392 acc: 0.9750 time0.0937
+Epoch 119  loss: 0.0159 acc: 1.0000 time0.0935
+Epoch 120  loss: 0.0576 acc: 0.9667 time0.0941
+Epoch 120  loss: 0.0233 acc: 1.0000 Valid  loss: 4.2349  acc: 0.6333  f1: 0.6249
+Test  loss: 5.4322 acc: 0.5660 f1: 0.5129 time: 0.0462
+Epoch 121  loss: 0.0215 acc: 1.0000 time0.0933
+Epoch 122  loss: 0.0209 acc: 0.9917 time0.0932
+Epoch 123  loss: 0.0264 acc: 0.9833 time0.0937
+Epoch 124  loss: 0.0256 acc: 0.9917 time0.0939
+Epoch 125  loss: 0.0257 acc: 0.9917 time0.0941
+Epoch 125  loss: 0.0450 acc: 0.9833 Valid  loss: 4.0713  acc: 0.6583  f1: 0.6492
+Test  loss: 5.2801 acc: 0.5553 f1: 0.5101 time: 0.0463
+Epoch 126  loss: 0.0370 acc: 0.9917 time0.0937
+Epoch 127  loss: 0.0499 acc: 0.9833 time0.0942
+Epoch 128  loss: 0.0171 acc: 1.0000 time0.0943
+Epoch 129  loss: 0.0387 acc: 0.9833 time0.0936
+Epoch 130  loss: 0.1235 acc: 0.9667 time0.0941
+Epoch 130  loss: 0.0180 acc: 0.9917 Valid  loss: 4.1866  acc: 0.6500  f1: 0.6432
+Test  loss: 5.2845 acc: 0.5765 f1: 0.5275 time: 0.0462
+Epoch 131  loss: 0.0072 acc: 1.0000 time0.0939
+Epoch 132  loss: 0.0227 acc: 0.9917 time0.0939
+Epoch 133  loss: 0.0185 acc: 1.0000 time0.0939
+Epoch 134  loss: 0.0560 acc: 0.9833 time0.0936
+Epoch 135  loss: 0.0271 acc: 0.9833 time0.0937
+Epoch 135  loss: 0.0651 acc: 0.9833 Valid  loss: 4.0865  acc: 0.6833  f1: 0.6732
+Test  loss: 5.3799 acc: 0.5637 f1: 0.5183 time: 0.0457
+Epoch 136  loss: 0.0440 acc: 0.9917 time0.0939
+Epoch 137  loss: 0.0631 acc: 0.9750 time0.0934
+Epoch 138  loss: 0.0194 acc: 0.9917 time0.0942
+Epoch 139  loss: 0.0275 acc: 0.9917 time0.0941
+Epoch 140  loss: 0.0428 acc: 0.9750 time0.0943
+Epoch 140  loss: 0.0302 acc: 0.9833 Valid  loss: 4.4672  acc: 0.6250  f1: 0.6142
+Test  loss: 5.9776 acc: 0.5515 f1: 0.5022 time: 0.0460
+Epoch 141  loss: 0.0289 acc: 0.9833 time0.0940
+Epoch 142  loss: 0.0212 acc: 0.9917 time0.0936
+Epoch 143  loss: 0.0225 acc: 0.9917 time0.0942
+Epoch 144  loss: 0.0325 acc: 0.9917 time0.0940
+Epoch 145  loss: 0.0311 acc: 0.9917 time0.0940
+Epoch 145  loss: 0.0173 acc: 0.9917 Valid  loss: 4.3733  acc: 0.6417  f1: 0.6390
+Test  loss: 5.4337 acc: 0.5767 f1: 0.5286 time: 0.0458
+Epoch 146  loss: 0.0325 acc: 0.9833 time0.0950
+Epoch 147  loss: 0.0126 acc: 1.0000 time0.0950
+Epoch 148  loss: 0.0432 acc: 0.9833 time0.0938
+Epoch 149  loss: 0.0105 acc: 1.0000 time0.0935
+Epoch 150  loss: 0.0332 acc: 0.9917 time0.0942
+Epoch 150  loss: 0.0072 acc: 1.0000 Valid  loss: 4.5550  acc: 0.6250  f1: 0.6228
+Test  loss: 5.4462 acc: 0.5835 f1: 0.5342 time: 0.0459
+VALID: VALID ACC 0.6916667222976685  VALID F1 0.6871467946072206 EPOCH 35
+VALID: TEST ACC 0.5560224056243896 TEST F1 0.5061174441941989 EPOCH 35
+GLOBAL: TEST ACC 0.5835084319114685 TEST F1 0.5341508911384709 EPOCH 150
+Epoch 151  loss: 0.0300 acc: 0.9917 time0.0936
+Epoch 152  loss: 0.0367 acc: 0.9750 time0.0939
+Epoch 153  loss: 0.0063 acc: 1.0000 time0.0941
+Epoch 154  loss: 0.0165 acc: 0.9917 time0.0942
+Epoch 155  loss: 0.0144 acc: 1.0000 time0.0941
+Epoch 155  loss: 0.0085 acc: 1.0000 Valid  loss: 4.4947  acc: 0.6417  f1: 0.6350
+Test  loss: 5.5121 acc: 0.5690 f1: 0.5228 time: 0.0462
+Epoch 156  loss: 0.0039 acc: 1.0000 time0.0939
+Epoch 157  loss: 0.0057 acc: 1.0000 time0.0942
+Epoch 158  loss: 0.0507 acc: 0.9833 time0.0935
+Epoch 159  loss: 0.0156 acc: 1.0000 time0.0939
+Epoch 160  loss: 0.0073 acc: 1.0000 time0.0943
+Epoch 160  loss: 0.0043 acc: 1.0000 Valid  loss: 4.6523  acc: 0.6583  f1: 0.6583
+Test  loss: 5.7192 acc: 0.5769 f1: 0.5298 time: 0.0460
+Epoch 161  loss: 0.0117 acc: 1.0000 time0.0943
+Epoch 162  loss: 0.0098 acc: 1.0000 time0.0940
+Epoch 163  loss: 0.0167 acc: 1.0000 time0.0948
+Epoch 164  loss: 0.0591 acc: 0.9750 time0.0946
+Epoch 165  loss: 0.0155 acc: 0.9917 time0.0946
+Epoch 165  loss: 0.0228 acc: 0.9917 Valid  loss: 4.6305  acc: 0.6583  f1: 0.6527
+Test  loss: 5.8065 acc: 0.5713 f1: 0.5267 time: 0.0460
+Epoch 166  loss: 0.0095 acc: 1.0000 time0.0943
+Epoch 167  loss: 0.0401 acc: 0.9833 time0.0944
+Epoch 168  loss: 0.0051 acc: 1.0000 time0.0942
+Epoch 169  loss: 0.0186 acc: 0.9917 time0.0943
+Epoch 170  loss: 0.0088 acc: 1.0000 time0.0939
+Epoch 170  loss: 0.0175 acc: 0.9917 Valid  loss: 4.9474  acc: 0.6417  f1: 0.6385
+Test  loss: 6.1152 acc: 0.5756 f1: 0.5268 time: 0.0470
+Epoch 171  loss: 0.0210 acc: 0.9917 time0.0941
+Epoch 172  loss: 0.0151 acc: 1.0000 time0.0950
+Epoch 173  loss: 0.0035 acc: 1.0000 time0.0948
+Epoch 174  loss: 0.0119 acc: 1.0000 time0.0942
+Epoch 175  loss: 0.0046 acc: 1.0000 time0.0937
+Epoch 175  loss: 0.0005 acc: 1.0000 Valid  loss: 4.9290  acc: 0.6667  f1: 0.6608
+Test  loss: 6.1236 acc: 0.5707 f1: 0.5232 time: 0.0460
+Epoch 176  loss: 0.0051 acc: 1.0000 time0.0944
+Epoch 177  loss: 0.0433 acc: 0.9917 time0.0939
+Epoch 178  loss: 0.0096 acc: 1.0000 time0.0941
+Epoch 179  loss: 0.0026 acc: 1.0000 time0.0942
+Epoch 180  loss: 0.0032 acc: 1.0000 time0.0940
+Epoch 180  loss: 0.0118 acc: 0.9917 Valid  loss: 5.0296  acc: 0.6417  f1: 0.6400
+Test  loss: 6.3390 acc: 0.5660 f1: 0.5177 time: 0.0457
+Epoch 181  loss: 0.0130 acc: 0.9917 time0.0947
+Epoch 182  loss: 0.0049 acc: 1.0000 time0.0939
+Epoch 183  loss: 0.0376 acc: 0.9833 time0.0948
+Epoch 184  loss: 0.0048 acc: 1.0000 time0.0946
+Epoch 185  loss: 0.0178 acc: 0.9917 time0.0942
+Epoch 185  loss: 0.0476 acc: 0.9917 Valid  loss: 4.8278  acc: 0.6500  f1: 0.6466
+Test  loss: 6.2032 acc: 0.5713 f1: 0.5271 time: 0.0461
+Epoch 186  loss: 0.0096 acc: 0.9917 time0.0943
+Epoch 187  loss: 0.0049 acc: 1.0000 time0.0950
+Epoch 188  loss: 0.0168 acc: 0.9917 time0.0945
+Epoch 189  loss: 0.0353 acc: 0.9917 time0.0941
+Epoch 190  loss: 0.0126 acc: 1.0000 time0.0937
+Epoch 190  loss: 0.0446 acc: 0.9667 Valid  loss: 4.9201  acc: 0.6833  f1: 0.6810
+Test  loss: 6.2851 acc: 0.5804 f1: 0.5306 time: 0.0464
+Epoch 191  loss: 0.0518 acc: 0.9667 time0.0949
+Epoch 192  loss: 0.0152 acc: 0.9917 time0.0944
+Epoch 193  loss: 0.0075 acc: 1.0000 time0.0939
+Epoch 194  loss: 0.0176 acc: 0.9917 time0.0945
+Epoch 195  loss: 0.0032 acc: 1.0000 time0.0955
+Epoch 195  loss: 0.0004 acc: 1.0000 Valid  loss: 4.8600  acc: 0.6667  f1: 0.6589
+Test  loss: 6.4224 acc: 0.5606 f1: 0.5098 time: 0.0473
+Epoch 196  loss: 0.0042 acc: 1.0000 time0.0946
+Epoch 197  loss: 0.0164 acc: 0.9917 time0.0944
+Epoch 198  loss: 0.0036 acc: 1.0000 time0.0938
+Epoch 199  loss: 0.0186 acc: 0.9917 time0.0946
+Epoch 200  loss: 0.0091 acc: 1.0000 time0.0947
+Epoch 200  loss: 0.0003 acc: 1.0000 Valid  loss: 4.9777  acc: 0.6583  f1: 0.6488
+Test  loss: 6.5039 acc: 0.5567 f1: 0.5062 time: 0.0464
+VALID: VALID ACC 0.6916667222976685  VALID F1 0.6871467946072206 EPOCH 35
+VALID: TEST ACC 0.5560224056243896 TEST F1 0.5061174441941989 EPOCH 35
+GLOBAL: TEST ACC 0.5835084319114685 TEST F1 0.5341508911384709 EPOCH 150
+Epoch 201  loss: 0.0099 acc: 1.0000 time0.0942
+Epoch 202  loss: 0.0097 acc: 1.0000 time0.0939
+Epoch 203  loss: 0.0137 acc: 1.0000 time0.0948
+Epoch 204  loss: 0.0050 acc: 1.0000 time0.0939
+Epoch 205  loss: 0.0072 acc: 1.0000 time0.0941
+Epoch 205  loss: 0.0027 acc: 1.0000 Valid  loss: 4.8531  acc: 0.6750  f1: 0.6729
+Test  loss: 6.1708 acc: 0.5805 f1: 0.5314 time: 0.0463
+Epoch 206  loss: 0.0102 acc: 1.0000 time0.0940
+Epoch 207  loss: 0.0127 acc: 1.0000 time0.0943
+Epoch 208  loss: 0.0072 acc: 1.0000 time0.0944
+Epoch 209  loss: 0.0222 acc: 0.9917 time0.0942
+Epoch 210  loss: 0.0057 acc: 1.0000 time0.0938
+Epoch 210  loss: 0.0008 acc: 1.0000 Valid  loss: 5.0087  acc: 0.6417  f1: 0.6379
+Test  loss: 6.3543 acc: 0.5657 f1: 0.5200 time: 0.0468
+Epoch 211  loss: 0.0044 acc: 1.0000 time0.0951
+Epoch 212  loss: 0.0063 acc: 1.0000 time0.0944
+Epoch 213  loss: 0.0038 acc: 1.0000 time0.0945
+Epoch 214  loss: 0.0137 acc: 0.9917 time0.0940
+Epoch 215  loss: 0.0342 acc: 0.9833 time0.0947
+Epoch 215  loss: 0.0001 acc: 1.0000 Valid  loss: 5.1145  acc: 0.6833  f1: 0.6802
+Test  loss: 6.4870 acc: 0.5751 f1: 0.5280 time: 0.0460
+Epoch 216  loss: 0.0031 acc: 1.0000 time0.0948
+Epoch 217  loss: 0.0114 acc: 0.9917 time0.0947
+Epoch 218  loss: 0.0027 acc: 1.0000 time0.0942
+Epoch 219  loss: 0.0123 acc: 0.9917 time0.0946
+Epoch 220  loss: 0.0079 acc: 1.0000 time0.0950
+Epoch 220  loss: 0.0001 acc: 1.0000 Valid  loss: 5.1967  acc: 0.6667  f1: 0.6631
+Test  loss: 6.6540 acc: 0.5600 f1: 0.5175 time: 0.0456
+Epoch 221  loss: 0.0085 acc: 1.0000 time0.0950
+Epoch 222  loss: 0.0064 acc: 1.0000 time0.0939
+Epoch 223  loss: 0.0080 acc: 1.0000 time0.0944
+Epoch 224  loss: 0.0045 acc: 1.0000 time0.0948
+Epoch 225  loss: 0.0045 acc: 1.0000 time0.0947
+Epoch 225  loss: 0.0005 acc: 1.0000 Valid  loss: 5.1856  acc: 0.6750  f1: 0.6740
+Test  loss: 6.4326 acc: 0.5791 f1: 0.5307 time: 0.0461
+Epoch 226  loss: 0.0151 acc: 0.9917 time0.0950
+Epoch 227  loss: 0.0019 acc: 1.0000 time0.0946
+Epoch 228  loss: 0.0109 acc: 1.0000 time0.0950
+Epoch 229  loss: 0.0017 acc: 1.0000 time0.0941
+Epoch 230  loss: 0.0057 acc: 1.0000 time0.0946
+Epoch 230  loss: 0.0006 acc: 1.0000 Valid  loss: 5.2208  acc: 0.6667  f1: 0.6640
+Test  loss: 6.5260 acc: 0.5779 f1: 0.5302 time: 0.0462
+Epoch 231  loss: 0.0025 acc: 1.0000 time0.0946
+Epoch 232  loss: 0.0051 acc: 1.0000 time0.0941
+Epoch 233  loss: 0.0044 acc: 1.0000 time0.0940
+Epoch 234  loss: 0.0163 acc: 0.9917 time0.0937
+Epoch 235  loss: 0.0040 acc: 1.0000 time0.0943
+Epoch 235  loss: 0.0001 acc: 1.0000 Valid  loss: 5.3417  acc: 0.6750  f1: 0.6723
+Test  loss: 6.7142 acc: 0.5751 f1: 0.5299 time: 0.0467
+Epoch 236  loss: 0.0010 acc: 1.0000 time0.0948
+Epoch 237  loss: 0.0016 acc: 1.0000 time0.0944
+Epoch 238  loss: 0.0178 acc: 0.9917 time0.0946
+Epoch 239  loss: 0.0036 acc: 1.0000 time0.0949
+Epoch 240  loss: 0.0012 acc: 1.0000 time0.0947
+Epoch 240  loss: 0.0004 acc: 1.0000 Valid  loss: 5.4104  acc: 0.6667  f1: 0.6621
+Test  loss: 6.8788 acc: 0.5707 f1: 0.5276 time: 0.0458
+Epoch 241  loss: 0.0056 acc: 1.0000 time0.0950
+Epoch 242  loss: 0.0089 acc: 1.0000 time0.0945
+Epoch 243  loss: 0.0017 acc: 1.0000 time0.0952
+Epoch 244  loss: 0.0045 acc: 1.0000 time0.0952
+Epoch 245  loss: 0.0037 acc: 1.0000 time0.0941
+Epoch 245  loss: 0.0005 acc: 1.0000 Valid  loss: 5.4531  acc: 0.6667  f1: 0.6607
+Test  loss: 7.0708 acc: 0.5651 f1: 0.5197 time: 0.0463
+Epoch 246  loss: 0.0074 acc: 1.0000 time0.0948
+Epoch 247  loss: 0.0069 acc: 1.0000 time0.0950
+Epoch 248  loss: 0.0239 acc: 0.9917 time0.0950
+Epoch 249  loss: 0.0029 acc: 1.0000 time0.0940
+Epoch 250  loss: 0.0022 acc: 1.0000 time0.0938
+Epoch 250  loss: 0.0001 acc: 1.0000 Valid  loss: 5.5740  acc: 0.6917  f1: 0.6872
+Test  loss: 7.1989 acc: 0.5671 f1: 0.5210 time: 0.0460
+VALID: VALID ACC 0.6916667222976685  VALID F1 0.6871467946072206 EPOCH 35
+VALID: TEST ACC 0.5560224056243896 TEST F1 0.5061174441941989 EPOCH 35
+GLOBAL: TEST ACC 0.5835084319114685 TEST F1 0.5341508911384709 EPOCH 150
+Epoch 251  loss: 0.0013 acc: 1.0000 time0.0940
+Epoch 252  loss: 0.0088 acc: 1.0000 time0.0950
+Epoch 253  loss: 0.0074 acc: 1.0000 time0.0953
+Epoch 254  loss: 0.0027 acc: 1.0000 time0.0941
+Epoch 255  loss: 0.0024 acc: 1.0000 time0.0950
+Epoch 255  loss: 0.0010 acc: 1.0000 Valid  loss: 5.4327  acc: 0.6833  f1: 0.6777
+Test  loss: 6.9755 acc: 0.5643 f1: 0.5193 time: 0.0466
+Epoch 256  loss: 0.0047 acc: 1.0000 time0.0948
+Epoch 257  loss: 0.0048 acc: 1.0000 time0.0943
+Epoch 258  loss: 0.0065 acc: 1.0000 time0.0948
+Epoch 259  loss: 0.0106 acc: 1.0000 time0.0951
+Epoch 260  loss: 0.0016 acc: 1.0000 time0.0952
+Epoch 260  loss: 0.0013 acc: 1.0000 Valid  loss: 5.3031  acc: 0.6667  f1: 0.6625
+Test  loss: 6.8491 acc: 0.5769 f1: 0.5276 time: 0.0463
+Epoch 261  loss: 0.0021 acc: 1.0000 time0.0939
+Epoch 262  loss: 0.0016 acc: 1.0000 time0.0947
+Epoch 263  loss: 0.0035 acc: 1.0000 time0.0943
+Epoch 264  loss: 0.0120 acc: 1.0000 time0.0947
+Epoch 265  loss: 0.0224 acc: 0.9917 time0.0941
+Epoch 265  loss: 0.0002 acc: 1.0000 Valid  loss: 5.4792  acc: 0.6833  f1: 0.6752
+Test  loss: 6.9113 acc: 0.5690 f1: 0.5188 time: 0.0461
+Epoch 266  loss: 0.0034 acc: 1.0000 time0.0953
+Epoch 267  loss: 0.0021 acc: 1.0000 time0.0947
+Epoch 268  loss: 0.0188 acc: 0.9917 time0.0947
+Epoch 269  loss: 0.0040 acc: 1.0000 time0.0947
+Epoch 270  loss: 0.0022 acc: 1.0000 time0.0942
+Epoch 270  loss: 0.0001 acc: 1.0000 Valid  loss: 5.5474  acc: 0.6417  f1: 0.6321
+Test  loss: 7.2578 acc: 0.5508 f1: 0.5085 time: 0.0460
+Epoch 271  loss: 0.0059 acc: 1.0000 time0.0955
+Epoch 272  loss: 0.0025 acc: 1.0000 time0.0949
+Epoch 273  loss: 0.0013 acc: 1.0000 time0.0950
+Epoch 274  loss: 0.0352 acc: 0.9917 time0.0947
+Epoch 275  loss: 0.0063 acc: 1.0000 time0.0953
+Epoch 275  loss: 0.0011 acc: 1.0000 Valid  loss: 5.4660  acc: 0.6833  f1: 0.6768
+Test  loss: 7.1948 acc: 0.5639 f1: 0.5155 time: 0.0462
+Epoch 276  loss: 0.0018 acc: 1.0000 time0.0946
+Epoch 277  loss: 0.0057 acc: 1.0000 time0.0950
+Epoch 278  loss: 0.0030 acc: 1.0000 time0.0941
+Epoch 279  loss: 0.0086 acc: 1.0000 time0.0941
+Epoch 280  loss: 0.0156 acc: 0.9917 time0.0944
+Epoch 280  loss: 0.0013 acc: 1.0000 Valid  loss: 5.7460  acc: 0.6750  f1: 0.6689
+Test  loss: 7.4133 acc: 0.5676 f1: 0.5200 time: 0.0459
+Epoch 281  loss: 0.0050 acc: 1.0000 time0.0946
+Epoch 282  loss: 0.0250 acc: 0.9917 time0.0942
+Epoch 283  loss: 0.0019 acc: 1.0000 time0.0946
+Epoch 284  loss: 0.0029 acc: 1.0000 time0.0950
+Epoch 285  loss: 0.0085 acc: 1.0000 time0.0947
+Epoch 285  loss: 0.0005 acc: 1.0000 Valid  loss: 5.7532  acc: 0.6917  f1: 0.6890
+Test  loss: 7.6560 acc: 0.5643 f1: 0.5196 time: 0.0462
+Epoch 286  loss: 0.0012 acc: 1.0000 time0.0951
+Epoch 287  loss: 0.0019 acc: 1.0000 time0.0941
+Epoch 288  loss: 0.0089 acc: 0.9917 time0.0948
+Epoch 289  loss: 0.0039 acc: 1.0000 time0.0946
+Epoch 290  loss: 0.0148 acc: 0.9917 time0.0949
+Epoch 290  loss: 0.0000 acc: 1.0000 Valid  loss: 5.9822  acc: 0.6667  f1: 0.6604
+Test  loss: 7.9865 acc: 0.5534 f1: 0.5094 time: 0.0463
+Epoch 291  loss: 0.0118 acc: 0.9917 time0.0953
+Epoch 292  loss: 0.0009 acc: 1.0000 time0.0945
+Epoch 293  loss: 0.0072 acc: 1.0000 time0.0948
+Epoch 294  loss: 0.0351 acc: 0.9833 time0.0951
+Epoch 295  loss: 0.0022 acc: 1.0000 time0.0945
+Epoch 295  loss: 0.0057 acc: 1.0000 Valid  loss: 5.9662  acc: 0.6667  f1: 0.6590
+Test  loss: 7.8183 acc: 0.5641 f1: 0.5160 time: 0.0457
+Epoch 296  loss: 0.0049 acc: 1.0000 time0.0949
+Epoch 297  loss: 0.0049 acc: 1.0000 time0.0947
+Epoch 298  loss: 0.0066 acc: 1.0000 time0.0952
+Epoch 299  loss: 0.0167 acc: 0.9917 time0.0954
+Epoch 300  loss: 0.0120 acc: 0.9917 time0.0948
+Epoch 300  loss: 0.0001 acc: 1.0000 Valid  loss: 5.6531  acc: 0.6583  f1: 0.6544
+Test  loss: 7.8285 acc: 0.5502 f1: 0.5089 time: 0.0464
+VALID: VALID ACC 0.6916667222976685  VALID F1 0.6871467946072206 EPOCH 35
+VALID: TEST ACC 0.5560224056243896 TEST F1 0.5061174441941989 EPOCH 35
+GLOBAL: TEST ACC 0.5835084319114685 TEST F1 0.5341508911384709 EPOCH 150
+Epoch 301  loss: 0.0047 acc: 1.0000 time0.0946
+Epoch 302  loss: 0.0142 acc: 0.9917 time0.0948
+Epoch 303  loss: 0.0011 acc: 1.0000 time0.0943
+Epoch 304  loss: 0.0154 acc: 0.9917 time0.0948
+Epoch 305  loss: 0.0027 acc: 1.0000 time0.0950
+Epoch 305  loss: 0.0016 acc: 1.0000 Valid  loss: 6.1556  acc: 0.6500  f1: 0.6398
+Test  loss: 7.7110 acc: 0.5495 f1: 0.5001 time: 0.0467
+Epoch 306  loss: 0.0041 acc: 1.0000 time0.0954
+Epoch 307  loss: 0.0081 acc: 1.0000 time0.0946
+Epoch 308  loss: 0.0156 acc: 0.9917 time0.0948
+Epoch 309  loss: 0.0036 acc: 1.0000 time0.0949
+Epoch 310  loss: 0.0030 acc: 1.0000 time0.0955
+Epoch 310  loss: 0.0001 acc: 1.0000 Valid  loss: 5.5995  acc: 0.6417  f1: 0.6336
+Test  loss: 7.0660 acc: 0.5569 f1: 0.5142 time: 0.0465
+Epoch 311  loss: 0.0101 acc: 1.0000 time0.0947
+Epoch 312  loss: 0.0028 acc: 1.0000 time0.0948
+Epoch 313  loss: 0.0079 acc: 1.0000 time0.0945
+Epoch 314  loss: 0.0015 acc: 1.0000 time0.0954
+Epoch 315  loss: 0.0043 acc: 1.0000 time0.0947
+Epoch 315  loss: 0.0003 acc: 1.0000 Valid  loss: 5.6365  acc: 0.6333  f1: 0.6265
+Test  loss: 7.2905 acc: 0.5366 f1: 0.4991 time: 0.0462
+Epoch 316  loss: 0.0017 acc: 1.0000 time0.0946
+Epoch 317  loss: 0.0074 acc: 1.0000 time0.0948
+Epoch 318  loss: 0.0010 acc: 1.0000 time0.0948
+Epoch 319  loss: 0.0049 acc: 1.0000 time0.0954
+Epoch 320  loss: 0.0038 acc: 1.0000 time0.0960
+Epoch 320  loss: 0.0000 acc: 1.0000 Valid  loss: 5.7403  acc: 0.6583  f1: 0.6565
+Test  loss: 7.1857 acc: 0.5560 f1: 0.5133 time: 0.0467
+Epoch 321  loss: 0.0023 acc: 1.0000 time0.0944
+Epoch 322  loss: 0.0013 acc: 1.0000 time0.0947
+Epoch 323  loss: 0.0020 acc: 1.0000 time0.0947
+Epoch 324  loss: 0.0023 acc: 1.0000 time0.0951
+Epoch 325  loss: 0.0011 acc: 1.0000 time0.0949
+Epoch 325  loss: 0.0000 acc: 1.0000 Valid  loss: 6.0993  acc: 0.6583  f1: 0.6551
+Test  loss: 7.6797 acc: 0.5648 f1: 0.5189 time: 0.0464
+Epoch 326  loss: 0.0027 acc: 1.0000 time0.0945
+Epoch 327  loss: 0.0012 acc: 1.0000 time0.0949
+Epoch 328  loss: 0.0028 acc: 1.0000 time0.0954
+Epoch 329  loss: 0.0014 acc: 1.0000 time0.0953
+Epoch 330  loss: 0.0023 acc: 1.0000 time0.0950
+Epoch 330  loss: 0.0001 acc: 1.0000 Valid  loss: 6.4461  acc: 0.6667  f1: 0.6609
+Test  loss: 8.0893 acc: 0.5544 f1: 0.5085 time: 0.0470
+Epoch 331  loss: 0.0017 acc: 1.0000 time0.0950
+Epoch 332  loss: 0.0040 acc: 1.0000 time0.0948
+Epoch 333  loss: 0.0015 acc: 1.0000 time0.0947
+Epoch 334  loss: 0.0016 acc: 1.0000 time0.0950
+Epoch 335  loss: 0.0003 acc: 1.0000 time0.0948
+Epoch 335  loss: 0.0000 acc: 1.0000 Valid  loss: 6.4497  acc: 0.6500  f1: 0.6436
+Test  loss: 8.1659 acc: 0.5618 f1: 0.5165 time: 0.0459
+Epoch 336  loss: 0.0055 acc: 1.0000 time0.0943
+Epoch 337  loss: 0.0017 acc: 1.0000 time0.0947
+Epoch 338  loss: 0.0007 acc: 1.0000 time0.0954
+Epoch 339  loss: 0.0044 acc: 1.0000 time0.0948
+Epoch 340  loss: 0.0024 acc: 1.0000 time0.0944
+Epoch 340  loss: 0.0000 acc: 1.0000 Valid  loss: 6.7003  acc: 0.6417  f1: 0.6344
+Test  loss: 8.3980 acc: 0.5567 f1: 0.5161 time: 0.0463
+Epoch 341  loss: 0.0014 acc: 1.0000 time0.0950
+Epoch 342  loss: 0.0131 acc: 0.9917 time0.0947
+Epoch 343  loss: 0.0012 acc: 1.0000 time0.0950
+Epoch 344  loss: 0.0017 acc: 1.0000 time0.0953
+Epoch 345  loss: 0.0005 acc: 1.0000 time0.0951
+Epoch 345  loss: 0.0000 acc: 1.0000 Valid  loss: 6.4929  acc: 0.6500  f1: 0.6463
+Test  loss: 8.2279 acc: 0.5641 f1: 0.5181 time: 0.0466
+Epoch 346  loss: 0.0010 acc: 1.0000 time0.0957
+Epoch 347  loss: 0.0004 acc: 1.0000 time0.0954
+Epoch 348  loss: 0.0009 acc: 1.0000 time0.0955
+Epoch 349  loss: 0.0077 acc: 1.0000 time0.0957
+Epoch 350  loss: 0.0033 acc: 1.0000 time0.0949
+Epoch 350  loss: 0.0000 acc: 1.0000 Valid  loss: 6.6966  acc: 0.6417  f1: 0.6374
+Test  loss: 8.1253 acc: 0.5593 f1: 0.5115 time: 0.0462
+VALID: VALID ACC 0.6916667222976685  VALID F1 0.6871467946072206 EPOCH 35
+VALID: TEST ACC 0.5560224056243896 TEST F1 0.5061174441941989 EPOCH 35
+GLOBAL: TEST ACC 0.5835084319114685 TEST F1 0.5341508911384709 EPOCH 150
+Epoch 351  loss: 0.0005 acc: 1.0000 time0.0960
+Epoch 352  loss: 0.0020 acc: 1.0000 time0.0953
+Epoch 353  loss: 0.0008 acc: 1.0000 time0.0948
+Epoch 354  loss: 0.0029 acc: 1.0000 time0.0953
+Epoch 355  loss: 0.0014 acc: 1.0000 time0.0945
+Epoch 355  loss: 0.0000 acc: 1.0000 Valid  loss: 6.3504  acc: 0.6583  f1: 0.6545
+Test  loss: 7.8219 acc: 0.5669 f1: 0.5221 time: 0.0467
+Epoch 356  loss: 0.0020 acc: 1.0000 time0.0952
+Epoch 357  loss: 0.0009 acc: 1.0000 time0.0954
+Epoch 358  loss: 0.0121 acc: 0.9917 time0.0955
+Epoch 359  loss: 0.0003 acc: 1.0000 time0.0951
+Epoch 360  loss: 0.0008 acc: 1.0000 time0.0948
+Epoch 360  loss: 0.0002 acc: 1.0000 Valid  loss: 6.6219  acc: 0.6250  f1: 0.6269
+Test  loss: 7.9920 acc: 0.5599 f1: 0.5156 time: 0.0463
+Epoch 361  loss: 0.0100 acc: 0.9917 time0.0958
+Epoch 362  loss: 0.0187 acc: 0.9917 time0.0953
+Epoch 363  loss: 0.0024 acc: 1.0000 time0.0948
+Epoch 364  loss: 0.0007 acc: 1.0000 time0.0950
+Epoch 365  loss: 0.0471 acc: 0.9833 time0.0953
+Epoch 365  loss: 0.0002 acc: 1.0000 Valid  loss: 6.9633  acc: 0.6333  f1: 0.6291
+Test  loss: 9.0218 acc: 0.5474 f1: 0.4989 time: 0.0459
+Epoch 366  loss: 0.0039 acc: 1.0000 time0.0963
+Epoch 367  loss: 0.0024 acc: 1.0000 time0.0954
+Epoch 368  loss: 0.0043 acc: 1.0000 time0.0951
+Epoch 369  loss: 0.0074 acc: 1.0000 time0.0947
+Epoch 370  loss: 0.0040 acc: 1.0000 time0.0951
+Epoch 370  loss: 0.0031 acc: 1.0000 Valid  loss: 6.9626  acc: 0.6417  f1: 0.6360
+Test  loss: 8.4644 acc: 0.5476 f1: 0.5066 time: 0.0470
+Epoch 371  loss: 0.0042 acc: 1.0000 time0.0957
+Epoch 372  loss: 0.0104 acc: 0.9917 time0.0953
+Epoch 373  loss: 0.0063 acc: 1.0000 time0.0948
+Epoch 374  loss: 0.0029 acc: 1.0000 time0.0951
+Epoch 375  loss: 0.0230 acc: 0.9917 time0.0957
+Epoch 375  loss: 0.0002 acc: 1.0000 Valid  loss: 7.0604  acc: 0.6417  f1: 0.6343
+Test  loss: 8.7255 acc: 0.5562 f1: 0.5063 time: 0.0463
+Epoch 376  loss: 0.0093 acc: 0.9917 time0.0953
+Epoch 377  loss: 0.0116 acc: 0.9917 time0.0955
+Epoch 378  loss: 0.0224 acc: 0.9917 time0.0948
+Epoch 379  loss: 0.0122 acc: 1.0000 time0.0951
+Epoch 380  loss: 0.1154 acc: 0.9583 time0.0958
+Epoch 380  loss: 0.0002 acc: 1.0000 Valid  loss: 6.9640  acc: 0.6417  f1: 0.6328
+Test  loss: 8.2675 acc: 0.5541 f1: 0.5062 time: 0.0469
+Epoch 381  loss: 0.0027 acc: 1.0000 time0.0962
+Epoch 382  loss: 0.6040 acc: 0.8500 time0.0956
+Epoch 383  loss: 0.0979 acc: 0.9667 time0.0953
+Epoch 384  loss: 3.4430 acc: 0.5500 time0.0949
+Epoch 385  loss: 0.3562 acc: 0.8917 time0.0950
+Epoch 385  loss: 8.2566 acc: 0.3500 Valid  loss: 12.8231  acc: 0.3250  f1: 0.2748
+Test  loss: 14.6079 acc: 0.2938 f1: 0.2541 time: 0.0465
+Epoch 386  loss: 3.5341 acc: 0.6417 time0.0952
+Epoch 387  loss: 2.1088 acc: 0.7167 time0.0946
+Epoch 388  loss: 1.0510 acc: 0.7750 time0.0953
+Epoch 389  loss: 0.6369 acc: 0.8083 time0.0953
+Epoch 390  loss: 0.9814 acc: 0.7083 time0.0952
+Epoch 390  loss: 1.7745 acc: 0.6000 Valid  loss: 3.9474  acc: 0.4167  f1: 0.3473
+Test  loss: 4.4715 acc: 0.3281 f1: 0.2650 time: 0.0467
+Epoch 391  loss: 0.9527 acc: 0.7750 time0.0949
+Epoch 392  loss: 1.0562 acc: 0.7583 time0.0952
+Epoch 393  loss: 0.5358 acc: 0.8417 time0.0959
+Epoch 394  loss: 0.4386 acc: 0.8333 time0.0959
+Epoch 395  loss: 0.3776 acc: 0.8583 time0.0947
+Epoch 395  loss: 2.6038 acc: 0.4500 Valid  loss: 3.6646  acc: 0.3583  f1: 0.3085
+Test  loss: 3.7047 acc: 0.3683 f1: 0.2952 time: 0.0464
+Epoch 396  loss: 0.3778 acc: 0.8583 time0.0948
+Epoch 397  loss: 0.4964 acc: 0.7667 time0.0955
+Epoch 398  loss: 0.5471 acc: 0.7833 time0.0958
+Epoch 399  loss: 0.4691 acc: 0.8583 time0.0958
+Epoch 400  loss: 0.3774 acc: 0.8583 time0.0949
+Epoch 400  loss: 0.8452 acc: 0.6333 Valid  loss: 1.8129  acc: 0.4833  f1: 0.4707
+Test  loss: 2.2801 acc: 0.4095 f1: 0.3816 time: 0.0463
+VALID: VALID ACC 0.6916667222976685  VALID F1 0.6871467946072206 EPOCH 35
+VALID: TEST ACC 0.5560224056243896 TEST F1 0.5061174441941989 EPOCH 35
+GLOBAL: TEST ACC 0.5835084319114685 TEST F1 0.5341508911384709 EPOCH 150
+Epoch 401  loss: 0.3240 acc: 0.8833 time0.0952
+Epoch 402  loss: 0.2620 acc: 0.8917 time0.0959
+Epoch 403  loss: 0.3717 acc: 0.8750 time0.0952
+Epoch 404  loss: 0.2982 acc: 0.8833 time0.0961
+Epoch 405  loss: 0.2059 acc: 0.9583 time0.0944
+Epoch 405  loss: 0.3388 acc: 0.8917 Valid  loss: 1.4975  acc: 0.6083  f1: 0.6205
+Test  loss: 1.9195 acc: 0.5746 f1: 0.5321 time: 0.0462
+Epoch 406  loss: 0.2314 acc: 0.9333 time0.0951
+Epoch 407  loss: 0.2473 acc: 0.9417 time0.0958
+Epoch 408  loss: 0.3625 acc: 0.8917 time0.0943
+Epoch 409  loss: 0.1524 acc: 0.9583 time0.0944
+Epoch 410  loss: 0.2726 acc: 0.9000 time0.0954
+Epoch 410  loss: 0.6248 acc: 0.8333 Valid  loss: 2.5462  acc: 0.5833  f1: 0.5824
+Test  loss: 3.2441 acc: 0.4968 f1: 0.4359 time: 0.0472
+Epoch 411  loss: 0.1778 acc: 0.9417 time0.0958
+Epoch 412  loss: 0.1737 acc: 0.9583 time0.0958
+Epoch 413  loss: 0.1118 acc: 0.9667 time0.0954
+Epoch 414  loss: 0.1488 acc: 0.9333 time0.0953
+Epoch 415  loss: 0.1190 acc: 0.9667 time0.0950
+Epoch 415  loss: 0.1435 acc: 0.9250 Valid  loss: 2.1440  acc: 0.6667  f1: 0.6615
+Test  loss: 3.3580 acc: 0.5553 f1: 0.5067 time: 0.0465
+Epoch 416  loss: 0.1051 acc: 0.9583 time0.0959
+Epoch 417  loss: 0.1230 acc: 0.9500 time0.0954
+Epoch 418  loss: 0.1063 acc: 0.9667 time0.0958
+Epoch 419  loss: 0.1125 acc: 0.9583 time0.0957
+Epoch 420  loss: 0.1183 acc: 0.9500 time0.0954
+Epoch 420  loss: 0.2949 acc: 0.9000 Valid  loss: 2.7159  acc: 0.6333  f1: 0.6207
+Test  loss: 4.0451 acc: 0.5117 f1: 0.4599 time: 0.0469
+Epoch 421  loss: 0.0940 acc: 0.9583 time0.0960
+Epoch 422  loss: 0.0655 acc: 0.9833 time0.0955
+Epoch 423  loss: 0.0708 acc: 0.9750 time0.0963
+Epoch 424  loss: 0.0568 acc: 0.9750 time0.0954
+Epoch 425  loss: 0.0558 acc: 0.9833 time0.0954
+Epoch 425  loss: 0.0739 acc: 0.9917 Valid  loss: 2.6537  acc: 0.6750  f1: 0.6690
+Test  loss: 4.2006 acc: 0.5418 f1: 0.4978 time: 0.0462
+Epoch 426  loss: 0.0947 acc: 0.9583 time0.0962
+Epoch 427  loss: 0.0394 acc: 0.9833 time0.0954
+Epoch 428  loss: 0.0728 acc: 0.9833 time0.0950
+Epoch 429  loss: 0.0315 acc: 0.9917 time0.0948
+Epoch 430  loss: 0.0297 acc: 0.9917 time0.0955
+Epoch 430  loss: 0.0788 acc: 0.9833 Valid  loss: 3.1848  acc: 0.6667  f1: 0.6560
+Test  loss: 4.3950 acc: 0.5462 f1: 0.4964 time: 0.0465
+Epoch 431  loss: 0.0702 acc: 0.9667 time0.0960
+Epoch 432  loss: 0.0548 acc: 0.9667 time0.0955
+Epoch 433  loss: 0.0338 acc: 0.9917 time0.0961
+Epoch 434  loss: 0.0276 acc: 1.0000 time0.0951
+Epoch 435  loss: 0.0546 acc: 0.9750 time0.0957
+Epoch 435  loss: 0.0793 acc: 0.9583 Valid  loss: 3.2929  acc: 0.6500  f1: 0.6381
+Test  loss: 4.6296 acc: 0.5448 f1: 0.4923 time: 0.0469
+Epoch 436  loss: 0.0475 acc: 0.9833 time0.0954
+Epoch 437  loss: 0.0111 acc: 1.0000 time0.0960
+Epoch 438  loss: 0.0439 acc: 0.9750 time0.0959
+Epoch 439  loss: 0.0517 acc: 0.9750 time0.0950
+Epoch 440  loss: 0.0296 acc: 0.9917 time0.0953
+Epoch 440  loss: 0.0322 acc: 0.9833 Valid  loss: 3.3751  acc: 0.6667  f1: 0.6701
+Test  loss: 4.8235 acc: 0.5636 f1: 0.5143 time: 0.0466
+Epoch 441  loss: 0.0451 acc: 0.9833 time0.0952
+Epoch 442  loss: 0.0228 acc: 0.9917 time0.0961
+Epoch 443  loss: 0.0213 acc: 1.0000 time0.0956
+Epoch 444  loss: 0.0223 acc: 1.0000 time0.0958
+Epoch 445  loss: 0.0179 acc: 0.9917 time0.0953
+Epoch 445  loss: 0.0516 acc: 0.9917 Valid  loss: 3.5196  acc: 0.6667  f1: 0.6647
+Test  loss: 4.8291 acc: 0.5744 f1: 0.5244 time: 0.0465
+Epoch 446  loss: 0.0235 acc: 0.9917 time0.0955
+Epoch 447  loss: 0.0113 acc: 1.0000 time0.0957
+Epoch 448  loss: 0.0175 acc: 1.0000 time0.0954
+Epoch 449  loss: 0.0176 acc: 1.0000 time0.0951
+Epoch 450  loss: 0.0304 acc: 0.9917 time0.0957
+Epoch 450  loss: 0.0974 acc: 0.9667 Valid  loss: 3.7155  acc: 0.6750  f1: 0.6722
+Test  loss: 5.0865 acc: 0.5658 f1: 0.5162 time: 0.0469
+VALID: VALID ACC 0.6916667222976685  VALID F1 0.6871467946072206 EPOCH 35
+VALID: TEST ACC 0.5560224056243896 TEST F1 0.5061174441941989 EPOCH 35
+GLOBAL: TEST ACC 0.5835084319114685 TEST F1 0.5341508911384709 EPOCH 150
+Epoch 451  loss: 0.0093 acc: 1.0000 time0.0951
+Epoch 452  loss: 0.0145 acc: 1.0000 time0.0959
+Epoch 453  loss: 0.0119 acc: 1.0000 time0.0959
+Epoch 454  loss: 0.0502 acc: 0.9833 time0.0952
+Epoch 455  loss: 0.0140 acc: 0.9917 time0.0953
+Epoch 455  loss: 0.0254 acc: 0.9917 Valid  loss: 3.5744  acc: 0.6917  f1: 0.6881
+Test  loss: 5.2194 acc: 0.5686 f1: 0.5195 time: 0.0467
+Epoch 456  loss: 0.0297 acc: 0.9833 time0.0963
+Epoch 457  loss: 0.0197 acc: 0.9917 time0.0961
+Epoch 458  loss: 0.0060 acc: 1.0000 time0.0961
+Epoch 459  loss: 0.0064 acc: 1.0000 time0.0958
+Epoch 460  loss: 0.0040 acc: 1.0000 time0.0952
+Epoch 460  loss: 0.0061 acc: 1.0000 Valid  loss: 3.6482  acc: 0.6833  f1: 0.6805
+Test  loss: 5.3381 acc: 0.5653 f1: 0.5167 time: 0.0465
+Epoch 461  loss: 0.0084 acc: 1.0000 time0.0964
+Epoch 462  loss: 0.0159 acc: 1.0000 time0.0959
+Epoch 463  loss: 0.0051 acc: 1.0000 time0.0959
+Epoch 464  loss: 0.0084 acc: 1.0000 time0.0953
+Epoch 465  loss: 0.0085 acc: 1.0000 time0.0952
+Epoch 465  loss: 0.0079 acc: 1.0000 Valid  loss: 3.7359  acc: 0.7000  f1: 0.6929
+Test  loss: 5.4189 acc: 0.5593 f1: 0.5120 time: 0.0467
+Epoch 466  loss: 0.0078 acc: 1.0000 time0.0962
+Epoch 467  loss: 0.0066 acc: 1.0000 time0.0958
+Epoch 468  loss: 0.0121 acc: 1.0000 time0.0960
+Epoch 469  loss: 0.0158 acc: 1.0000 time0.0954
+Epoch 470  loss: 0.0065 acc: 1.0000 time0.0953
+Epoch 470  loss: 0.0185 acc: 0.9917 Valid  loss: 3.8503  acc: 0.7000  f1: 0.6931
+Test  loss: 5.5352 acc: 0.5576 f1: 0.5103 time: 0.0460
+Epoch 471  loss: 0.0177 acc: 0.9917 time0.0967
+Epoch 472  loss: 0.0088 acc: 1.0000 time0.0958
+Epoch 473  loss: 0.0072 acc: 1.0000 time0.0961
+Epoch 474  loss: 0.0196 acc: 0.9917 time0.0962
+Epoch 475  loss: 0.0118 acc: 1.0000 time0.0964
+Epoch 475  loss: 0.0162 acc: 1.0000 Valid  loss: 3.8368  acc: 0.7167  f1: 0.7112
+Test  loss: 5.5298 acc: 0.5643 f1: 0.5165 time: 0.0466
+Epoch 476  loss: 0.0038 acc: 1.0000 time0.0963
+Epoch 477  loss: 0.0076 acc: 1.0000 time0.0954
+Epoch 478  loss: 0.0171 acc: 0.9917 time0.0961
+Epoch 479  loss: 0.0067 acc: 1.0000 time0.0955
+Epoch 480  loss: 0.0252 acc: 0.9833 time0.0956
+Epoch 480  loss: 0.0133 acc: 1.0000 Valid  loss: 3.8233  acc: 0.7083  f1: 0.7027
+Test  loss: 5.5416 acc: 0.5723 f1: 0.5241 time: 0.0465
+Epoch 481  loss: 0.0029 acc: 1.0000 time0.0954
+Epoch 482  loss: 0.0124 acc: 1.0000 time0.0959
+Epoch 483  loss: 0.0046 acc: 1.0000 time0.0959
+Epoch 484  loss: 0.0059 acc: 1.0000 time0.0958
+Epoch 485  loss: 0.0049 acc: 1.0000 time0.0958
+Epoch 485  loss: 0.0172 acc: 1.0000 Valid  loss: 3.8792  acc: 0.7000  f1: 0.6945
+Test  loss: 5.6167 acc: 0.5718 f1: 0.5240 time: 0.0467
+Epoch 486  loss: 0.0051 acc: 1.0000 time0.0956
+Epoch 487  loss: 0.0155 acc: 0.9917 time0.0952
+Epoch 488  loss: 0.0119 acc: 1.0000 time0.0954
+Epoch 489  loss: 0.0142 acc: 1.0000 time0.0960
+Epoch 490  loss: 0.0071 acc: 1.0000 time0.0958
+Epoch 490  loss: 0.0027 acc: 1.0000 Valid  loss: 3.9780  acc: 0.6750  f1: 0.6712
+Test  loss: 5.6739 acc: 0.5737 f1: 0.5257 time: 0.0464
+Epoch 491  loss: 0.0033 acc: 1.0000 time0.0959
+Epoch 492  loss: 0.0072 acc: 1.0000 time0.0964
+Epoch 493  loss: 0.0069 acc: 1.0000 time0.0954
+Epoch 494  loss: 0.0295 acc: 0.9917 time0.0957
+Epoch 495  loss: 0.0045 acc: 1.0000 time0.0960
+Epoch 495  loss: 0.0018 acc: 1.0000 Valid  loss: 4.0641  acc: 0.6833  f1: 0.6779
+Test  loss: 5.7875 acc: 0.5679 f1: 0.5196 time: 0.0471
+Epoch 496  loss: 0.0049 acc: 1.0000 time0.0962
+Epoch 497  loss: 0.0041 acc: 1.0000 time0.0961
+Epoch 498  loss: 0.0032 acc: 1.0000 time0.0959
+Epoch 499  loss: 0.0024 acc: 1.0000 time0.0960
+Epoch 500  loss: 0.0080 acc: 1.0000 time0.0963
+Epoch 500  loss: 0.0017 acc: 1.0000 Valid  loss: 4.1247  acc: 0.6833  f1: 0.6779
+Test  loss: 5.8989 acc: 0.5669 f1: 0.5177 time: 0.0471
+VALID: VALID ACC 0.7166666984558105  VALID F1 0.7111748282479989 EPOCH 475
+VALID: TEST ACC 0.5642507076263428 TEST F1 0.5164660980916048 EPOCH 475
+GLOBAL: TEST ACC 0.5835084319114685 TEST F1 0.5341508911384709 EPOCH 150
+Epoch 501  loss: 0.0033 acc: 1.0000 time0.0957
+Epoch 502  loss: 0.0059 acc: 1.0000 time0.0959
+Epoch 503  loss: 0.0074 acc: 1.0000 time0.0962
+Epoch 504  loss: 0.0066 acc: 1.0000 time0.0957
+Epoch 505  loss: 0.0034 acc: 1.0000 time0.0958
+Epoch 505  loss: 0.0027 acc: 1.0000 Valid  loss: 4.1553  acc: 0.7083  f1: 0.7028
+Test  loss: 5.9857 acc: 0.5657 f1: 0.5163 time: 0.0464
+Epoch 506  loss: 0.0103 acc: 1.0000 time0.0961
+Epoch 507  loss: 0.0028 acc: 1.0000 time0.0954
+Epoch 508  loss: 0.0046 acc: 1.0000 time0.0965
+Epoch 509  loss: 0.0061 acc: 1.0000 time0.0963
+Epoch 510  loss: 0.0032 acc: 1.0000 time0.0960
+Epoch 510  loss: 0.0133 acc: 0.9917 Valid  loss: 4.1998  acc: 0.6917  f1: 0.6847
+Test  loss: 6.0497 acc: 0.5644 f1: 0.5155 time: 0.0461
+Epoch 511  loss: 0.0040 acc: 1.0000 time0.0967
+Epoch 512  loss: 0.0051 acc: 1.0000 time0.0962
+Epoch 513  loss: 0.0208 acc: 0.9833 time0.0962
+Epoch 514  loss: 0.0016 acc: 1.0000 time0.0958
+Epoch 515  loss: 0.0046 acc: 1.0000 time0.0950
+Epoch 515  loss: 0.0016 acc: 1.0000 Valid  loss: 4.2153  acc: 0.6917  f1: 0.6853
+Test  loss: 6.0759 acc: 0.5676 f1: 0.5181 time: 0.0464
+Epoch 516  loss: 0.0057 acc: 1.0000 time0.0966
+Epoch 517  loss: 0.0058 acc: 1.0000 time0.0961
+Epoch 518  loss: 0.0034 acc: 1.0000 time0.0959
+Epoch 519  loss: 0.0064 acc: 1.0000 time0.0968
+Epoch 520  loss: 0.0145 acc: 0.9917 time0.0965
+Epoch 520  loss: 0.0006 acc: 1.0000 Valid  loss: 4.1547  acc: 0.7000  f1: 0.6947
+Test  loss: 6.0679 acc: 0.5693 f1: 0.5206 time: 0.0468
+Epoch 521  loss: 0.0046 acc: 1.0000 time0.0964
+Epoch 522  loss: 0.0083 acc: 1.0000 time0.0958
+Epoch 523  loss: 0.0101 acc: 0.9917 time0.0953
+Epoch 524  loss: 0.0020 acc: 1.0000 time0.0960
+Epoch 525  loss: 0.0064 acc: 1.0000 time0.0953
+Epoch 525  loss: 0.0020 acc: 1.0000 Valid  loss: 4.1818  acc: 0.6917  f1: 0.6874
+Test  loss: 6.0612 acc: 0.5686 f1: 0.5210 time: 0.0462
+Epoch 526  loss: 0.0067 acc: 1.0000 time0.0960
+Epoch 527  loss: 0.0065 acc: 1.0000 time0.0958
+Epoch 528  loss: 0.0024 acc: 1.0000 time0.0957
+Epoch 529  loss: 0.0030 acc: 1.0000 time0.0958
+Epoch 530  loss: 0.0017 acc: 1.0000 time0.0960
+Epoch 530  loss: 0.0034 acc: 1.0000 Valid  loss: 4.1954  acc: 0.7167  f1: 0.7117
+Test  loss: 6.0971 acc: 0.5700 f1: 0.5235 time: 0.0470
+Epoch 531  loss: 0.0116 acc: 1.0000 time0.0964
+Epoch 532  loss: 0.0078 acc: 1.0000 time0.0962
+Epoch 533  loss: 0.0063 acc: 1.0000 time0.0958
+Epoch 534  loss: 0.0077 acc: 1.0000 time0.0956
+Epoch 535  loss: 0.0136 acc: 1.0000 time0.0963
+Epoch 535  loss: 0.0022 acc: 1.0000 Valid  loss: 4.1643  acc: 0.7083  f1: 0.7043
+Test  loss: 6.1178 acc: 0.5690 f1: 0.5220 time: 0.0467
+Epoch 536  loss: 0.0016 acc: 1.0000 time0.0964
+Epoch 537  loss: 0.0036 acc: 1.0000 time0.0957
+Epoch 538  loss: 0.0038 acc: 1.0000 time0.0960
+Epoch 539  loss: 0.0040 acc: 1.0000 time0.0958
+Epoch 540  loss: 0.0013 acc: 1.0000 time0.0961
+Epoch 540  loss: 0.0060 acc: 1.0000 Valid  loss: 4.2290  acc: 0.7083  f1: 0.7020
+Test  loss: 6.2195 acc: 0.5657 f1: 0.5180 time: 0.0472
+Epoch 541  loss: 0.0110 acc: 0.9917 time0.0962
+Epoch 542  loss: 0.0071 acc: 1.0000 time0.0963
+Epoch 543  loss: 0.0047 acc: 1.0000 time0.0960
+Epoch 544  loss: 0.0056 acc: 1.0000 time0.0957
+Epoch 545  loss: 0.0031 acc: 1.0000 time0.0964
+Epoch 545  loss: 0.0006 acc: 1.0000 Valid  loss: 4.2555  acc: 0.7000  f1: 0.6959
+Test  loss: 6.2201 acc: 0.5699 f1: 0.5216 time: 0.0461
+Epoch 546  loss: 0.0089 acc: 1.0000 time0.0976
+Epoch 547  loss: 0.0014 acc: 1.0000 time0.0958
+Epoch 548  loss: 0.0116 acc: 1.0000 time0.0964
+Epoch 549  loss: 0.0021 acc: 1.0000 time0.0956
+Epoch 550  loss: 0.0139 acc: 0.9917 time0.0958
+Epoch 550  loss: 0.0006 acc: 1.0000 Valid  loss: 4.2723  acc: 0.7000  f1: 0.6954
+Test  loss: 6.3005 acc: 0.5678 f1: 0.5197 time: 0.0461
+VALID: VALID ACC 0.7166666984558105  VALID F1 0.7111748282479989 EPOCH 475
+VALID: TEST ACC 0.5642507076263428 TEST F1 0.5164660980916048 EPOCH 475
+GLOBAL: TEST ACC 0.5835084319114685 TEST F1 0.5341508911384709 EPOCH 150
+Epoch 551  loss: 0.0036 acc: 1.0000 time0.0974
+Epoch 552  loss: 0.0145 acc: 0.9917 time0.0960
+Epoch 553  loss: 0.0037 acc: 1.0000 time0.0960
+Epoch 554  loss: 0.0010 acc: 1.0000 time0.0953
+Epoch 555  loss: 0.0043 acc: 1.0000 time0.0962
+Epoch 555  loss: 0.0013 acc: 1.0000 Valid  loss: 4.3167  acc: 0.6917  f1: 0.6863
+Test  loss: 6.4352 acc: 0.5637 f1: 0.5164 time: 0.0467
+Epoch 556  loss: 0.0023 acc: 1.0000 time0.0965
+Epoch 557  loss: 0.0021 acc: 1.0000 time0.0960
+Epoch 558  loss: 0.0073 acc: 0.9917 time0.0966
+Epoch 559  loss: 0.0042 acc: 1.0000 time0.0963
+Epoch 560  loss: 0.0021 acc: 1.0000 time0.0956
+Epoch 560  loss: 0.0004 acc: 1.0000 Valid  loss: 4.3136  acc: 0.7000  f1: 0.6972
+Test  loss: 6.5377 acc: 0.5593 f1: 0.5128 time: 0.0469
+Epoch 561  loss: 0.0047 acc: 1.0000 time0.0962
+Epoch 562  loss: 0.0079 acc: 1.0000 time0.0950
+Epoch 563  loss: 0.0026 acc: 1.0000 time0.0962
+Epoch 564  loss: 0.0013 acc: 1.0000 time0.0964
+Epoch 565  loss: 0.0017 acc: 1.0000 time0.0963
+Epoch 565  loss: 0.0002 acc: 1.0000 Valid  loss: 4.3397  acc: 0.6833  f1: 0.6795
+Test  loss: 6.5352 acc: 0.5630 f1: 0.5159 time: 0.0473
+Epoch 566  loss: 0.0049 acc: 1.0000 time0.0957
+Epoch 567  loss: 0.0035 acc: 1.0000 time0.0959
+Epoch 568  loss: 0.0014 acc: 1.0000 time0.0959
+Epoch 569  loss: 0.0031 acc: 1.0000 time0.0959
+Epoch 570  loss: 0.0021 acc: 1.0000 time0.0959
+Epoch 570  loss: 0.0002 acc: 1.0000 Valid  loss: 4.3656  acc: 0.6917  f1: 0.6891
+Test  loss: 6.5179 acc: 0.5678 f1: 0.5201 time: 0.0472
+Epoch 571  loss: 0.0098 acc: 0.9917 time0.0968
+Epoch 572  loss: 0.0188 acc: 0.9917 time0.0965
+Epoch 573  loss: 0.0064 acc: 1.0000 time0.0956
+Epoch 574  loss: 0.0065 acc: 1.0000 time0.0957
+Epoch 575  loss: 0.0029 acc: 1.0000 time0.0965
+Epoch 575  loss: 0.0012 acc: 1.0000 Valid  loss: 4.5150  acc: 0.7083  f1: 0.7057
+Test  loss: 6.5924 acc: 0.5634 f1: 0.5174 time: 0.0474
+Epoch 576  loss: 0.0141 acc: 0.9917 time0.0964
+Epoch 577  loss: 0.0086 acc: 0.9917 time0.0969
+Epoch 578  loss: 0.0045 acc: 1.0000 time0.0960
+Epoch 579  loss: 0.0026 acc: 1.0000 time0.0965
+Epoch 580  loss: 0.0021 acc: 1.0000 time0.0964
+Epoch 580  loss: 0.0002 acc: 1.0000 Valid  loss: 4.4194  acc: 0.7083  f1: 0.7039
+Test  loss: 6.6392 acc: 0.5665 f1: 0.5192 time: 0.0463
+Epoch 581  loss: 0.0066 acc: 1.0000 time0.0964
+Epoch 582  loss: 0.0011 acc: 1.0000 time0.0957
+Epoch 583  loss: 0.0020 acc: 1.0000 time0.0966
+Epoch 584  loss: 0.0024 acc: 1.0000 time0.0967
+Epoch 585  loss: 0.0032 acc: 1.0000 time0.0966
+Epoch 585  loss: 0.0001 acc: 1.0000 Valid  loss: 4.6499  acc: 0.6917  f1: 0.6904
+Test  loss: 6.7263 acc: 0.5665 f1: 0.5189 time: 0.0466
+Epoch 586  loss: 0.0122 acc: 0.9917 time0.0966
+Epoch 587  loss: 0.0025 acc: 1.0000 time0.0957
+Epoch 588  loss: 0.0036 acc: 1.0000 time0.0961
+Epoch 589  loss: 0.0021 acc: 1.0000 time0.0962
+Epoch 590  loss: 0.0031 acc: 1.0000 time0.0978
+Epoch 590  loss: 0.0004 acc: 1.0000 Valid  loss: 4.6431  acc: 0.7000  f1: 0.6977
+Test  loss: 6.5847 acc: 0.5692 f1: 0.5220 time: 0.0477
+Epoch 591  loss: 0.0051 acc: 1.0000 time0.0962
+Epoch 592  loss: 0.0017 acc: 1.0000 time0.0960
+Epoch 593  loss: 0.0022 acc: 1.0000 time0.0961
+Epoch 594  loss: 0.0010 acc: 1.0000 time0.0965
+Epoch 595  loss: 0.0016 acc: 1.0000 time0.0967
+Epoch 595  loss: 0.0014 acc: 1.0000 Valid  loss: 4.5650  acc: 0.6833  f1: 0.6799
+Test  loss: 6.5850 acc: 0.5678 f1: 0.5204 time: 0.0470
+Epoch 596  loss: 0.0048 acc: 1.0000 time0.0966
+Epoch 597  loss: 0.0057 acc: 1.0000 time0.0968
+Epoch 598  loss: 0.0024 acc: 1.0000 time0.0964
+Epoch 599  loss: 0.0108 acc: 0.9917 time0.0967
+Epoch 600  loss: 0.0017 acc: 1.0000 time0.0964
+Epoch 600  loss: 0.0003 acc: 1.0000 Valid  loss: 4.6121  acc: 0.7000  f1: 0.6965
+Test  loss: 6.6289 acc: 0.5704 f1: 0.5228 time: 0.0468
+VALID: VALID ACC 0.7166666984558105  VALID F1 0.7111748282479989 EPOCH 475
+VALID: TEST ACC 0.5642507076263428 TEST F1 0.5164660980916048 EPOCH 475
+GLOBAL: TEST ACC 0.5835084319114685 TEST F1 0.5341508911384709 EPOCH 150
+Epoch 601  loss: 0.0027 acc: 1.0000 time0.0960
+Epoch 602  loss: 0.0034 acc: 1.0000 time0.0963
+Epoch 603  loss: 0.0080 acc: 0.9917 time0.0964
+Epoch 604  loss: 0.0076 acc: 1.0000 time0.0969
+Epoch 605  loss: 0.0030 acc: 1.0000 time0.0955
+Epoch 605  loss: 0.0003 acc: 1.0000 Valid  loss: 4.5349  acc: 0.7000  f1: 0.6964
+Test  loss: 6.7303 acc: 0.5674 f1: 0.5201 time: 0.0467
+Epoch 606  loss: 0.0046 acc: 1.0000 time0.0969
+Epoch 607  loss: 0.0061 acc: 1.0000 time0.0966
+Epoch 608  loss: 0.0010 acc: 1.0000 time0.0962
+Epoch 609  loss: 0.0010 acc: 1.0000 time0.0969
+Epoch 610  loss: 0.0021 acc: 1.0000 time0.0971
+Epoch 610  loss: 0.0022 acc: 1.0000 Valid  loss: 4.5251  acc: 0.7167  f1: 0.7107
+Test  loss: 6.8390 acc: 0.5629 f1: 0.5153 time: 0.0482
+Epoch 611  loss: 0.0021 acc: 1.0000 time0.0963
+Epoch 612  loss: 0.0028 acc: 1.0000 time0.0967
+Epoch 613  loss: 0.0042 acc: 1.0000 time0.0967
+Epoch 614  loss: 0.0017 acc: 1.0000 time0.0960
+Epoch 615  loss: 0.0072 acc: 1.0000 time0.0969
+Epoch 615  loss: 0.0044 acc: 1.0000 Valid  loss: 4.6029  acc: 0.6917  f1: 0.6846
+Test  loss: 6.9725 acc: 0.5525 f1: 0.5062 time: 0.0484
+Epoch 616  loss: 0.0022 acc: 1.0000 time0.0972
+Epoch 617  loss: 0.0046 acc: 1.0000 time0.0966
+Epoch 618  loss: 0.0036 acc: 1.0000 time0.0966
+Epoch 619  loss: 0.0011 acc: 1.0000 time0.0961
+Epoch 620  loss: 0.0038 acc: 1.0000 time0.0961
+Epoch 620  loss: 0.0068 acc: 1.0000 Valid  loss: 4.7997  acc: 0.6917  f1: 0.6844
+Test  loss: 7.2074 acc: 0.5406 f1: 0.4943 time: 0.0485
+Epoch 621  loss: 0.0055 acc: 1.0000 time0.0965
+Epoch 622  loss: 0.0022 acc: 1.0000 time0.0959
+Epoch 623  loss: 0.0013 acc: 1.0000 time0.0969
+Epoch 624  loss: 0.0013 acc: 1.0000 time0.0973
+Epoch 625  loss: 0.0035 acc: 1.0000 time0.0970
+Epoch 625  loss: 0.0085 acc: 1.0000 Valid  loss: 4.9203  acc: 0.7000  f1: 0.6914
+Test  loss: 7.2858 acc: 0.5427 f1: 0.4959 time: 0.0489
+Epoch 626  loss: 0.0017 acc: 1.0000 time0.0973
+Epoch 627  loss: 0.0013 acc: 1.0000 time0.0966
+Epoch 628  loss: 0.0030 acc: 1.0000 time0.0959
+Epoch 629  loss: 0.0016 acc: 1.0000 time0.0960
+Epoch 630  loss: 0.0022 acc: 1.0000 time0.0966
+Epoch 630  loss: 0.0031 acc: 1.0000 Valid  loss: 4.8669  acc: 0.7000  f1: 0.6945
+Test  loss: 7.2260 acc: 0.5511 f1: 0.5039 time: 0.0487
+Epoch 631  loss: 0.0021 acc: 1.0000 time0.0966
+Epoch 632  loss: 0.0022 acc: 1.0000 time0.0960
+Epoch 633  loss: 0.0006 acc: 1.0000 time0.0968
+Epoch 634  loss: 0.0008 acc: 1.0000 time0.0969
+Epoch 635  loss: 0.0029 acc: 1.0000 time0.0968
+Epoch 635  loss: 0.0018 acc: 1.0000 Valid  loss: 4.8321  acc: 0.7000  f1: 0.6943
+Test  loss: 7.1672 acc: 0.5565 f1: 0.5090 time: 0.0488
+Epoch 636  loss: 0.0034 acc: 1.0000 time0.0966
+Epoch 637  loss: 0.0023 acc: 1.0000 time0.0966
+Epoch 638  loss: 0.0034 acc: 1.0000 time0.0969
+Epoch 639  loss: 0.0014 acc: 1.0000 time0.0966
+Epoch 640  loss: 0.0022 acc: 1.0000 time0.0958
+Epoch 640  loss: 0.0003 acc: 1.0000 Valid  loss: 4.7577  acc: 0.7167  f1: 0.7117
+Test  loss: 7.0949 acc: 0.5634 f1: 0.5165 time: 0.0482
+Epoch 641  loss: 0.0013 acc: 1.0000 time0.0974
+Epoch 642  loss: 0.0017 acc: 1.0000 time0.0963
+Epoch 643  loss: 0.0011 acc: 1.0000 time0.0955
+Epoch 644  loss: 0.0027 acc: 1.0000 time0.0968
+Epoch 645  loss: 0.0023 acc: 1.0000 time0.0973
+Epoch 645  loss: 0.0001 acc: 1.0000 Valid  loss: 4.8918  acc: 0.6917  f1: 0.6879
+Test  loss: 7.0997 acc: 0.5658 f1: 0.5182 time: 0.0492
+Epoch 646  loss: 0.0006 acc: 1.0000 time0.0970
+Epoch 647  loss: 0.0068 acc: 1.0000 time0.0972
+Epoch 648  loss: 0.0063 acc: 1.0000 time0.0978
+Epoch 649  loss: 0.0023 acc: 1.0000 time0.0962
+Epoch 650  loss: 0.0006 acc: 1.0000 time0.0961
+Epoch 650  loss: 0.0001 acc: 1.0000 Valid  loss: 4.9101  acc: 0.6917  f1: 0.6880
+Test  loss: 7.1316 acc: 0.5660 f1: 0.5178 time: 0.0486
+VALID: VALID ACC 0.7166666984558105  VALID F1 0.7111748282479989 EPOCH 475
+VALID: TEST ACC 0.5642507076263428 TEST F1 0.5164660980916048 EPOCH 475
+GLOBAL: TEST ACC 0.5835084319114685 TEST F1 0.5341508911384709 EPOCH 150
+Epoch 651  loss: 0.0007 acc: 1.0000 time0.0972
+Epoch 652  loss: 0.0064 acc: 1.0000 time0.0961
+Epoch 653  loss: 0.0026 acc: 1.0000 time0.0968
+Epoch 654  loss: 0.0022 acc: 1.0000 time0.0974
+Epoch 655  loss: 0.0005 acc: 1.0000 time0.0978
+Epoch 655  loss: 0.0001 acc: 1.0000 Valid  loss: 4.9404  acc: 0.6833  f1: 0.6782
+Test  loss: 7.1973 acc: 0.5685 f1: 0.5192 time: 0.0492
+Epoch 656  loss: 0.0035 acc: 1.0000 time0.0975
+Epoch 657  loss: 0.0017 acc: 1.0000 time0.0967
+Epoch 658  loss: 0.0052 acc: 1.0000 time0.0971
+Epoch 659  loss: 0.0017 acc: 1.0000 time0.0975
+Epoch 660  loss: 0.0006 acc: 1.0000 time0.0970
+Epoch 660  loss: 0.0001 acc: 1.0000 Valid  loss: 4.9635  acc: 0.7000  f1: 0.6959
+Test  loss: 7.2053 acc: 0.5665 f1: 0.5177 time: 0.0486
+Epoch 661  loss: 0.0010 acc: 1.0000 time0.0961
+Epoch 662  loss: 0.0018 acc: 1.0000 time0.0967
+Epoch 663  loss: 0.0005 acc: 1.0000 time0.0964
+Epoch 664  loss: 0.0015 acc: 1.0000 time0.0965
+Epoch 665  loss: 0.0018 acc: 1.0000 time0.0967
+Epoch 665  loss: 0.0001 acc: 1.0000 Valid  loss: 4.8642  acc: 0.7167  f1: 0.7117
+Test  loss: 7.1963 acc: 0.5653 f1: 0.5172 time: 0.0491
+Epoch 666  loss: 0.0006 acc: 1.0000 time0.0962
+Epoch 667  loss: 0.0015 acc: 1.0000 time0.0972
+Epoch 668  loss: 0.0007 acc: 1.0000 time0.0959
+Epoch 669  loss: 0.0016 acc: 1.0000 time0.0959
+Epoch 670  loss: 0.0095 acc: 0.9917 time0.0974
+Epoch 670  loss: 0.0002 acc: 1.0000 Valid  loss: 4.8711  acc: 0.7167  f1: 0.7117
+Test  loss: 7.1607 acc: 0.5678 f1: 0.5201 time: 0.0491
+Epoch 671  loss: 0.0014 acc: 1.0000 time0.0982
+Epoch 672  loss: 0.0025 acc: 1.0000 time0.0970
+Epoch 673  loss: 0.0024 acc: 1.0000 time0.0974
+Epoch 674  loss: 0.0009 acc: 1.0000 time0.0967
+Epoch 675  loss: 0.0075 acc: 0.9917 time0.0963
+Epoch 675  loss: 0.0002 acc: 1.0000 Valid  loss: 4.9606  acc: 0.7000  f1: 0.6961
+Test  loss: 7.1068 acc: 0.5742 f1: 0.5274 time: 0.0480
+Epoch 676  loss: 0.0020 acc: 1.0000 time0.0960
+Epoch 677  loss: 0.0017 acc: 1.0000 time0.0966
+Epoch 678  loss: 0.0031 acc: 1.0000 time0.0965
+Epoch 679  loss: 0.0008 acc: 1.0000 time0.0966
+Epoch 680  loss: 0.0127 acc: 0.9917 time0.0970
+Epoch 680  loss: 0.0002 acc: 1.0000 Valid  loss: 4.9932  acc: 0.6917  f1: 0.6885
+Test  loss: 7.1037 acc: 0.5770 f1: 0.5310 time: 0.0486
+Epoch 681  loss: 0.0006 acc: 1.0000 time0.0969
+Epoch 682  loss: 0.0013 acc: 1.0000 time0.0966
+Epoch 683  loss: 0.0015 acc: 1.0000 time0.0973
+Epoch 684  loss: 0.0039 acc: 1.0000 time0.0968
+Epoch 685  loss: 0.0012 acc: 1.0000 time0.0960
+Epoch 685  loss: 0.0001 acc: 1.0000 Valid  loss: 4.9930  acc: 0.6833  f1: 0.6822
+Test  loss: 7.1265 acc: 0.5769 f1: 0.5302 time: 0.0488
+Epoch 686  loss: 0.0011 acc: 1.0000 time0.0975
+Epoch 687  loss: 0.0009 acc: 1.0000 time0.0957
+Epoch 688  loss: 0.0215 acc: 0.9917 time0.0971
+Epoch 689  loss: 0.0004 acc: 1.0000 time0.0980
+Epoch 690  loss: 0.0011 acc: 1.0000 time0.0965
+Epoch 690  loss: 0.0008 acc: 1.0000 Valid  loss: 4.8341  acc: 0.7167  f1: 0.7138
+Test  loss: 7.1393 acc: 0.5721 f1: 0.5250 time: 0.0485
+Epoch 691  loss: 0.0013 acc: 1.0000 time0.0973
+Epoch 692  loss: 0.0034 acc: 1.0000 time0.0973
+Epoch 693  loss: 0.0027 acc: 1.0000 time0.0973
+Epoch 694  loss: 0.0085 acc: 0.9917 time0.0971
+Epoch 695  loss: 0.0221 acc: 0.9833 time0.0956
+Epoch 695  loss: 0.0010 acc: 1.0000 Valid  loss: 5.0699  acc: 0.7083  f1: 0.7059
+Test  loss: 7.2186 acc: 0.5700 f1: 0.5223 time: 0.0481
+Epoch 696  loss: 0.0036 acc: 1.0000 time0.0967
+Epoch 697  loss: 0.0008 acc: 1.0000 time0.0965
+Epoch 698  loss: 0.0012 acc: 1.0000 time0.0973
+Epoch 699  loss: 0.0053 acc: 1.0000 time0.0965
+Epoch 700  loss: 0.0051 acc: 1.0000 time0.0969
+Epoch 700  loss: 0.0001 acc: 1.0000 Valid  loss: 5.0860  acc: 0.7000  f1: 0.6981
+Test  loss: 7.3008 acc: 0.5707 f1: 0.5221 time: 0.0493
+VALID: VALID ACC 0.7166666984558105  VALID F1 0.7111748282479989 EPOCH 475
+VALID: TEST ACC 0.5642507076263428 TEST F1 0.5164660980916048 EPOCH 475
+GLOBAL: TEST ACC 0.5835084319114685 TEST F1 0.5341508911384709 EPOCH 150
+Epoch 701  loss: 0.0015 acc: 1.0000 time0.0968
+Epoch 702  loss: 0.0021 acc: 1.0000 time0.0966
+Epoch 703  loss: 0.0018 acc: 1.0000 time0.0959
+Epoch 704  loss: 0.0043 acc: 1.0000 time0.0965
+Epoch 705  loss: 0.0014 acc: 1.0000 time0.0972
+Epoch 705  loss: 0.0002 acc: 1.0000 Valid  loss: 5.0395  acc: 0.7000  f1: 0.6991
+Test  loss: 7.3760 acc: 0.5679 f1: 0.5192 time: 0.0489
+Epoch 706  loss: 0.0058 acc: 1.0000 time0.0967
+Epoch 707  loss: 0.0076 acc: 1.0000 time0.0974
+Epoch 708  loss: 0.0023 acc: 1.0000 time0.0974
+Epoch 709  loss: 0.0039 acc: 1.0000 time0.0972
+Epoch 710  loss: 0.0007 acc: 1.0000 time0.0965
+Epoch 710  loss: 0.0006 acc: 1.0000 Valid  loss: 5.2040  acc: 0.7167  f1: 0.7130
+Test  loss: 7.4585 acc: 0.5579 f1: 0.5102 time: 0.0482
+Epoch 711  loss: 0.0006 acc: 1.0000 time0.0984
+Epoch 712  loss: 0.0042 acc: 1.0000 time0.0963
+Epoch 713  loss: 0.0029 acc: 1.0000 time0.0968
+Epoch 714  loss: 0.0011 acc: 1.0000 time0.0970
+Epoch 715  loss: 0.0022 acc: 1.0000 time0.0978
+Epoch 715  loss: 0.0017 acc: 1.0000 Valid  loss: 5.4049  acc: 0.7000  f1: 0.6916
+Test  loss: 7.6136 acc: 0.5518 f1: 0.5051 time: 0.0495
+Epoch 716  loss: 0.0010 acc: 1.0000 time0.0975
+Epoch 717  loss: 0.0022 acc: 1.0000 time0.0970
+Epoch 718  loss: 0.0014 acc: 1.0000 time0.0981
+Epoch 719  loss: 0.0046 acc: 1.0000 time0.0980
+Epoch 720  loss: 0.0096 acc: 0.9917 time0.0971
+Epoch 720  loss: 0.0021 acc: 1.0000 Valid  loss: 5.4441  acc: 0.7000  f1: 0.6922
+Test  loss: 7.6587 acc: 0.5490 f1: 0.5023 time: 0.0489
+Epoch 721  loss: 0.0024 acc: 1.0000 time0.0968
+Epoch 722  loss: 0.0032 acc: 1.0000 time0.0969
+Epoch 723  loss: 0.0014 acc: 1.0000 time0.0969
+Epoch 724  loss: 0.0007 acc: 1.0000 time0.0973
+Epoch 725  loss: 0.0016 acc: 1.0000 time0.0960
+Epoch 725  loss: 0.0011 acc: 1.0000 Valid  loss: 5.1953  acc: 0.7000  f1: 0.6983
+Test  loss: 7.5217 acc: 0.5597 f1: 0.5122 time: 0.0485
+Epoch 726  loss: 0.0035 acc: 1.0000 time0.0965
+Epoch 727  loss: 0.0013 acc: 1.0000 time0.0962
+Epoch 728  loss: 0.0014 acc: 1.0000 time0.0973
+Epoch 729  loss: 0.0024 acc: 1.0000 time0.0973
+Epoch 730  loss: 0.0051 acc: 1.0000 time0.0968
+Epoch 730  loss: 0.0002 acc: 1.0000 Valid  loss: 5.1390  acc: 0.7083  f1: 0.7064
+Test  loss: 7.4354 acc: 0.5688 f1: 0.5217 time: 0.0487
+Epoch 731  loss: 0.0062 acc: 1.0000 time0.0971
+Epoch 732  loss: 0.0011 acc: 1.0000 time0.0972
+Epoch 733  loss: 0.0008 acc: 1.0000 time0.0973
+Epoch 734  loss: 0.0008 acc: 1.0000 time0.0967
+Epoch 735  loss: 0.0009 acc: 1.0000 time0.0966
+Epoch 735  loss: 0.0000 acc: 1.0000 Valid  loss: 5.1752  acc: 0.6833  f1: 0.6822
+Test  loss: 7.4968 acc: 0.5707 f1: 0.5231 time: 0.0486
+Epoch 736  loss: 0.0005 acc: 1.0000 time0.0981
+Epoch 737  loss: 0.0053 acc: 1.0000 time0.0963
+Epoch 738  loss: 0.0005 acc: 1.0000 time0.0973
+Epoch 739  loss: 0.0013 acc: 1.0000 time0.0977
+Epoch 740  loss: 0.0007 acc: 1.0000 time0.0974
+Epoch 740  loss: 0.0000 acc: 1.0000 Valid  loss: 5.0070  acc: 0.6917  f1: 0.6896
+Test  loss: 7.4823 acc: 0.5716 f1: 0.5246 time: 0.0487
+Epoch 741  loss: 0.0020 acc: 1.0000 time0.0974
+Epoch 742  loss: 0.0048 acc: 1.0000 time0.0974
+Epoch 743  loss: 0.0008 acc: 1.0000 time0.0967
+Epoch 744  loss: 0.0007 acc: 1.0000 time0.0976
+Epoch 745  loss: 0.0015 acc: 1.0000 time0.0973
+Epoch 745  loss: 0.0002 acc: 1.0000 Valid  loss: 4.9916  acc: 0.7000  f1: 0.6976
+Test  loss: 7.4230 acc: 0.5734 f1: 0.5277 time: 0.0488
+Epoch 746  loss: 0.0004 acc: 1.0000 time0.0970
+Epoch 747  loss: 0.0006 acc: 1.0000 time0.0963
+Epoch 748  loss: 0.0012 acc: 1.0000 time0.0972
+Epoch 749  loss: 0.0024 acc: 1.0000 time0.0971
+Epoch 750  loss: 0.0012 acc: 1.0000 time0.0970
+Epoch 750  loss: 0.0006 acc: 1.0000 Valid  loss: 5.0936  acc: 0.7083  f1: 0.7055
+Test  loss: 7.4577 acc: 0.5730 f1: 0.5267 time: 0.0487
+VALID: VALID ACC 0.7166666984558105  VALID F1 0.7111748282479989 EPOCH 475
+VALID: TEST ACC 0.5642507076263428 TEST F1 0.5164660980916048 EPOCH 475
+GLOBAL: TEST ACC 0.5835084319114685 TEST F1 0.5341508911384709 EPOCH 150
+Epoch 751  loss: 0.0013 acc: 1.0000 time0.0971
+Epoch 752  loss: 0.0009 acc: 1.0000 time0.0976
+Epoch 753  loss: 0.0007 acc: 1.0000 time0.0964
+Epoch 754  loss: 0.0036 acc: 1.0000 time0.0966
+Epoch 755  loss: 0.0012 acc: 1.0000 time0.0976
+Epoch 755  loss: 0.0015 acc: 1.0000 Valid  loss: 5.2692  acc: 0.7000  f1: 0.6978
+Test  loss: 7.5112 acc: 0.5706 f1: 0.5236 time: 0.0495
+Epoch 756  loss: 0.0018 acc: 1.0000 time0.0961
+Epoch 757  loss: 0.0019 acc: 1.0000 time0.0969
+Epoch 758  loss: 0.0005 acc: 1.0000 time0.0978
+Epoch 759  loss: 0.0009 acc: 1.0000 time0.0976
+Epoch 760  loss: 0.0003 acc: 1.0000 time0.0971
+Epoch 760  loss: 0.0026 acc: 1.0000 Valid  loss: 5.2607  acc: 0.7083  f1: 0.7050
+Test  loss: 7.5037 acc: 0.5713 f1: 0.5251 time: 0.0488
+Epoch 761  loss: 0.0008 acc: 1.0000 time0.0957
+Epoch 762  loss: 0.0007 acc: 1.0000 time0.0960
+Epoch 763  loss: 0.0015 acc: 1.0000 time0.0963
+Epoch 764  loss: 0.0143 acc: 0.9917 time0.0970
+Epoch 765  loss: 0.0009 acc: 1.0000 time0.0974
+Epoch 765  loss: 0.0005 acc: 1.0000 Valid  loss: 5.1685  acc: 0.7000  f1: 0.6981
+Test  loss: 7.4489 acc: 0.5692 f1: 0.5221 time: 0.0488
+Epoch 766  loss: 0.0022 acc: 1.0000 time0.0970
+Epoch 767  loss: 0.0023 acc: 1.0000 time0.0969
+Epoch 768  loss: 0.0009 acc: 1.0000 time0.0969
+Epoch 769  loss: 0.0007 acc: 1.0000 time0.0961
+Epoch 770  loss: 0.0016 acc: 1.0000 time0.0966
+Epoch 770  loss: 0.0000 acc: 1.0000 Valid  loss: 5.1566  acc: 0.7083  f1: 0.7084
+Test  loss: 7.4685 acc: 0.5760 f1: 0.5301 time: 0.0485
+Epoch 771  loss: 0.0028 acc: 1.0000 time0.0979
+Epoch 772  loss: 0.0084 acc: 0.9917 time0.0963
+Epoch 773  loss: 0.0008 acc: 1.0000 time0.0968
+Epoch 774  loss: 0.0036 acc: 1.0000 time0.0974
+Epoch 775  loss: 0.0011 acc: 1.0000 time0.0978
+Epoch 775  loss: 0.0000 acc: 1.0000 Valid  loss: 5.2059  acc: 0.6917  f1: 0.6920
+Test  loss: 7.5242 acc: 0.5767 f1: 0.5298 time: 0.0491
+Epoch 776  loss: 0.0005 acc: 1.0000 time0.0969
+Epoch 777  loss: 0.0013 acc: 1.0000 time0.0978
+Epoch 778  loss: 0.0039 acc: 1.0000 time0.0971
+Epoch 779  loss: 0.0238 acc: 0.9917 time0.0966
+Epoch 780  loss: 0.0006 acc: 1.0000 time0.0968
+Epoch 780  loss: 0.0000 acc: 1.0000 Valid  loss: 5.2346  acc: 0.6833  f1: 0.6814
+Test  loss: 7.6319 acc: 0.5741 f1: 0.5257 time: 0.0488
+Epoch 781  loss: 0.0031 acc: 1.0000 time0.0969
+Epoch 782  loss: 0.0003 acc: 1.0000 time0.0962
+Epoch 783  loss: 0.0023 acc: 1.0000 time0.0972
+Epoch 784  loss: 0.0022 acc: 1.0000 time0.0973
+Epoch 785  loss: 0.0005 acc: 1.0000 time0.0975
+Epoch 785  loss: 0.0000 acc: 1.0000 Valid  loss: 5.2712  acc: 0.6833  f1: 0.6757
+Test  loss: 7.8332 acc: 0.5653 f1: 0.5137 time: 0.0492
+Epoch 786  loss: 0.0045 acc: 1.0000 time0.0974
+Epoch 787  loss: 0.0018 acc: 1.0000 time0.0972
+Epoch 788  loss: 0.0004 acc: 1.0000 time0.0963
+Epoch 789  loss: 0.0020 acc: 1.0000 time0.0967
+Epoch 790  loss: 0.0030 acc: 1.0000 time0.0970
+Epoch 790  loss: 0.0001 acc: 1.0000 Valid  loss: 5.3607  acc: 0.6667  f1: 0.6606
+Test  loss: 7.9078 acc: 0.5611 f1: 0.5094 time: 0.0490
+Epoch 791  loss: 0.0016 acc: 1.0000 time0.0987
+Epoch 792  loss: 0.0021 acc: 1.0000 time0.0972
+Epoch 793  loss: 0.0014 acc: 1.0000 time0.0982
+Epoch 794  loss: 0.0017 acc: 1.0000 time0.0973
+Epoch 795  loss: 0.0047 acc: 1.0000 time0.0970
+Epoch 795  loss: 0.0001 acc: 1.0000 Valid  loss: 5.3213  acc: 0.6750  f1: 0.6662
+Test  loss: 7.8831 acc: 0.5599 f1: 0.5095 time: 0.0488
+Epoch 796  loss: 0.0009 acc: 1.0000 time0.0965
+Epoch 797  loss: 0.0021 acc: 1.0000 time0.0967
+Epoch 798  loss: 0.0015 acc: 1.0000 time0.0969
+Epoch 799  loss: 0.0018 acc: 1.0000 time0.0972
+Epoch 800  loss: 0.0013 acc: 1.0000 time0.0975
+Epoch 800  loss: 0.0001 acc: 1.0000 Valid  loss: 5.1622  acc: 0.7000  f1: 0.6929
+Test  loss: 7.8387 acc: 0.5569 f1: 0.5094 time: 0.0491
+VALID: VALID ACC 0.7166666984558105  VALID F1 0.7111748282479989 EPOCH 475
+VALID: TEST ACC 0.5642507076263428 TEST F1 0.5164660980916048 EPOCH 475
+GLOBAL: TEST ACC 0.5835084319114685 TEST F1 0.5341508911384709 EPOCH 150
+Epoch 801  loss: 0.0002 acc: 1.0000 time0.0975
+Epoch 802  loss: 0.0005 acc: 1.0000 time0.0974
+Epoch 803  loss: 0.0009 acc: 1.0000 time0.0972
+Epoch 804  loss: 0.0004 acc: 1.0000 time0.0966
+Epoch 805  loss: 0.0007 acc: 1.0000 time0.0967
+Epoch 805  loss: 0.0001 acc: 1.0000 Valid  loss: 5.1097  acc: 0.7083  f1: 0.7021
+Test  loss: 7.8002 acc: 0.5597 f1: 0.5132 time: 0.0491
+Epoch 806  loss: 0.0020 acc: 1.0000 time0.0972
+Epoch 807  loss: 0.0010 acc: 1.0000 time0.0973
+Epoch 808  loss: 0.0017 acc: 1.0000 time0.0972
+Epoch 809  loss: 0.0008 acc: 1.0000 time0.0960
+Epoch 810  loss: 0.0019 acc: 1.0000 time0.0973
+Epoch 810  loss: 0.0001 acc: 1.0000 Valid  loss: 5.0527  acc: 0.6917  f1: 0.6863
+Test  loss: 7.6352 acc: 0.5690 f1: 0.5224 time: 0.0494
+Epoch 811  loss: 0.0009 acc: 1.0000 time0.0965
+Epoch 812  loss: 0.0003 acc: 1.0000 time0.0969
+Epoch 813  loss: 0.0005 acc: 1.0000 time0.0973
+Epoch 814  loss: 0.0008 acc: 1.0000 time0.0976
+Epoch 815  loss: 0.0010 acc: 1.0000 time0.0970
+Epoch 815  loss: 0.0001 acc: 1.0000 Valid  loss: 5.1073  acc: 0.7000  f1: 0.6991
+Test  loss: 7.4879 acc: 0.5774 f1: 0.5307 time: 0.0490
+Epoch 816  loss: 0.0005 acc: 1.0000 time0.0972
+Epoch 817  loss: 0.0007 acc: 1.0000 time0.0972
+Epoch 818  loss: 0.0013 acc: 1.0000 time0.0969
+Epoch 819  loss: 0.0007 acc: 1.0000 time0.0967
+Epoch 820  loss: 0.0013 acc: 1.0000 time0.0965
+Epoch 820  loss: 0.0001 acc: 1.0000 Valid  loss: 5.2038  acc: 0.6917  f1: 0.6933
+Test  loss: 7.4326 acc: 0.5742 f1: 0.5276 time: 0.0489
+Epoch 821  loss: 0.0019 acc: 1.0000 time0.0974
+Epoch 822  loss: 0.0027 acc: 1.0000 time0.0962
+Epoch 823  loss: 0.0006 acc: 1.0000 time0.0968
+Epoch 824  loss: 0.0008 acc: 1.0000 time0.0974
+Epoch 825  loss: 0.0016 acc: 1.0000 time0.0974
+Epoch 825  loss: 0.0001 acc: 1.0000 Valid  loss: 5.1544  acc: 0.7000  f1: 0.7005
+Test  loss: 7.4162 acc: 0.5763 f1: 0.5297 time: 0.0486
+Epoch 826  loss: 0.0016 acc: 1.0000 time0.0976
+Epoch 827  loss: 0.0006 acc: 1.0000 time0.0967
+Epoch 828  loss: 0.0016 acc: 1.0000 time0.0958
+Epoch 829  loss: 0.0009 acc: 1.0000 time0.0970
+Epoch 830  loss: 0.0017 acc: 1.0000 time0.0976
+Epoch 830  loss: 0.0001 acc: 1.0000 Valid  loss: 5.1057  acc: 0.7000  f1: 0.7005
+Test  loss: 7.4449 acc: 0.5748 f1: 0.5283 time: 0.0485
+Epoch 831  loss: 0.0043 acc: 1.0000 time0.0985
+Epoch 832  loss: 0.0010 acc: 1.0000 time0.0975
+Epoch 833  loss: 0.0019 acc: 1.0000 time0.0983
+Epoch 834  loss: 0.0002 acc: 1.0000 time0.0978
+Epoch 835  loss: 0.0005 acc: 1.0000 time0.0975
+Epoch 835  loss: 0.0000 acc: 1.0000 Valid  loss: 5.1011  acc: 0.7000  f1: 0.6991
+Test  loss: 7.5346 acc: 0.5749 f1: 0.5276 time: 0.0490
+Epoch 836  loss: 0.0007 acc: 1.0000 time0.0980
+Epoch 837  loss: 0.0024 acc: 1.0000 time0.0980
+Epoch 838  loss: 0.0005 acc: 1.0000 time0.0972
+Epoch 839  loss: 0.0024 acc: 1.0000 time0.0966
+Epoch 840  loss: 0.0009 acc: 1.0000 time0.0961
+Epoch 840  loss: 0.0000 acc: 1.0000 Valid  loss: 5.1937  acc: 0.6917  f1: 0.6893
+Test  loss: 7.5660 acc: 0.5734 f1: 0.5256 time: 0.0487
+Epoch 841  loss: 0.0010 acc: 1.0000 time0.0969
+Epoch 842  loss: 0.0006 acc: 1.0000 time0.0969
+Epoch 843  loss: 0.0024 acc: 1.0000 time0.0976
+Epoch 844  loss: 0.0007 acc: 1.0000 time0.0980
+Epoch 845  loss: 0.0008 acc: 1.0000 time0.0970
+Epoch 845  loss: 0.0000 acc: 1.0000 Valid  loss: 5.2302  acc: 0.7000  f1: 0.6985
+Test  loss: 7.5397 acc: 0.5749 f1: 0.5274 time: 0.0486
+Epoch 846  loss: 0.0005 acc: 1.0000 time0.0981
+Epoch 847  loss: 0.0043 acc: 1.0000 time0.0981
+Epoch 848  loss: 0.0005 acc: 1.0000 time0.0975
+Epoch 849  loss: 0.0020 acc: 1.0000 time0.0977
+Epoch 850  loss: 0.0005 acc: 1.0000 time0.0978
+Epoch 850  loss: 0.0000 acc: 1.0000 Valid  loss: 5.2361  acc: 0.7000  f1: 0.6996
+Test  loss: 7.5170 acc: 0.5732 f1: 0.5258 time: 0.0486
+VALID: VALID ACC 0.7166666984558105  VALID F1 0.7111748282479989 EPOCH 475
+VALID: TEST ACC 0.5642507076263428 TEST F1 0.5164660980916048 EPOCH 475
+GLOBAL: TEST ACC 0.5835084319114685 TEST F1 0.5341508911384709 EPOCH 150
+Epoch 851  loss: 0.0029 acc: 1.0000 time0.0970
+Epoch 852  loss: 0.0012 acc: 1.0000 time0.0972
+Epoch 853  loss: 0.0007 acc: 1.0000 time0.0977
+Epoch 854  loss: 0.0010 acc: 1.0000 time0.0967
+Epoch 855  loss: 0.0004 acc: 1.0000 time0.0968
+Epoch 855  loss: 0.0000 acc: 1.0000 Valid  loss: 5.2335  acc: 0.7000  f1: 0.6996
+Test  loss: 7.4778 acc: 0.5737 f1: 0.5271 time: 0.0486
+Epoch 856  loss: 0.0029 acc: 1.0000 time0.0988
+Epoch 857  loss: 0.0009 acc: 1.0000 time0.0963
+Epoch 858  loss: 0.0006 acc: 1.0000 time0.0967
+Epoch 859  loss: 0.0032 acc: 1.0000 time0.0977
+Epoch 860  loss: 0.0012 acc: 1.0000 time0.0974
+Epoch 860  loss: 0.0000 acc: 1.0000 Valid  loss: 5.2653  acc: 0.7000  f1: 0.7004
+Test  loss: 7.4783 acc: 0.5737 f1: 0.5276 time: 0.0494
+Epoch 861  loss: 0.0045 acc: 1.0000 time0.0964
+Epoch 862  loss: 0.0006 acc: 1.0000 time0.0969
+Epoch 863  loss: 0.0012 acc: 1.0000 time0.0975
+Epoch 864  loss: 0.0017 acc: 1.0000 time0.0968
+Epoch 865  loss: 0.0020 acc: 1.0000 time0.0964
+Epoch 865  loss: 0.0001 acc: 1.0000 Valid  loss: 5.2537  acc: 0.7000  f1: 0.7000
+Test  loss: 7.4275 acc: 0.5742 f1: 0.5295 time: 0.0497
+Epoch 866  loss: 0.0008 acc: 1.0000 time0.0967
+Epoch 867  loss: 0.0017 acc: 1.0000 time0.0973
+Epoch 868  loss: 0.0007 acc: 1.0000 time0.0991
+Epoch 869  loss: 0.0007 acc: 1.0000 time0.1007
+Epoch 870  loss: 0.0009 acc: 1.0000 time0.1015
+Epoch 870  loss: 0.0001 acc: 1.0000 Valid  loss: 5.1904  acc: 0.7000  f1: 0.7008
+Test  loss: 7.4127 acc: 0.5737 f1: 0.5284 time: 0.0504
+Epoch 871  loss: 0.0009 acc: 1.0000 time0.1032
+Epoch 872  loss: 0.0007 acc: 1.0000 time0.1032
+Epoch 873  loss: 0.0003 acc: 1.0000 time0.1032
+Epoch 874  loss: 0.0008 acc: 1.0000 time0.1021
+Epoch 875  loss: 0.0005 acc: 1.0000 time0.1017
+Epoch 875  loss: 0.0002 acc: 1.0000 Valid  loss: 5.1423  acc: 0.7000  f1: 0.7005
+Test  loss: 7.4395 acc: 0.5744 f1: 0.5287 time: 0.0500
+Epoch 876  loss: 0.0006 acc: 1.0000 time0.1008
+Epoch 877  loss: 0.0003 acc: 1.0000 time0.0990
+Epoch 878  loss: 0.0011 acc: 1.0000 time0.0992
+Epoch 879  loss: 0.0005 acc: 1.0000 time0.0986
+Epoch 880  loss: 0.0024 acc: 1.0000 time0.0983
+Epoch 880  loss: 0.0002 acc: 1.0000 Valid  loss: 5.0342  acc: 0.7083  f1: 0.7074
+Test  loss: 7.4827 acc: 0.5742 f1: 0.5283 time: 0.0492
+Epoch 881  loss: 0.0005 acc: 1.0000 time0.0979
+Epoch 882  loss: 0.0007 acc: 1.0000 time0.0974
+Epoch 883  loss: 0.0017 acc: 1.0000 time0.0974
+Epoch 884  loss: 0.0008 acc: 1.0000 time0.0979
+Epoch 885  loss: 0.0016 acc: 1.0000 time0.0975
+Epoch 885  loss: 0.0001 acc: 1.0000 Valid  loss: 5.0615  acc: 0.7083  f1: 0.7069
+Test  loss: 7.5390 acc: 0.5721 f1: 0.5269 time: 0.0497
+Epoch 886  loss: 0.0006 acc: 1.0000 time0.0966
+Epoch 887  loss: 0.0009 acc: 1.0000 time0.0974
+Epoch 888  loss: 0.0004 acc: 1.0000 time0.0976
+Epoch 889  loss: 0.0006 acc: 1.0000 time0.0971
+Epoch 890  loss: 0.0008 acc: 1.0000 time0.0973
+Epoch 890  loss: 0.0001 acc: 1.0000 Valid  loss: 5.1099  acc: 0.7083  f1: 0.7061
+Test  loss: 7.5734 acc: 0.5725 f1: 0.5273 time: 0.0488
+Epoch 891  loss: 0.0003 acc: 1.0000 time0.0966
+Epoch 892  loss: 0.0010 acc: 1.0000 time0.0966
+Epoch 893  loss: 0.0008 acc: 1.0000 time0.0967
+Epoch 894  loss: 0.0004 acc: 1.0000 time0.0967
+Epoch 895  loss: 0.0004 acc: 1.0000 time0.0976
+Epoch 895  loss: 0.0000 acc: 1.0000 Valid  loss: 5.1336  acc: 0.7083  f1: 0.7061
+Test  loss: 7.6027 acc: 0.5730 f1: 0.5274 time: 0.0491
+Epoch 896  loss: 0.0019 acc: 1.0000 time0.0969
+Epoch 897  loss: 0.0011 acc: 1.0000 time0.0977
+Epoch 898  loss: 0.0003 acc: 1.0000 time0.0982
+Epoch 899  loss: 0.0004 acc: 1.0000 time0.0969
+Epoch 900  loss: 0.0007 acc: 1.0000 time0.0972
+Epoch 900  loss: 0.0000 acc: 1.0000 Valid  loss: 5.1611  acc: 0.7083  f1: 0.7061
+Test  loss: 7.6036 acc: 0.5723 f1: 0.5267 time: 0.0486
+VALID: VALID ACC 0.7166666984558105  VALID F1 0.7111748282479989 EPOCH 475
+VALID: TEST ACC 0.5642507076263428 TEST F1 0.5164660980916048 EPOCH 475
+GLOBAL: TEST ACC 0.5835084319114685 TEST F1 0.5341508911384709 EPOCH 150
+Epoch 901  loss: 0.0005 acc: 1.0000 time0.0974
+Epoch 902  loss: 0.0005 acc: 1.0000 time0.0964
+Epoch 903  loss: 0.0011 acc: 1.0000 time0.0970
+Epoch 904  loss: 0.0002 acc: 1.0000 time0.0970
+Epoch 905  loss: 0.0010 acc: 1.0000 time0.0972
+Epoch 905  loss: 0.0001 acc: 1.0000 Valid  loss: 5.1402  acc: 0.7083  f1: 0.7061
+Test  loss: 7.6239 acc: 0.5723 f1: 0.5266 time: 0.0489
+Epoch 906  loss: 0.0003 acc: 1.0000 time0.0975
+Epoch 907  loss: 0.0004 acc: 1.0000 time0.0968
+Epoch 908  loss: 0.0012 acc: 1.0000 time0.0973
+Epoch 909  loss: 0.0003 acc: 1.0000 time0.0976
+Epoch 910  loss: 0.0003 acc: 1.0000 time0.0972
+Epoch 910  loss: 0.0001 acc: 1.0000 Valid  loss: 5.1297  acc: 0.7083  f1: 0.7061
+Test  loss: 7.6398 acc: 0.5713 f1: 0.5256 time: 0.0490
+Epoch 911  loss: 0.0016 acc: 1.0000 time0.0980
+Epoch 912  loss: 0.0005 acc: 1.0000 time0.0979
+Epoch 913  loss: 0.0007 acc: 1.0000 time0.0987
+Epoch 914  loss: 0.0007 acc: 1.0000 time0.0994
+Epoch 915  loss: 0.0010 acc: 1.0000 time0.0996
+Epoch 915  loss: 0.0000 acc: 1.0000 Valid  loss: 5.1340  acc: 0.7083  f1: 0.7061
+Test  loss: 7.6521 acc: 0.5716 f1: 0.5256 time: 0.0498
+Epoch 916  loss: 0.0003 acc: 1.0000 time0.0995
+Epoch 917  loss: 0.0007 acc: 1.0000 time0.0999
+Epoch 918  loss: 0.0003 acc: 1.0000 time0.1000
+Epoch 919  loss: 0.0008 acc: 1.0000 time0.0992
+Epoch 920  loss: 0.0004 acc: 1.0000 time0.1002
+Epoch 920  loss: 0.0000 acc: 1.0000 Valid  loss: 5.1272  acc: 0.7083  f1: 0.7061
+Test  loss: 7.6552 acc: 0.5711 f1: 0.5252 time: 0.0494
+Epoch 921  loss: 0.0002 acc: 1.0000 time0.0971
+Epoch 922  loss: 0.0003 acc: 1.0000 time0.0974
+Epoch 923  loss: 0.0005 acc: 1.0000 time0.0979
+Epoch 924  loss: 0.0006 acc: 1.0000 time0.0976
+Epoch 925  loss: 0.0003 acc: 1.0000 time0.0973
+Epoch 925  loss: 0.0001 acc: 1.0000 Valid  loss: 5.1211  acc: 0.7083  f1: 0.7061
+Test  loss: 7.6414 acc: 0.5714 f1: 0.5257 time: 0.0491
+Epoch 926  loss: 0.0005 acc: 1.0000 time0.0975
+Epoch 927  loss: 0.0006 acc: 1.0000 time0.0969
+Epoch 928  loss: 0.0004 acc: 1.0000 time0.0977
+Epoch 929  loss: 0.0009 acc: 1.0000 time0.0985
+Epoch 930  loss: 0.0003 acc: 1.0000 time0.0991
+Epoch 930  loss: 0.0001 acc: 1.0000 Valid  loss: 5.1091  acc: 0.7083  f1: 0.7057
+Test  loss: 7.6260 acc: 0.5702 f1: 0.5244 time: 0.0498
+Epoch 931  loss: 0.0002 acc: 1.0000 time0.0999
+Epoch 932  loss: 0.0018 acc: 1.0000 time0.0993
+Epoch 933  loss: 0.0011 acc: 1.0000 time0.0989
+Epoch 934  loss: 0.0004 acc: 1.0000 time0.0992
+Epoch 935  loss: 0.0009 acc: 1.0000 time0.0981
+Epoch 935  loss: 0.0001 acc: 1.0000 Valid  loss: 5.1046  acc: 0.7083  f1: 0.7055
+Test  loss: 7.6187 acc: 0.5725 f1: 0.5267 time: 0.0493
+Epoch 936  loss: 0.0004 acc: 1.0000 time0.0981
+Epoch 937  loss: 0.0008 acc: 1.0000 time0.0985
+Epoch 938  loss: 0.0003 acc: 1.0000 time0.0971
+Epoch 939  loss: 0.0014 acc: 1.0000 time0.0971
+Epoch 940  loss: 0.0005 acc: 1.0000 time0.0974
+Epoch 940  loss: 0.0001 acc: 1.0000 Valid  loss: 5.1033  acc: 0.7083  f1: 0.7061
+Test  loss: 7.6133 acc: 0.5711 f1: 0.5253 time: 0.0492
+Epoch 941  loss: 0.0010 acc: 1.0000 time0.0979
+Epoch 942  loss: 0.0002 acc: 1.0000 time0.0971
+Epoch 943  loss: 0.0004 acc: 1.0000 time0.0980
+Epoch 944  loss: 0.0010 acc: 1.0000 time0.0971
+Epoch 945  loss: 0.0024 acc: 1.0000 time0.0979
+Epoch 945  loss: 0.0000 acc: 1.0000 Valid  loss: 5.2199  acc: 0.7000  f1: 0.6991
+Test  loss: 7.5686 acc: 0.5741 f1: 0.5284 time: 0.0499
+Epoch 946  loss: 0.0010 acc: 1.0000 time0.0985
+Epoch 947  loss: 0.0012 acc: 1.0000 time0.0989
+Epoch 948  loss: 0.0011 acc: 1.0000 time0.0989
+Epoch 949  loss: 0.0013 acc: 1.0000 time0.0981
+Epoch 950  loss: 0.0015 acc: 1.0000 time0.0979
+Epoch 950  loss: 0.0000 acc: 1.0000 Valid  loss: 5.3525  acc: 0.6917  f1: 0.6933
+Test  loss: 7.5312 acc: 0.5756 f1: 0.5301 time: 0.0491
+VALID: VALID ACC 0.7166666984558105  VALID F1 0.7111748282479989 EPOCH 475
+VALID: TEST ACC 0.5642507076263428 TEST F1 0.5164660980916048 EPOCH 475
+GLOBAL: TEST ACC 0.5835084319114685 TEST F1 0.5341508911384709 EPOCH 150
+Epoch 951  loss: 0.0008 acc: 1.0000 time0.0987
+Epoch 952  loss: 0.0034 acc: 1.0000 time0.0983
+Epoch 953  loss: 0.0016 acc: 1.0000 time0.0972
+Epoch 954  loss: 0.0007 acc: 1.0000 time0.0974
+Epoch 955  loss: 0.0006 acc: 1.0000 time0.0977
+Epoch 955  loss: 0.0000 acc: 1.0000 Valid  loss: 5.3656  acc: 0.6917  f1: 0.6933
+Test  loss: 7.5555 acc: 0.5765 f1: 0.5304 time: 0.0499
+Epoch 956  loss: 0.0001 acc: 1.0000 time0.0969
+Epoch 957  loss: 0.0008 acc: 1.0000 time0.0976
+Epoch 958  loss: 0.0004 acc: 1.0000 time0.0980
+Epoch 959  loss: 0.0033 acc: 1.0000 time0.0981
+Epoch 960  loss: 0.0003 acc: 1.0000 time0.0965
+Epoch 960  loss: 0.0000 acc: 1.0000 Valid  loss: 5.3034  acc: 0.7000  f1: 0.7005
+Test  loss: 7.5476 acc: 0.5758 f1: 0.5290 time: 0.0488
+Epoch 961  loss: 0.0002 acc: 1.0000 time0.0963
+Epoch 962  loss: 0.0004 acc: 1.0000 time0.0973
+Epoch 963  loss: 0.0003 acc: 1.0000 time0.0972
+Epoch 964  loss: 0.0006 acc: 1.0000 time0.0978
+Epoch 965  loss: 0.0005 acc: 1.0000 time0.0980
+Epoch 965  loss: 0.0001 acc: 1.0000 Valid  loss: 5.2426  acc: 0.7000  f1: 0.7005
+Test  loss: 7.5610 acc: 0.5749 f1: 0.5281 time: 0.0496
+Epoch 966  loss: 0.0006 acc: 1.0000 time0.0984
+Epoch 967  loss: 0.0040 acc: 1.0000 time0.0982
+Epoch 968  loss: 0.0010 acc: 1.0000 time0.0976
+Epoch 969  loss: 0.0008 acc: 1.0000 time0.0990
+Epoch 970  loss: 0.0004 acc: 1.0000 time0.0997
+Epoch 970  loss: 0.0001 acc: 1.0000 Valid  loss: 5.2472  acc: 0.7083  f1: 0.7089
+Test  loss: 7.6439 acc: 0.5734 f1: 0.5259 time: 0.0505
+Epoch 971  loss: 0.0010 acc: 1.0000 time0.1012
+Epoch 972  loss: 0.0011 acc: 1.0000 time0.1010
+Epoch 973  loss: 0.0008 acc: 1.0000 time0.1012
+Epoch 974  loss: 0.0004 acc: 1.0000 time0.1002
+Epoch 975  loss: 0.0016 acc: 1.0000 time0.1007
+Epoch 975  loss: 0.0000 acc: 1.0000 Valid  loss: 5.2686  acc: 0.7083  f1: 0.7079
+Test  loss: 7.7057 acc: 0.5718 f1: 0.5244 time: 0.0498
+Epoch 976  loss: 0.0010 acc: 1.0000 time0.0998
+Epoch 977  loss: 0.0005 acc: 1.0000 time0.1011
+Epoch 978  loss: 0.0006 acc: 1.0000 time0.1005
+Epoch 979  loss: 0.0004 acc: 1.0000 time0.1006
+Epoch 980  loss: 0.0008 acc: 1.0000 time0.1000
+Epoch 980  loss: 0.0001 acc: 1.0000 Valid  loss: 5.2915  acc: 0.7083  f1: 0.7080
+Test  loss: 7.7210 acc: 0.5718 f1: 0.5237 time: 0.0497
+Epoch 981  loss: 0.0014 acc: 1.0000 time0.0976
+Epoch 982  loss: 0.0003 acc: 1.0000 time0.0978
+Epoch 983  loss: 0.0003 acc: 1.0000 time0.0978
+Epoch 984  loss: 0.0004 acc: 1.0000 time0.0979
+Epoch 985  loss: 0.0027 acc: 1.0000 time0.0990
+Epoch 985  loss: 0.0001 acc: 1.0000 Valid  loss: 5.3997  acc: 0.7083  f1: 0.7080
+Test  loss: 7.7203 acc: 0.5725 f1: 0.5243 time: 0.0493
+Epoch 986  loss: 0.0006 acc: 1.0000 time0.1005
+Epoch 987  loss: 0.0004 acc: 1.0000 time0.1014
+Epoch 988  loss: 0.0002 acc: 1.0000 time0.1015
+Epoch 989  loss: 0.0010 acc: 1.0000 time0.1012
+Epoch 990  loss: 0.0032 acc: 1.0000 time0.1014
+Epoch 990  loss: 0.0001 acc: 1.0000 Valid  loss: 5.3152  acc: 0.7083  f1: 0.7080
+Test  loss: 7.6425 acc: 0.5748 f1: 0.5266 time: 0.0502
+Epoch 991  loss: 0.0077 acc: 0.9917 time0.1015
+Epoch 992  loss: 0.0015 acc: 1.0000 time0.1001
+Epoch 993  loss: 0.0004 acc: 1.0000 time0.0998
+Epoch 994  loss: 0.0016 acc: 1.0000 time0.0991
+Epoch 995  loss: 0.0006 acc: 1.0000 time0.0987
+Epoch 995  loss: 0.0001 acc: 1.0000 Valid  loss: 5.3388  acc: 0.6917  f1: 0.6933
+Test  loss: 7.4737 acc: 0.5786 f1: 0.5339 time: 0.0494
+Epoch 996  loss: 0.0002 acc: 1.0000 time0.0976
+Epoch 997  loss: 0.0009 acc: 1.0000 time0.0966
+Epoch 998  loss: 0.0010 acc: 1.0000 time0.0971
+Epoch 999  loss: 0.0006 acc: 1.0000 time0.0972
+Epoch 1000  loss: 0.0006 acc: 1.0000 time0.0980
+Epoch 1000  loss: 0.0001 acc: 1.0000 Valid  loss: 5.2725  acc: 0.7000  f1: 0.7038
+Test  loss: 7.4206 acc: 0.5728 f1: 0.5301 time: 0.0493
+VALID: VALID ACC 0.7166666984558105  VALID F1 0.7111748282479989 EPOCH 475
+VALID: TEST ACC 0.5642507076263428 TEST F1 0.5164660980916048 EPOCH 475
+GLOBAL: TEST ACC 0.5835084319114685 TEST F1 0.5341508911384709 EPOCH 150

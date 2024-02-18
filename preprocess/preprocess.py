@@ -9,6 +9,9 @@ import os
 from scipy.sparse import coo_matrix
 import matplotlib.pyplot as plt
 import re
+
+nltk.download('averaged_perceptron_tagger')
+
 def clean_str(string,use=True):
     """
     Tokenization/string cleaning for all datasets except for SST.
@@ -102,8 +105,8 @@ def PMI(inputs, mapping, window_size, sparse):
                     PMI_adj[j, i] = pmi
     return PMI_adj
 
-def make_node2id_eng_text(dataset_name, remove_StopWord=False):
-    stop_word=load_stopwords()
+def make_node2id_eng_text(dataset_name, remove_StopWord = False):
+    stop_word = load_stopwords()
     stop_word.add('')
     os.makedirs(f'./{dataset_name}_data', exist_ok=True)
 
@@ -135,7 +138,9 @@ def make_node2id_eng_text(dataset_name, remove_StopWord=False):
     words_set = set()
     train_idx = []
     test_idx = []
-    labels = []
+    coarse_labels = []
+    fine_labels = []
+    #labels = []
     tag_list = []
     word_list = []
     ent_mapping = {} 
@@ -152,7 +157,9 @@ def make_node2id_eng_text(dataset_name, remove_StopWord=False):
 
         tag_list.append(' '.join(tags))
         tag_set.update(tags)
-        labels.append(item['label'])
+        #labels.append(item['label'])
+        coarse_labels.append(item['coarse_label'])
+        fine_labels.append(item['fine_label'])
         if remove_StopWord:
             words = [one.lower() for one in query.split(' ') if one not in stop_word]
         else:
@@ -190,7 +197,9 @@ def make_node2id_eng_text(dataset_name, remove_StopWord=False):
         tags = [one[1].lower() for one in nltk.pos_tag(nltk.word_tokenize(query))]
         tag_list.append(' '.join(tags))
         tag_set.update(tags)
-        labels.append(item['label'])
+        #labels.append(item['label'])
+        coarse_labels.append(item['coarse_label'])
+        fine_labels.append(item['fine_label'])
         if remove_StopWord:
             words = [one.lower() for one in query.split(' ') if one not in stop_word]
         else:
@@ -283,8 +292,14 @@ def make_node2id_eng_text(dataset_name, remove_StopWord=False):
     json.dump(train_idx, open('./{}_data/train_idx.json'.format(dataset_name), 'w'), ensure_ascii=False)
     json.dump(test_idx, open('./{}_data/test_idx.json'.format(dataset_name), 'w'), ensure_ascii=False)
 
-    label_map = {value: i for i, value in enumerate(set(labels))}
-    json.dump([label_map[label] for label in labels], open('./{}_data/labels.json'.format(dataset_name), 'w'),
+    # label_map = {value: i for i, value in enumerate(set(labels))}
+    # json.dump([label_map[label] for label in labels], open('./{}_data/labels.json'.format(dataset_name), 'w'),
+    #           ensure_ascii=False)
+    coarse_label_map = {value: i for i, value in enumerate(set(coarse_labels))}
+    json.dump([coarse_label_map[coarse_label] for coarse_label in coarse_labels], open('./{}_data/coarse_labels.json'.format(dataset_name), 'w'),
+              ensure_ascii=False)
+    fine_label_map = {value: i for i, value in enumerate(set(fine_labels))}
+    json.dump([fine_label_map[fine_label] for fine_label in fine_labels], open('./{}_data/fine_labels.json'.format(dataset_name), 'w'),
               ensure_ascii=False)
     json.dump(query_nodes, open('./{}_data/query_id2_list.json'.format(dataset_name), 'w'),
               ensure_ascii=False)
@@ -304,7 +319,7 @@ def make_node2id_eng_text(dataset_name, remove_StopWord=False):
             err_count += 1
             # print('error:', word)
             embs.append(np.zeros(300, dtype=np.float64))
-    print('err in word count', err_count)
+    print('unknown word in glove embedding', err_count)
     pkl.dump(np.array(embs, dtype=np.float64), open('./{}_data/word_emb.pkl'.format(dataset_name), 'wb'))
 
 dataset_name='trec'
