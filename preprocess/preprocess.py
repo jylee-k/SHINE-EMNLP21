@@ -44,6 +44,18 @@ def load_stopwords(filepath='./stopwords_en.txt'):
     return stopwords
 
 def tf_idf_transform(inputs, mapping=None, sparse=False):
+    """
++    Apply TF-IDF transformation to the input data.
++
++    Args:
++        inputs (array-like or iterable): Input data.
++        mapping (dict or None, optional): Mapping of terms to feature indices. Default is None.
++        sparse (bool, optional): Whether to return sparse matrix. Default is False.
++
++    Returns:
++        array-like or scipy.sparse.coo_matrix: Transformed input data with TF-IDF weights.
+    """
+
     from sklearn.feature_extraction.text import CountVectorizer
     from sklearn.feature_extraction.text import TfidfTransformer
     from scipy.sparse import coo_matrix
@@ -106,6 +118,7 @@ def PMI(inputs, mapping, window_size, sparse):
     return PMI_adj
 
 def make_node2id_eng_text(dataset_name, remove_StopWord = False):
+    
     stop_word = load_stopwords()
     stop_word.add('')
     os.makedirs(f'./{dataset_name}_data', exist_ok=True)
@@ -114,21 +127,21 @@ def make_node2id_eng_text(dataset_name, remove_StopWord = False):
     f_test = json.load(open('./{}_split.json'.format(dataset_name)))['test']
 
     from collections import defaultdict
-    word_freq=defaultdict(int)
+    word_freq = defaultdict(int)
     for item in f_train.values():
-        words=clean_str(item['text']).split(' ')
+        words = clean_str(item['text']).split(' ')
         for one in words:
             word_freq[one.lower()]+=1
     for item in f_test.values():
-        words=clean_str(item['text']).split(' ')
+        words = clean_str(item['text']).split(' ')
         for one in words:
             word_freq[one.lower()]+=1
-    freq_stop=0
-    for word,count in word_freq.items():
-        if count<5:
+    freq_stop = 0
+    for word, count in word_freq.items():
+        if count < 5:
             stop_word.add(word)
-            freq_stop+=1
-    print('freq_stop num',freq_stop)
+            freq_stop += 1
+    print('freq_stop num', freq_stop)
 
     ent2id_new = json.load(open('./pretrained_emb/NELL_KG/ent2ids_refined', 'r'))
     adj_ent_index = []
@@ -140,7 +153,7 @@ def make_node2id_eng_text(dataset_name, remove_StopWord = False):
     test_idx = []
     coarse_labels = []
     fine_labels = []
-    #labels = []
+    labels = []
     tag_list = []
     word_list = []
     ent_mapping = {} 
@@ -157,9 +170,9 @@ def make_node2id_eng_text(dataset_name, remove_StopWord = False):
 
         tag_list.append(' '.join(tags))
         tag_set.update(tags)
-        #labels.append(item['label'])
-        coarse_labels.append(item['coarse_label'])
-        fine_labels.append(item['fine_label'])
+        labels.append(item['label'])
+        # coarse_labels.append(item['coarse_label'])
+        # fine_labels.append(item['fine_label'])
         if remove_StopWord:
             words = [one.lower() for one in query.split(' ') if one not in stop_word]
         else:
@@ -197,9 +210,9 @@ def make_node2id_eng_text(dataset_name, remove_StopWord = False):
         tags = [one[1].lower() for one in nltk.pos_tag(nltk.word_tokenize(query))]
         tag_list.append(' '.join(tags))
         tag_set.update(tags)
-        #labels.append(item['label'])
-        coarse_labels.append(item['coarse_label'])
-        fine_labels.append(item['fine_label'])
+        labels.append(item['label'])
+        # coarse_labels.append(item['coarse_label'])
+        # fine_labels.append(item['fine_label'])
         if remove_StopWord:
             words = [one.lower() for one in query.split(' ') if one not in stop_word]
         else:
@@ -223,7 +236,6 @@ def make_node2id_eng_text(dataset_name, remove_StopWord = False):
             query_nodes.append(query)
         else:
             print(item)
-            print(query)
             print(query)
 
         test_idx.append(len(test_idx)+ len(train_idx))
@@ -277,7 +289,7 @@ def make_node2id_eng_text(dataset_name, remove_StopWord = False):
 
     print('len_train',len(train_idx))
     print('len_test',len(test_idx))
-    print('len_quries',len(query_nodes))
+    print('len_queries',len(query_nodes))
 
     tags_mapping = {key: value for value, key in enumerate(tag_nodes)}
     words_mapping = {key: value for value, key in enumerate(word_nodes)}
@@ -292,15 +304,15 @@ def make_node2id_eng_text(dataset_name, remove_StopWord = False):
     json.dump(train_idx, open('./{}_data/train_idx.json'.format(dataset_name), 'w'), ensure_ascii=False)
     json.dump(test_idx, open('./{}_data/test_idx.json'.format(dataset_name), 'w'), ensure_ascii=False)
 
-    # label_map = {value: i for i, value in enumerate(set(labels))}
-    # json.dump([label_map[label] for label in labels], open('./{}_data/labels.json'.format(dataset_name), 'w'),
+    label_map = {value: i for i, value in enumerate(set(labels))}
+    json.dump([label_map[label] for label in labels], open('./{}_data/labels.json'.format(dataset_name), 'w'),
+              ensure_ascii=False)
+    # coarse_label_map = {value: i for i, value in enumerate(set(coarse_labels))}
+    # json.dump([coarse_label_map[coarse_label] for coarse_label in coarse_labels], open('./{}_data/coarse_labels.json'.format(dataset_name), 'w'),
     #           ensure_ascii=False)
-    coarse_label_map = {value: i for i, value in enumerate(set(coarse_labels))}
-    json.dump([coarse_label_map[coarse_label] for coarse_label in coarse_labels], open('./{}_data/coarse_labels.json'.format(dataset_name), 'w'),
-              ensure_ascii=False)
-    fine_label_map = {value: i for i, value in enumerate(set(fine_labels))}
-    json.dump([fine_label_map[fine_label] for fine_label in fine_labels], open('./{}_data/fine_labels.json'.format(dataset_name), 'w'),
-              ensure_ascii=False)
+    # fine_label_map = {value: i for i, value in enumerate(set(fine_labels))}
+    # json.dump([fine_label_map[fine_label] for fine_label in fine_labels], open('./{}_data/fine_labels.json'.format(dataset_name), 'w'),
+    #           ensure_ascii=False)
     json.dump(query_nodes, open('./{}_data/query_id2_list.json'.format(dataset_name), 'w'),
               ensure_ascii=False)
     json.dump(tag_nodes, open('./{}_data/tag_id2_list.json'.format(dataset_name), 'w'), ensure_ascii=False)
@@ -322,7 +334,7 @@ def make_node2id_eng_text(dataset_name, remove_StopWord = False):
     print('unknown word in glove embedding', err_count)
     pkl.dump(np.array(embs, dtype=np.float64), open('./{}_data/word_emb.pkl'.format(dataset_name), 'wb'))
 
-dataset_name='trec'
+dataset_name='medquad'
 if dataset_name in ['mr', 'snippets', 'tagmynews']:
     remove_StopWord = True
 else:

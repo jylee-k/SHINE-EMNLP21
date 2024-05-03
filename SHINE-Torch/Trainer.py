@@ -10,6 +10,11 @@ from sklearn import metrics
 from utils import fetch_to_tensor
 from model import SHINE
 
+from sklearn.metrics import confusion_matrix, classification_report, f1_score
+import seaborn as sn
+import pandas as pd
+import matplotlib.pyplot as plt
+
 class Trainer(object):
     def __init__(self, params):
         self.dataset_name = params.dataset
@@ -25,7 +30,7 @@ class Trainer(object):
 
         self.adj_dict, self.features_dict, self.train_idx, self.valid_idx, self.test_idx, self.labels, self.nums_node = self.load_data()
         self.label_num = len(set(self.labels))
-        self.labels = torch.tensor(self.labels).to(self.device)
+        self.labels = torch.tensor(self.labels).type(torch.LongTensor).to(self.device)
         self.out_features_dim = [self.label_num, self.hidden_size, self.hidden_size, self.hidden_size, self.hidden_size]
         in_fea_final = self.out_features_dim[1] + self.out_features_dim[2] + self.out_features_dim[3]
         self.in_features_dim = [0, self.nums_node[1], self.nums_node[2], self.nums_node[-1], in_fea_final]
@@ -74,11 +79,12 @@ class Trainer(object):
             acc = torch.eq(torch.argmax(train_scores, dim=-1), train_labels).float().mean().item()
             print('Epoch {}  loss: {:.4f} acc: {:.4f} time{:.4f}'.format(i, loss, acc,time.time()-t))
             if i%5 == 0:
-                acc_valid, loss_valid, f1_valid, acc_test, loss_test, f1_test = self.test(i) 
+                acc_valid, loss_valid, f1_valid, acc_test, loss_test, f1_test, y_pred, y_true = self.test(i) 
                 if acc_test > global_best_acc:
                     global_best_acc = acc_test
                     global_best_f1 = f1_test
                     global_best_epoch = i
+                    #self.cm(y_true.cpu().numpy(), y_pred.cpu().numpy())
                 if acc_valid > best_valid_acc:
                     best_valid_acc = acc_valid
                     best_valid_f1 = f1_valid 
@@ -112,12 +118,30 @@ class Trainer(object):
                 'Valid  loss: {:.4f}  acc: {:.4f}  f1: {:.4f}'.format(loss_valid, acc_valid, f1_valid))
             test_scores = output[self.test_idx]
             test_labels = self.labels[self.test_idx]
+            y_pred = torch.argmax(test_scores, dim=-1)
             loss_test = F.cross_entropy(test_scores, test_labels).item()
             acc_test = torch.eq(torch.argmax(test_scores, dim=-1), test_labels).float().mean().item()
             f1_test = metrics.f1_score(test_labels.detach().cpu().numpy(),torch.argmax(test_scores,-1).detach().cpu().numpy(),average='macro')
             print('Test  loss: {:.4f} acc: {:.4f} f1: {:.4f} time: {:.4f}'.format(loss_test, acc_test, f1_test, time.time() - t))
         self.model.training = True
-        return acc_valid, loss_valid, f1_valid, acc_test, loss_test, f1_test   
+        return acc_valid, loss_valid, f1_valid, acc_test, loss_test, f1_test, y_pred, test_labels
+    
+    def cm(self, y_true, y_pred):
+        cf_matrix = confusion_matrix(y_true, y_pred)
+        print(cf_matrix)
+        print(classification_report(y_true, y_pred))
+        print('macro f1: ',f1_score(y_true, y_pred, average='macro'))
+        print('micro f1: ',f1_score(y_true, y_pred, average='micro'))
+        # Creating a dataframe for a array-formatted Confusion matrix,so it will be easy for plotting.
+        cm_df = pd.DataFrame(cf_matrix,
+                     index = ['0','1','2', '3'], 
+                     columns = ['0','1','2','3'])
+        plt.figure(figsize = (12,7))
+        sn.heatmap(cm_df, annot=True, fmt='g')
+        plt.title('Confusion Matrix')
+        plt.ylabel('Actal Values')
+        plt.xlabel('Predicted Values')
+        plt.savefig('output.png')
 
     def load_data(self):
         start = time.time()
@@ -160,7 +184,7 @@ class Trainer(object):
         
         train_set = json.load(open(self.data_path + './train_idx.json'))
         test_set = json.load(open(self.data_path + './test_idx.json'))
-        labels = json.load(open(self.data_path + './fine_labels.json'))
+        labels = json.load(open(self.data_path + './labels.json'))
         
         data_index = train_set + test_set
         Sumofquery = len(data_index)

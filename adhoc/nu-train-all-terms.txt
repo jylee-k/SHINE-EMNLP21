@@ -1,0 +1,417 @@
+2	create a storyboard for a sequel to your book use the same characters
+0	briefly describe the authors approach to the liabilities of the goto statement
+1	specify a deterministic finite automaton dfa recognizing the
+1	how to construct the optimal maintenance problem
+1	specify the thickness of a galvanized coating based on atmospheric data level 
+0	discuss the nature of socialism
+0	what is the title of the first movie you saw 
+0	how many years does this animal live
+0	when did the first saudi radio station open
+2	contrast olympic athletes of today with athletes of past olympic games
+0	express the following percentages as fractions in simplest form
+2	compare how different children come to school
+0	describe the output of this program fragment
+1	relate topographic map to field features
+2	analyze safe and dangerous aspects of these features
+2	design and make an animal that moves
+0	compare historical events to contemporary situations
+0	classify the following substances as particle atom element molecule compound
+2	how do you combine the results of various individual tests to determine whether a student can progress to a next semester phase year
+2	how does autonomy differ with age
+2	appraise the speechs effectiveness based upon the class criteria
+1	predict what happens to x if y increases
+2	write a song about old macdonald who had a bulldozer instead of a farm
+0	state the characteristics of each type of corrosion testing studied
+2	following the identification of the forms of corrosion that were involved in a failure recommend a solution to avoid this failure
+2	organize this book into three or more sections and give your own subtitle for each section
+2	what can i do to investigate this problem further
+0	paraphrase an important speech
+0	describe what happened at
+2	pretend you are a librarian recommending this book to someone write a paragraph telling what you would say
+2	using information from the book about one of the main characters rewrite the ending of the book
+0	correctly label the brain lobes indicated on the diagram below
+1	describe an experiment to answer the question of the effects of weight on the fall of an object
+2	make up a new language code and write material using it
+0	what are the representational symbols on maps and charts
+2	name one character rewrite the story from this characters point of view
+2	revises and process to improve the outcome
+2	evaluate your own or a peers essay in terms of the principles of composition discussed during the semester
+2	how does compare contrast with
+0	describe in your own words how to borrow a book from the library
+2	can you distinguish aged rums from unaged rums by smell
+2	was hemingway a great american writer first you will need to define greatness
+2	how do the clauses and expressions given in the article which replace goto statements lead to the three traditional control statements
+2	how to combine virtual symmetry and symbolic model checking effectively
+2	compose a complete c program that reads text strings from a text file into a suitable data
+2	can you find four different feelings pa lia had during the story
+2	construct a poster that will advertise your new food product in an exciting and irresistible way
+1	use a sketch too find the exact value of each expression
+2	given an argument on any position enumerate the logical fallacies in that argument
+1	choose a country that does not compete at the olympics and explain why that country is not an olympic member
+2	how could we determine the number of pennies in a jar without counting them
+1	show through roleplay the final scene in the novel
+1	solve for the ten following fraction multiplication problems please make sure to show all your work
+2	evaluate two internet sources of information about the egyptians which would be a better choice for your purpose and why
+2	which of the two algorithms bubblesort or quicksort is more efficient justify your answer
+1	demonstrate how your units specific student learning outcomes are linked to the mission of uam
+2	distinguish between the following giving suitable examples
+0	what is a textual index
+2	how would you decide about
+1	compute the area of actual circles
+2	compare two of the characters in this book
+2	design the architecture of the software system based on the requirements defined in the software requirement specification document
+2	in what ways is oxyperoxidase similar to other oxygenated heme proteins and how does it differ
+2	what might happen if you combined
+2	after solving a problem determine the degree to which the problem was solved as efficiently as possible 
+2	justify the title to kill a mockingbird 
+2	why dont you devise your own way to deal with 
+1	how would you relate position concept with position strategy
+2	investigate innovations that can enhance future olympics
+2	structure sorts the list in ascending order displays the list on the screen and stores the list
+0	how much is your weight
+0	rewrite the sentence in your head following the direction given below
+2	design a healthy menu that you think most people would enjoy using the healthy eating guide
+1	show how ecrm can be used to improve marketing positioning as explained in the article
+2	if interest were compounded monthly instead of daily what would the difference in interest be
+0	in which countries is arabic language spoken
+0	who was the writer of the hamilton 
+1	relate the principle of reinforcement to classroom interactions
+1	how to construct the selected information system
+2	identify one problem in the book and give an alternate solution one not given by the author
+2	create a new product give it a name and plan a marketing campaign
+0	from a blueprint to describe the article depicted
+2	select the most effective solution
+2	examine carefully the given map extract on the following page to help you work out the exercise below
+1	specify the thickness of a galvanized coating based on atmospheric data level 
+2	predict whether phillip will ever go back to visit the cay after several years of recovery assuming he gets his sight back
+1	show the value of x after running this program fragment
+0	label any olympic sporting apparatus with design features
+0	describe in prose what is shown in graph form
+2	how do i differentiate between deceive and cheat on
+0	what is the setting of to kill a mockingbird
+0	state in your own words where in the library to find previous issues of journals that are no longer in the display racks
+0	what are the major products and exports of countries
+0	define stream bank floodplain and substrate
+2	select the athlete of the century and analyze why you chose this person
+2	compare and contrast the waterfall model with the prototyping model
+2	how does your agency inspect against its expectation for operators 
+0	how much water does an elephant drink
+1	demonstrate how this could work in an industry setting
+1	use the unification algorithm to determine whether the following two terms are uniable show intermediate step
+0	summarize this magazine article
+2	explain how the biological concept of symbiotic relationships could be used to help solve socially created problems like water pollution overflowing garbage landfills or homelessness
+2	contrast the valles marineris on mars with the grand canyon
+0	state how to find a word in a dictionary
+2	compose a simple rap or rhyme about zoo animals
+2	investigate whether or not the system can be solved for x y z 
+2	how effectively did students analyze course content on race class and privilege through autobiographical reflection
+2	develop a plan for a new olympic bid system
+2	can you distinguish pot still rums from column still rums by taste
+0	explain in your own words what do you mean by the term economics
+2	how are the adolescents with asd similar of different from each other in their sources of communication breakdowns 
+0	explain in your own words what is meant by mercantilism
+2	place the following in order of priority
+0	which part of a data packet is used by a router to determine the destination network
+1	what happens if you change the direction of the displacement but not its size
+0	label the parts of the microscope shown on the right
+1	what approach would you use to prove the truth of the below statement 
+0	list three characteristics that are unique to the cubist movement
+1	categorise the pictures and add them to the wall display
+2	predict the differences of a planet with no seasonal changes
+0	describe what goes in each of the four areas on the first page of notes
+2	given three possible approaches to implement the defined system discuss the possible advantages and disadvantages of each approach
+0	explain the communicative property
+0	what does ict stands for
+2	apply and integrate several different strategies to solve a mathematical problem not according to one formula
+0	determine the next number in a sequence
+2	evaluate whether their model is a true representation of the local environment
+0	who is the first president of usa
+2	listen to two classmates conversing on tape and critique their performance on the basis of the skills covered this semester
+2	compare and contrast preview questions clarifying questions and anticipated exam questions including how each relates to the notetaking process 
+0	recall basic math facts
+2	develop a way to teach the concept of adjectives
+2	how is scientific progress similar to darwinian evolution according to kuhn
+2	assess the appropriateness of an authors conclusions based on the evidence given
+0	explain the causes of historical events
+2	design costumes for the characters
+0	which technology is used by laser printer
+2	revise and process to improve the outcome
+1	make a scrapbook about the areas of study
+2	draw a painting that uses various principles of perspective to achieve its effect
+2	can you compare your with that presented in 
+2	break down the components of a standard film camera and explain how they interact to make the machine work
+2	write a set of rules to prevent what happened in the story
+2	in what ways are foxes similar to wolves and dogs
+0	identify a property commutative additive etc
+0	paraphrase what hamlet is saying in his soliloquy
+0	restate main idea of story in own words
+2	how do we differentiate between an interview and an interrogation
+2	award the contract to the best proposal rank the principles of good sportsmanship in order of importance to you
+0	describe and compare the role of islamic law in the legal systems of malaysia and pakistan
+2	evaluate a work of art giving the reasons for your evaluation
+1	how could someone modify the cornell method to make it effective for researching a topic for a paper
+0	please label the diagram below
+2	estimate the difficulty of the question
+2	how would the usa be different if the south had won the civil war
+2	create plan of local environment by drawing around boxes
+0	about what proportion of the population of the us is living on farms
+0	which of the following item does not belong to the set 
+2	if your story happened in a foreign land compare that land to the united states
+2	create a new song for the opening line of mary had a little lamb
+1	make up a puzzle game using the ideas from the study area
+2	compose an original work which incorporates five common materials in sculpture
+2	judge aesthetic qualities and relationship to future values
+2	which of the following actions would probably be least effective in determining the answer 
+0	express your opinion of drugs in sport through poetry
+2	how could we develop a coherent measure of success for organisations engaged in this type of activity with young people
+2	estimate expenditure on hivaids education
+1	can you solve the following problem 
+0	name the property that states that
+1	apply the rule of law to a new situation
+0	describe in your own words what is meant by a sprained ankle
+0	explain the possible uses described in class for the space to the left of the vertical line
+2	predict what will happen next in
+2	prepare a book jacket that illustrates the kind of book as well as the story
+2	would you have liked to have had cinderella for a sister explain why or why not
+2	how would you investigate this patient
+2	evaluate appropriate and inappropriate actions of characters
+0	make a list of facts you learned from the story
+0	in your own words how would you summarize the story up 
+2	evaluate the corrosion monitoring needs of a chemical processing plant 
+2	analyze the characteristics of frogs
+1	can you group by characteristics such as 
+1	construct a venn diagram to determine the validity of the given argument
+2	design a poster for this book
+1	what factors would you change if 
+0	list the levels in blooms taxonomy
+0	how many loop statement available in c
+0	classify types of corrosion inhibitors 
+2	can you design a to 
+0	draw the flow chart of the pnk system
+2	defend your use of a specific strategy in solving the problem
+2	compare this book to the last book you read
+1	how do you construct foliations on a given manifold m
+2	can you differentiate between ethnic chinese and ethnic koreans
+2	how do you think one should reason in making ethical decisions in business
+0	recall the equation for the ideal gas law
+2	what is part of this book did you like best tell why you like it
+0	what season are we in right now
+0	retell the story in your words
+0	tell in your own words how the setting of the story made it more interesting
+2	conclude and support which economic system leads to a higher standard of living
+0	describe nuclear transport to a lay person
+1	apply the storytelling technique here to a little story of your own
+2	differentiate between call by value and call by reference
+2	decide whether you are in favor of building on a floodplain defend your position in a debate
+2	create and perform a play about frogs
+0	rewrite a part in the poem using a different speaker
+1	would you solve these two problems using similar approaches
+0	identify the correct definition of osmosis
+2	by comparing the map of the tectonic plates to the earthquake map what inferences can you make
+2	how can we combine and abstract facts about a software system to create new knowledge
+0	describe types of coupling in software design
+0	state in your own words the rule for balls and strikes in baseball
+0	translate an equation into a computer spreadsheet
+0	identify ordinal positions
+0	rewrite the markov matrix to account for this slight change
+2	invent a machine to do a specific task
+2	defend the following claim the cornell method works so well that it could turn even a poor lecture into a valuable learning experience
+2	select the best proposal for a proposed water treatment plant
+2	given the data weve looked at on this topic evaluate how appropriate this conclusion is and defend your answer
+2	estimate the epicentral coordinates of the earthquake
+2	decide whether you learned enough about electricity from this book
+2	assess the relative effectiveness of different graphical representations of the same data or biological concept
+1	construct a market strategy for your product using a known strategy as a model
+1	if notes are available on the professors website how should those notes be used
+2	analyze the problem identifying its variables
+2	suggest ways in which it could have responded more effectively
+2	explain the term conjugal families by making reference to the different types of societies to which they could belong
+2	devise plans to market or make artwork more valuable
+1	construct the data path of the risc processor given in the previous question 
+0	translate the following passage from the iliad into english
+2	inspect the pattern of gps positions relative to the known published value
+0	when was the first airport in the yemen built
+2	can you see a possible solution to 
+1	use the distance travelled and cost of petrol to calculate the cost of a coach trip using a spreadsheet
+0	name the main characters in the story
+2	write a short story relating a personal experience in the style of a picaresque novel
+2	design a building according to given specifications
+0	compare calliope with howie use the word bank
+2	using straight value depreciation decide between two coppernickel alloys for the design of a heat exchanger 
+2	how would you investigate this abnormality
+1	sketch a graph of velocity versus time for the upward and downward parts of a balls flight
+2	make a diagnosis or analyze a case study
+2	describe the economic consequence of a neolocal society support your description with information you have learned from this course
+0	explain the whole method of crushing
+1	how might lifestyles in the united states be modified if a more socialistic system were adopted
+0	which of the following is the method for determining the volume of a cylinder
+0	list three predominant economic systems that exist
+2	how would you change the story to create a different ending
+1	solve a math problem using familiar procedure or formula
+2	judge whether olympic ideals are realistic or unrealistic for the contemporary elite athlete
+0	how many states are there in usa
+2	create an equation to represent the solution to this problem
+0	would you classify the zener diode in this circuit as a series voltage regulator or a shunt voltage regulator
+1	how does one specify the syntactical restrictions
+0	what are the structure or functions of congress
+2	make a radio announcement that advertise the book write it out
+1	calculate the number of sacrificial anodes that would be required to form a calcareous deposit on a steel pile immersed in seawater 
+1	can you apply the method used to some experience of your own 
+0	summarize a story in own words
+0	what is your family name
+2	how many ways can you 
+0	draw and label a diagram of a typical stream
+2	how did chinese newspapers differ from us
+0	classify animals into two groups
+2	after examining the videotape of a play in a football game determine the degree to which the defensive team performed effectively and
+2	judge whether it would be possible to survive on an island alone and blinded write about it
+2	in what ways do female offenders differ from male offenders
+2	given two possible solutions a and b to solving the given software development problem decide on the best solution give your justification
+1	how do teenagers use code in emails and instant messages
+0	given these five corrosion inhibitors v w x y z identify which are passivators 
+0	state the formula for the area of a circle
+0	complete an analogy analogy tasks are inference tasks
+2	given the data available on a research question take a position and defend it
+0	who was the first man on the moon
+0	how many instructions in the instruction set of risc computer
+2	what do you think about 
+2	differentiate between the following terms along with appropriate examples
+2	can you distinguish between 
+2	justify and nominate ways to prevent animal extinction
+2	determine if a characters actions were heroic 
+0	explain the process paraphrase for finding the perimeter of a rectangular garden
+1	construct a family of networks to demonstrate that the number of different mincuts in a network can be exponential in the size of the network
+0	in which part of the world does he live 
+2	how could you rewrite this story with a city setting
+2	write a poem about this book
+0	classify celebrations into family and community categories
+0	state the guidelines to design an anodic protection system
+1	use laplace to solve the following problems
+2	assess the strengths and weaknesses of the current olympics and recommend action that should be taken in future olympics what can be
+0	paraphrase this poem about sheik schubli explaining what he was saying about the characteristics of a friend
+2	develop a sqa plan for a software development project which is defined in the attached document
+2	compose a rhythm or put new words to a known melody
+0	list reserved words in c programming
+0	name steps that follow the taking of notes within hours or less
+2	how would you distinguish between polymyositis and viral myositis in a yearold man with weakness and a rash
+0	summarize a historical document
+2	decide about the most exciting part of the book being sure to give at least three reasons why
+2	how would you feel if 
+2	develop and execute a program for this exercise
+0	in one sentence illustrate the main point of a written passage
+2	how would you restructure the school day to reflect childrens developmental needs
+2	if you had access to all resources how would you deal with 
+2	compare herbatious and carnivorous animals on a venn diagram
+0	determine the authors point of view
+0	identify fractions from a pictorial representation
+2	compose your own notetaking design that incorporates all theadvantages of the cornell method
+2	can you develop a proposal which would 
+2	decide which candidate would best fill the position of principal
+2	what ideas can you add to
+2	compose a class story
+1	make a diorama to illustrate an important event
+2	how would you differentiate obstructive apneas from central apneas
+2	explain choices made in making recommendations to an end user
+2	design a machine to perform a specific task
+0	name the artist who painted the mona lisa
+1	how would you show your understanding of the abc process
+2	compose music for a frog play
+2	can you invent another character for the story
+1	construct one turing machine for computing each of the following functions
+2	what would you predictinfer from
+2	can you explain what must have happened when 
+2	design a cost effective strategy to generate reliable data
+1	apply laws of statistics to evaluate the reliability of a written test
+1	construct the bit ripple carry adder circuit
+2	decide whether you could have survived on the island blind and alone write about things that would have been challenging making sure to
+2	given the two solutions to the stated programming problem rate the solutions in terms of efficiency and readability
+2	analyze the movements and sounds of a frog
+2	choose a paint schedule for the maintenance of an outdoor structure level 
+1	relate your most powerful story where your use of technology in the classroom has yielded a significant outcome with a student or students
+2	recommend how our classroom or playground could be improved
+1	apply your understanding the olympic spirit to develop a new motto or slogan
+2	create a set of guidelines to determine the points of a plant susceptible to localized corrosion
+2	develop a hypothesis
+2	decide which course of action was most effective 
+2	using the basic principles of socialism discussed in this course evaluate the us economic system by providing key arguments to support your judgment
+0	in one sentence explain the main idea of a written passage
+2	is there a better solution to 
+0	describe how phillip and timothy survived on the cay
+0	illustrate what you think the main idea was
+2	how do we differentiate between genuine buyer and undercover buyer
+0	list four types of clauses mentioned in the article
+2	in what ways trajectory patterns differ according to abc
+0	describe the major clinical differences between visceral and somatic pain
+0	how much data can be stored in the cach memory
+0	list the characteristics peculiar to the cubist movement
+0	outline the most important insight of the tale
+2	analyze the positive and negative points presented concerning the abolition of guns and write a brief page narrative of your analysis
+1	construct an analog circuit with the following specifications
+2	inspect each of these boolean expressions and determine whether each one is a sum of products or a product of sums
+2	examine the data in the employees and departments tables
+0	identify the five major prophets of the old testament
+1	in a teaching simulation with your peers roleplaying th grade students demonstrate the principle of reinforcement in classroom interactions and prepare a half page description of what happened during the simulation that validated the principle
+0	explain what the author means by the statement our intellectual powers are geared to master static relations
+2	suppose phillip wasnt rescued shortly after timothys death how long could he have survived
+1	show me how you would check the brake lights are working on this car
+0	describe in your own words how to copy text from one program into another
+2	develop a network based on the following information activity immediate predecessors
+0	summarize the basic tenets of collaborative conservation
+0	outline the mechanisms employed by bacteria allowing them to evade phagocytic destruction
+2	examine the stated positions of both major political candidates with regard to a particular issue and state good reasons based on principles discussed in class for why one candidates position is more likely to be effective than the others
+2	can you defend the idea that simons incident with the pigs head is the most mystical in the story
+2	distinguish between micro and macro economics
+1	calculate the rate of habitat fragmentation within the colorado front range in the last decade
+0	explain in ones own words how to create a query in a database
+0	outline an attack plan that will allow you to test your hypothesis using computational molecular modeling tools
+1	derive a kinetic model from experimental data
+1	use a manual to calculate an employees vacation time
+1	how can we construct h given i b and e
+2	compose a device that would assist an athlete in their training
+0	use the eph or pourbaix diagram of cr to determine the control current and potential for the anodic protection of a s stainless steel vessel 
+0	when did you born 
+2	compare two dog food commercials what is the difference between them and how do they both sell their products
+0	explain what a poem means
+2	after designing an experiment examining the results and drawing conclusions determines in what ways the experiment could be conducted more effectively in order to draw more productive conclusions in the future
+0	define four types of traceability
+2	can you defend your position about 
+2	do you think is a good or a bad thing
+2	estimate roughly how long the collision process takes
+1	sketch a typical absorption process in a packed column with regeneration in form of
+0	explain how timothy saved phillips life
+2	what do you think is the mass and why
+0	summarize jems beliefs about boo radley
+2	appraise data in support of a hypothesis
+2	explain why it is likely that a matriarchal family system would be found in a matrilocal or matrilineal society
+2	do you agree
+2	inspect the size of the loaded data how many objects and variables does the iris data matrix contain
+2	design a new animal to live in the jungle
+2	investigate pointwise convergence and absolute convergence of the given series of functions
+2	can you create new and unusual uses for 
+2	how would you createdesign a new
+0	summarize the main point of these two texts in your own words 
+0	state in your own words what the author means when he says
+0	outline your experience in working with service users
+2	are you a person
+1	pretend you are one of the characters in the book write a diary about the happenings in your life for two consecutive days
+1	sketch the blackbody curves for radiation emitted from the sun and the earth
+1	use gauss law to find the electric field between the plates when the charge on them is q
+1	construct a dictionary and a truth table to determine if the following statements are logically equivalent
+1	what would result if 
+2	can you distinguish for me between what is reasonably achievable and what are exaggerations
+0	in your own words how would you define transferable skills
+0	translate a written text aloud from l to english
+2	do you devise a systematic approach in order to get larger progressions
+2	use a judge and jury to discuss the statement children enjoy anthony brownes books because of the illustrations
+0	outline in your own words how the leggos tomato paste advertisement sells their product
+2	devise a new economic system based on the ones that already exist
+2	how was life different in your town years ago
+2	design a testing scenario to assess the susceptibility of an alloy to be used in a given environment
+1	take a collection of photographs to demonstrate a particular point
+1	model an olympic village for the new millenium
+1	draw a picture of the bears house
+1	how to specify the impact energy and impact test temperature of the material in the code
+1	use the secondderivative test to determine whether critical points where fx yield relative maxima or relative minima
+1	draw pictures showing the beginning middle and ending of the story
+0	restate the olympic motto in your own words
+1	how to construct simple solutions when problems are complex

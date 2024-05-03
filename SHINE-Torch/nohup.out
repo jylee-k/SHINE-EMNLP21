@@ -1,0 +1,68 @@
+/home/lee-j/github/SHINE-EMNLP21/SHINE-Torch/utils.py:9: UserWarning: To copy construct from a tensor, it is recommended to use sourceTensor.clone().detach() or sourceTensor.clone().detach().requires_grad_(True), rather than torch.tensor(sourceTensor).
+  return torch.tensor(dicts[dict_type], dtype=torch.float, device=device)
+776
+709
+45956
+data process time: 13.805147886276245
+268,439 training parameters.
+Traceback (most recent call last):
+  File "/home/lee-j/github/SHINE-EMNLP21/SHINE-Torch/train.py", line 49, in <module>
+    test_acc,best_f1 = trainer.train()
+  File "/home/lee-j/github/SHINE-EMNLP21/SHINE-Torch/Trainer.py", line 71, in train
+    output = self.model(i)
+  File "/home/lee-j/github/SHINE-EMNLP21/.shine/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1501, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/home/lee-j/github/SHINE-EMNLP21/SHINE-Torch/model.py", line 64, in forward
+    cos_simi_total = torch.matmul(Doc_features, Doc_features.t())
+torch.cuda.OutOfMemoryError: CUDA out of memory. Tried to allocate 8.38 GiB (GPU 0; 10.91 GiB total capacity; 3.22 GiB already allocated; 7.10 GiB free; 3.26 GiB reserved in total by PyTorch) If reserved memory is >> allocated memory try setting max_split_size_mb to avoid fragmentation.  See documentation for Memory Management and PYTORCH_CUDA_ALLOC_CONF
+/home/lee-j/github/SHINE-EMNLP21/SHINE-Torch/utils.py:9: UserWarning: To copy construct from a tensor, it is recommended to use sourceTensor.clone().detach() or sourceTensor.clone().detach().requires_grad_(True), rather than torch.tensor(sourceTensor).
+  return torch.tensor(dicts[dict_type], dtype=torch.float, device=device)
+776
+709
+45956
+data process time: 30.458559274673462
+268,439 training parameters.
+Traceback (most recent call last):
+  File "/home/lee-j/github/SHINE-EMNLP21/SHINE-Torch/train.py", line 49, in <module>
+    test_acc,best_f1 = trainer.train()
+  File "/home/lee-j/github/SHINE-EMNLP21/SHINE-Torch/Trainer.py", line 76, in train
+    loss.backward()
+  File "/home/lee-j/github/SHINE-EMNLP21/.shine/lib/python3.10/site-packages/torch/_tensor.py", line 487, in backward
+    torch.autograd.backward(
+  File "/home/lee-j/github/SHINE-EMNLP21/.shine/lib/python3.10/site-packages/torch/autograd/__init__.py", line 200, in backward
+    Variable._execution_engine.run_backward(  # Calls into the C++ engine to run the backward pass
+torch.cuda.OutOfMemoryError: CUDA out of memory. Tried to allocate 8.38 GiB (GPU 5; 47.54 GiB total capacity; 45.00 GiB already allocated; 1.48 GiB free; 45.06 GiB reserved in total by PyTorch) If reserved memory is >> allocated memory try setting max_split_size_mb to avoid fragmentation.  See documentation for Memory Management and PYTORCH_CUDA_ALLOC_CONF
+/home/lee-j/github/SHINE-EMNLP21/SHINE-Torch/utils.py:9: UserWarning: To copy construct from a tensor, it is recommended to use sourceTensor.clone().detach() or sourceTensor.clone().detach().requires_grad_(True), rather than torch.tensor(sourceTensor).
+  return torch.tensor(dicts[dict_type], dtype=torch.float, device=device)
+776
+709
+45956
+data process time: 31.698500156402588
+268,439 training parameters.
+Traceback (most recent call last):
+  File "/home/lee-j/github/SHINE-EMNLP21/SHINE-Torch/train.py", line 49, in <module>
+    test_acc,best_f1 = trainer.train()
+  File "/home/lee-j/github/SHINE-EMNLP21/SHINE-Torch/Trainer.py", line 76, in train
+    loss.backward()
+  File "/home/lee-j/github/SHINE-EMNLP21/.shine/lib/python3.10/site-packages/torch/_tensor.py", line 487, in backward
+    torch.autograd.backward(
+  File "/home/lee-j/github/SHINE-EMNLP21/.shine/lib/python3.10/site-packages/torch/autograd/__init__.py", line 200, in backward
+    Variable._execution_engine.run_backward(  # Calls into the C++ engine to run the backward pass
+torch.cuda.OutOfMemoryError: CUDA out of memory. Tried to allocate 8.38 GiB (GPU 5; 47.54 GiB total capacity; 45.00 GiB already allocated; 1.48 GiB free; 45.06 GiB reserved in total by PyTorch) If reserved memory is >> allocated memory try setting max_split_size_mb to avoid fragmentation.  See documentation for Memory Management and PYTORCH_CUDA_ALLOC_CONF
+/home/lee-j/github/SHINE-EMNLP21/SHINE-Torch/utils.py:9: UserWarning: To copy construct from a tensor, it is recommended to use sourceTensor.clone().detach() or sourceTensor.clone().detach().requires_grad_(True), rather than torch.tensor(sourceTensor).
+  return torch.tensor(dicts[dict_type], dtype=torch.float, device=device)
+776
+709
+45956
+data process time: 21.866718530654907
+268,439 training parameters.
+Traceback (most recent call last):
+  File "/home/lee-j/github/SHINE-EMNLP21/SHINE-Torch/train.py", line 49, in <module>
+    test_acc,best_f1 = trainer.train()
+  File "/home/lee-j/github/SHINE-EMNLP21/SHINE-Torch/Trainer.py", line 76, in train
+    loss.backward()
+  File "/home/lee-j/github/SHINE-EMNLP21/.shine/lib/python3.10/site-packages/torch/_tensor.py", line 487, in backward
+    torch.autograd.backward(
+  File "/home/lee-j/github/SHINE-EMNLP21/.shine/lib/python3.10/site-packages/torch/autograd/__init__.py", line 200, in backward
+    Variable._execution_engine.run_backward(  # Calls into the C++ engine to run the backward pass
+torch.cuda.OutOfMemoryError: CUDA out of memory. Tried to allocate 8.38 GiB (GPU 5; 47.54 GiB total capacity; 45.00 GiB already allocated; 1.48 GiB free; 45.06 GiB reserved in total by PyTorch) If reserved memory is >> allocated memory try setting max_split_size_mb to avoid fragmentation.  See documentation for Memory Management and PYTORCH_CUDA_ALLOC_CONF
