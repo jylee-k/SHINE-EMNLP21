@@ -48,7 +48,7 @@ def tf_idf_transform(inputs, mapping=None, sparse=False):
 +    Apply TF-IDF transformation to the input data.
 +
 +    Args:
-+        inputs (array-like or iterable): Input data.
++        inputs (list): Input data.
 +        mapping (dict or None, optional): Mapping of terms to feature indices. Default is None.
 +        sparse (bool, optional): Whether to return sparse matrix. Default is False.
 +
@@ -66,6 +66,10 @@ def tf_idf_transform(inputs, mapping=None, sparse=False):
     return weight if not sparse else coo_matrix(weight)
 
 def PMI(inputs, mapping, window_size, sparse):
+    """
+    inputs (list): list of strings 
+
+    """
     W_ij = np.zeros([len(mapping), len(mapping)], dtype=np.float64)
     W_i = np.zeros([len(mapping)], dtype=np.float64)
     W_count = 0
@@ -123,19 +127,26 @@ def make_node2id_eng_text(dataset_name, remove_StopWord = False):
     stop_word.add('')
     os.makedirs(f'./{dataset_name}_data', exist_ok=True)
 
+    # load text and labels
     f_train = json.load(open('./{}_split.json'.format(dataset_name)))['train']
     f_test = json.load(open('./{}_split.json'.format(dataset_name)))['test']
 
     from collections import defaultdict
     word_freq = defaultdict(int)
-    for item in f_train.values():
+    for item in f_train.values(): # item is a text-label pair
+        # clean the text and split by whitespace to get words
         words = clean_str(item['text']).split(' ')
+        # count the word frequency
         for one in words:
             word_freq[one.lower()]+=1
-    for item in f_test.values():
+    for item in f_test.values(): # item is a text-label pair
+        # clean the text and split by whitespace to get words
         words = clean_str(item['text']).split(' ')
+        # count the word frequency
         for one in words:
             word_freq[one.lower()]+=1
+
+    # filter words with frequency < 5
     freq_stop = 0
     for word, count in word_freq.items():
         if count < 5:
@@ -143,6 +154,7 @@ def make_node2id_eng_text(dataset_name, remove_StopWord = False):
             freq_stop += 1
     print('freq_stop num', freq_stop)
 
+    
     ent2id_new = json.load(open('./pretrained_emb/NELL_KG/ent2ids_refined', 'r'))
     adj_ent_index = []
     query_nodes = []
@@ -158,21 +170,30 @@ def make_node2id_eng_text(dataset_name, remove_StopWord = False):
     word_list = []
     ent_mapping = {} 
 
+    # iterate through train set
     for i, item in enumerate(tqdm(f_train.values())):
-        # item=f_train[str(i)]
+        # clean text
         query = clean_str(item['text'])
+        # check if text is empty after cleaning
         if not query:
             print(query)
             continue
+        # get pos tags for words in the query
         tags = [one[1].lower() for one in nltk.pos_tag(nltk.word_tokenize(query))]
         if '' in tags:
             print(item)
 
+        # join the tags to form a tag string
         tag_list.append(' '.join(tags))
+        # update the tag set with unseen tags
         tag_set.update(tags)
+        # append labels
         labels.append(item['label'])
+
         # coarse_labels.append(item['coarse_label'])
         # fine_labels.append(item['fine_label'])
+
+        # get list of words from text
         if remove_StopWord:
             words = [one.lower() for one in query.split(' ') if one not in stop_word]
         else:
@@ -180,11 +201,15 @@ def make_node2id_eng_text(dataset_name, remove_StopWord = False):
         if '' in words:
             print(words)
 
+        # named entity recognition
         ent_list = []
         index = [] 
+        # for every word in the NER dictionary
         for key in ent2id_new.keys():
+            # check if the word is in the text
             if key in query.lower():
                 ent_list.append(key)
+                # check if word is already in the mapping dict
                 if key not in ent_mapping:
                     ent_mapping[key] = len(ent_mapping)
                     entity_set.update(ent_list)
@@ -200,6 +225,7 @@ def make_node2id_eng_text(dataset_name, remove_StopWord = False):
             print(query)
         train_idx.append(len(train_idx))
 
+    # iterate through the test set
     for i, item in enumerate(tqdm(f_test.values())):
         # item = f_test[str(i)]
         query = clean_str(item['text'])
@@ -219,13 +245,22 @@ def make_node2id_eng_text(dataset_name, remove_StopWord = False):
             words = [one.lower() for one in query.split(' ')]
         if '' in words:
             print(words)
+
+
+        # named entity recognition
         ent_list = []
         index = []
-        for key in ent2id_new.keys():
-            if key in query.lower():
-                if key not in ent_mapping:
+        # for every word in the NER dictionary
+        for key in ent2id_new.keys(): 
+            # check if the word is in the text
+            if key in query.lower(): 
+                # check if word is already in the mapping dict
+                if key not in ent_mapping: 
+                    # add word to ent_list
                     ent_list.append(key)
+                    # add word to mapping dict as word:idx_in_ent_list
                     ent_mapping[key] = len(ent_mapping)
+                    # update the 
                     entity_set.update(ent_list)
                 if ent_mapping[key] not in index: index.append(ent_mapping[key])
         adj_ent_index.append(index)

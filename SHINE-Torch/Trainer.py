@@ -25,7 +25,7 @@ class Trainer(object):
         self.lr = params.lr
         self.weight_decay = params.weight_decay
         self.concat_word_emb = params.concat_word_emb
-        self.type_names = params.type_num_node
+        self.type_names = params.type_num_node # params.type_num_node = ['query', 'tag', 'word', 'entity']
         self.data_path = params.data_path
 
         self.adj_dict, self.features_dict, self.train_idx, self.valid_idx, self.test_idx, self.labels, self.nums_node = self.load_data()
@@ -148,7 +148,8 @@ class Trainer(object):
         adj_dict = {}
         feature_dict = {}
         nums_node = []
-        for i in range(1, len(self.type_names)):
+        for i in range(1, len(self.type_names)): # self.type_names = ['query', 'tag', 'word', 'entity']
+            # opens adj_query2tag, adj_query2word, adj_query2entity
             adj_dict[str(0) + str(i)] = pkl.load(
                     open(self.data_path + './adj_{}2{}.pkl'.format(self.type_names[0], self.type_names[i]), 'rb'))
             if i == 1:
