@@ -208,15 +208,24 @@ def make_node2id_eng_text(dataset_name, remove_StopWord = False):
         for key in ent2id_new.keys():
             # check if the word is in the text
             if key in query.lower():
+                # add word to entity list
                 ent_list.append(key)
                 # check if word is already in the mapping dict
                 if key not in ent_mapping:
+                    # add word to mapping dict in order
                     ent_mapping[key] = len(ent_mapping)
+                    # update the entity set with new words from sentence
                     entity_set.update(ent_list)
-                if ent_mapping[key] not in index: index.append(ent_mapping[key])
+                
+                if ent_mapping[key] not in index:
+                    # index: a list of entities present in the sentence
+                    index.append(ent_mapping[key])
         # print(entity_set)
+        # entity adjacency matrix: list[list] of entities present in the sentences
         adj_ent_index.append(index)
+        # word_list: list of sentences
         word_list.append(' '.join(words))
+        # update word set
         words_set.update(words)
         if query:
             query_nodes.append(query)

@@ -147,12 +147,12 @@ class Trainer(object):
         start = time.time()
         adj_dict = {}
         feature_dict = {}
-        nums_node = []
+        nums_node = [] # list of the number of nodes in the adjacency matrices
         for i in range(1, len(self.type_names)): # self.type_names = ['query', 'tag', 'word', 'entity']
             # opens adj_query2tag, adj_query2word, adj_query2entity
             adj_dict[str(0) + str(i)] = pkl.load(
                     open(self.data_path + './adj_{}2{}.pkl'.format(self.type_names[0], self.type_names[i]), 'rb'))
-            if i == 1:
+            if i == 1: # 'tag'
                 nums_node.append(adj_dict[str(0) + str(i)].shape[0])
             if i != 3:
                 adj_dict[str(i) + str(i)] = pkl.load(
