@@ -149,17 +149,17 @@ class Trainer(object):
         feature_dict = {}
         nums_node = [] # list of the number of nodes in the adjacency matrices
         for i in range(1, len(self.type_names)): # self.type_names = ['query', 'tag', 'word', 'entity']
-            # opens adj_query2tag, adj_query2word, adj_query2entity
+            # opens '01': adj_query2tag, '02': adj_query2word, '03': adj_query2entity
             adj_dict[str(0) + str(i)] = pkl.load(
                     open(self.data_path + './adj_{}2{}.pkl'.format(self.type_names[0], self.type_names[i]), 'rb'))
-            if i == 1: # 'tag'
-                nums_node.append(adj_dict[str(0) + str(i)].shape[0])
-            if i != 3:
-                adj_dict[str(i) + str(i)] = pkl.load(
+            if i == 1: # add number of nodes for tags 
+                nums_node.append(adj_dict[str(0) + str(i)].shape[0]) # 
+            if i != 3: # 'tag', 'word'
+                adj_dict[str(i) + str(i)] = pkl.load( # opens '11': adj_tag, '22': adj_word
                     open(self.data_path + './adj_{}.pkl'.format(self.type_names[i]), 'rb'))
                 nums_node.append(adj_dict[str(i) + str(i)].shape[0])
             if i == 3:
-                feature_dict[str(i)] = pkl.load(
+                feature_dict[str(i)] = pkl.load( # opens '3': entity_emb
                     open(self.data_path + './{}_emb.pkl'.format(self.type_names[i]), 'rb'))
                 nums_node.append(feature_dict[str(i)].shape[0])
                 nums_node.append(feature_dict[str(i)].shape[1])

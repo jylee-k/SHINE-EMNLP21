@@ -36,13 +36,12 @@ class MyEncoder(json.JSONEncoder):
 def save_res(params, acc, f1):
     from collections import defaultdict
     result=defaultdict(list)
-    result[tuple([acc,f1])] = {
-                                        'seed': params.seed,
-                                        'weigh_dacay': params.weight_decay, 
-                                        'lr': params.lr,
-                                        'drop_out': params.drop_out,
-                                        'threshold': params.threshold,
-                                        }
+    result[tuple([acc,f1])] = {'seed': params.seed,
+                               'weigh_dacay': params.weight_decay, 
+                               'lr': params.lr,
+                               'drop_out': params.drop_out,
+                               'threshold': params.threshold,
+                               }
     os.makedirs(params.save_path, exist_ok=True)
     fname = params.save_name
     if not os.path.isfile(fname):

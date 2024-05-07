@@ -46,6 +46,6 @@ if __name__ == '__main__':
         params.weight_decay = 0.0003
     set_seed(params.seed)
     trainer = Trainer(params)
-    test_acc,best_f1 = trainer.train()
+    test_acc, best_f1 = trainer.train()
     save_res(params, test_acc, best_f1)
     del trainer

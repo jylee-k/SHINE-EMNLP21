@@ -9,7 +9,9 @@ import os
 from scipy.sparse import coo_matrix
 import matplotlib.pyplot as plt
 import re
+from sentence_transformers import SentenceTransformer
 
+embedding_model = SentenceTransformer('sentence-transformers/all-MiniLM-L12-v2')
 nltk.download('averaged_perceptron_tagger')
 
 def clean_str(string,use=True):
@@ -269,9 +271,11 @@ def make_node2id_eng_text(dataset_name, remove_StopWord = False):
                     ent_list.append(key)
                     # add word to mapping dict as word:idx_in_ent_list
                     ent_mapping[key] = len(ent_mapping)
-                    # update the 
+                    # update the set
                     entity_set.update(ent_list)
-                if ent_mapping[key] not in index: index.append(ent_mapping[key])
+                if ent_mapping[key] not in index: 
+                    index.append(ent_mapping[key])
+        # entity adjacency (index) matrix: list[list] of entities present in the sentences
         adj_ent_index.append(index)
 
         word_list.append(' '.join(words))
@@ -299,14 +303,19 @@ def make_node2id_eng_text(dataset_name, remove_StopWord = False):
     columns = []
 
     max_num = len(ent_mapping)
-    for i, index in enumerate(adj_ent_index):
-        for ind in index:
+    # creating a coo format for matrix of adj_ent_index
+    for sent_i, indices in enumerate(adj_ent_index):
+        for index in indices:
             data.append(1)
-            rows.append(i)
-            columns.append(ind)
+            rows.append(sent_i)
+            columns.append(index)
 
+    # create a matrice of ones and zeros
+    # ones correspond to (sentence_index, entity_index) i.e. which entities are present in the sentence
     adj_ent = coo_matrix((data, (rows, columns)), shape=(len(adj_ent_index), max_num))
+    # for entity in entity mapping
     for key in ent_mapping.keys():
+        # add embedding to ent_emb
         ent_emb.append(TransE_emb[ent2id_new[key]])
 
     ent_emb = np.array(ent_emb)

@@ -12,14 +12,14 @@ class SHINE(nn.Module):
         self.feature = features_dict
         self.in_features_dim = in_features_dim
         self.out_features_dim = out_features_dim
-        self.type_num = len(params.type_num_node)
+        self.type_num = len(params.type_num_node) #4
         self.drop_out = params.drop_out
         self.concat_word_emb = params.concat_word_emb
         self.device = params.device
         self.GCNs = []
         self.GCNs_2 = []
 
-        for i in range(1, self.type_num):
+        for i in range(1, self.type_num): #4
             self.GCNs.append(GCN(self.in_features_dim[i], self.out_features_dim[i]).to(self.device))
             self.GCNs_2.append(GCN(self.out_features_dim[i], self.out_features_dim[i]).to(self.device))            
         self.refined_linear = nn.Linear(self.out_features_dim[3]+self.out_features_dim[1]+self.out_features_dim[2] 
@@ -32,10 +32,14 @@ class SHINE(nn.Module):
         output = []
         for i in range(self.type_num - 1):
             if i == 1 and self.concat_word_emb:
-                temp_emb = torch.cat([
-                    F.dropout(self.GCNs_2[i](self.adj[str(i + 1) + str(i + 1)],
-                                self.GCNs[i](self.adj[str(i + 1) + str(i + 1)], self.feature[str(i + 1)], identity=True)),
-                                p=self.drop_out, training=self.training), self.feature['word_emb']], dim=-1)
+                temp_emb = torch.cat([F.dropout(self.GCNs_2[i](self.adj[str(i + 1) + str(i + 1)],
+                                                               self.GCNs[i](self.adj[str(i + 1) + str(i + 1)], 
+                                                                            self.feature[str(i + 1)], 
+                                                                            identity=True)),
+                                                p=self.drop_out, 
+                                                training=self.training), 
+                                      self.feature['word_emb']], 
+                                     dim=-1)
                 output.append(temp_emb)     
             elif i == 0:
                 temp_emb = F.dropout(self.GCNs_2[i](self.adj[str(i + 1) + str(i + 1)],
