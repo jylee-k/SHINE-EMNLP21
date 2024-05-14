@@ -278,6 +278,7 @@ def make_node2id_eng_text(dataset_name, remove_StopWord = False):
         # entity adjacency (index) matrix: list[list] of entities present in the sentences
         adj_ent_index.append(index)
 
+        
         word_list.append(' '.join(words))
         words_set.update(words)
         if query:
