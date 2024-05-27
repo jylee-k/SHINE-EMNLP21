@@ -6,6 +6,12 @@
     - GFN - [Paper](https://www.sciencedirect.com/science/article/abs/pii/S0950705121009217) (No code)
     - HeteGCN - [Paper](https://arxiv.org/abs/2008.12842) [GitHub](https://github.com/microsoft/HeteGCN)
     - SHINE - [Paper](https://aclanthology.org/2021.emnlp-main.247/) [GitHub](https://github.com/tata1661/SHINE-EMNLP21)
+
+- updated 26 May 2024 for newer models to benchmark against
+    - DADGNN - [Paper](https://aclanthology.org/2021.emnlp-main.642/) [GitHub](https://github.com/KEAML-JLU/DADGNN)
+    - Text-Level GNN - [Paper](https://aclanthology.org/2021.emnlp-main.642/) [GitHub](https://github.com/Cynwell/Text-Level-GNN)
+    - HyperGAT - [Paper](https://aclanthology.org/2020.emnlp-main.399/) [GitHub](https://github.com/kaize0409/HyperGAT_TextClassification)
+
 - Preferrably we need all of them compatible with the latest versions of the dependencies at Python 3.11
 
 - Datasets
