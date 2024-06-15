@@ -1,5 +1,5 @@
 .shine
-*/pretrained_emb
+pretrained_emb/
 */CYK-Parser
 .spacyt
 CNN_Text_Classification
