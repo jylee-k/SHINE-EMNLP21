@@ -105,6 +105,7 @@ threadpoolctl==3.2.0
 tokenizers==0.19.1
 toolz==0.12.1
 torch==2.2.2
+torch_geometric==2.5.3
 torcheval==0.0.7
 torchtext==0.17.2
 tornado==6.3.3
