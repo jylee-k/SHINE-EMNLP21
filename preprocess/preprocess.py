@@ -5,14 +5,18 @@ import math
 import nltk
 from tqdm import tqdm
 import os
+import spacy
+import textacy
+from vp_patterns import VP_PATTERNS
 
 from scipy.sparse import coo_matrix
 import matplotlib.pyplot as plt
 import re
 from sentence_transformers import SentenceTransformer
 
-embedding_model = SentenceTransformer("sentence-transformers/all-MiniLM-L12-v2")
-nltk.download("averaged_perceptron_tagger")
+# embedding_model = SentenceTransformer("sentence-transformers/all-MiniLM-L12-v2")
+# nltk.download("averaged_perceptron_tagger")
+nlp = spacy.load('en_core_web_lg')
 
 
 def clean_str(string, use=True):
@@ -131,6 +135,36 @@ def PMI(inputs, mapping, window_size, sparse):
                     PMI_adj[j, i] = pmi
     return PMI_adj
 
+def get_phrases(text):
+
+    doc = nlp(text)
+
+    verb_phrases = textacy.extract.token_matches(doc, VP_PATTERNS)
+
+
+    phrase_list = []
+
+    tag_list = []
+
+
+    # Extract Noun Phrases and corresponding pos tags
+
+    for chunk in doc.noun_chunks:
+
+        phrase_list.append(chunk.text)
+
+        tag_list.append("".join([t.pos_ for t in chunk]))
+
+    # Print all Verb Phrase and corresponding pos tags
+
+    for chunk in verb_phrases:
+
+        phrase_list.append(chunk.text)
+
+        tag_list.append("".join([t.pos_ for t in chunk]))
+
+    return phrase_list, tag_list
+
 
 def make_node2id_eng_text(dataset_name, remove_StopWord=False):
 
@@ -166,7 +200,7 @@ def make_node2id_eng_text(dataset_name, remove_StopWord=False):
             freq_stop += 1
     print("freq_stop num", freq_stop)
 
-    ent2id_new = json.load(open("./pretrained_emb/NELL_KG/ent2ids_refined", "r"))
+    ent2id_new = json.load(open("../pretrained_emb/NELL_KG/ent2ids_refined", "r"))
     adj_ent_index = []
     query_nodes = []
     tag_set = set()
@@ -174,6 +208,7 @@ def make_node2id_eng_text(dataset_name, remove_StopWord=False):
     entity_set = set()
     words_set = set()
     phrases_set = set()
+    joined_phrases_set = set()
     train_idx = []
     test_idx = []
     coarse_labels = []
@@ -183,6 +218,7 @@ def make_node2id_eng_text(dataset_name, remove_StopWord=False):
     phrase_tag_list = []
     word_list = []
     phrase_list = []
+    joined_phrase_list = []
     ent_mapping = {}
 
     # iterate through train set
@@ -197,16 +233,27 @@ def make_node2id_eng_text(dataset_name, remove_StopWord=False):
         tags = [one[1].lower() for one in nltk.pos_tag(nltk.word_tokenize(query))]
         if "" in tags:
             print(item)
+            
+        # get pos tags for phrases in the query
+        phrases, phrase_tags = get_phrases(query)
+        if "" in phrase_tags:
+            print(item)
 
         # join the tags to form a tag string
         tag_list.append(" ".join(tags))
         # update the tag set with unseen tags
         tag_set.update(tags)
+        
+        # join the phrase tags to form a tag string
+        phrase_tag_list.append(" ".join(phrase_tags))
+        # update the phrase tag set with unseen tags
+        phrase_tag_set.update(phrase_tags)
+        
         # append labels
-        labels.append(item["label"])
+        # labels.append(item["label"])
 
-        # coarse_labels.append(item['coarse_label'])
-        # fine_labels.append(item['fine_label'])
+        coarse_labels.append(item['coarse_label'])
+        fine_labels.append(item['fine_label'])
 
         # get list of words from text
         if remove_StopWord:
@@ -242,6 +289,17 @@ def make_node2id_eng_text(dataset_name, remove_StopWord=False):
         word_list.append(" ".join(words))
         # update word set
         words_set.update(words)
+        
+        phrase_list.append(" ".join(phrases))
+        # update the phrase set with unseen phrases
+        phrases_set.update(phrases)
+        
+        # joined phrases
+        joined_phrases_set.update(["_".join(phrase.split()) for phrase in phrases])
+        joined_phrase_list.append(" ".join(["_".join(phrase.split()) for phrase in phrases]))
+        
+        assert len(phrases_set) == len(joined_phrases_set), print(phrases, ["_".join(phrase.split()) for phrase in phrases])
+        
         if query:
             query_nodes.append(query)
         else:
@@ -258,11 +316,23 @@ def make_node2id_eng_text(dataset_name, remove_StopWord=False):
             print(query)
             continue
         tags = [one[1].lower() for one in nltk.pos_tag(nltk.word_tokenize(query))]
+        
+         # get pos tags for phrases in the query
+        phrases, phrase_tags = get_phrases(query)
+        if "" in phrase_tags:
+            print(item)
+        
         tag_list.append(" ".join(tags))
         tag_set.update(tags)
-        labels.append(item["label"])
-        # coarse_labels.append(item['coarse_label'])
-        # fine_labels.append(item['fine_label'])
+        
+        # join the phrase tags to form a tag string
+        phrase_tag_list.append(" ".join(phrase_tags))
+        # update the phrase tag set with unseen tags
+        phrase_tag_set.update(phrase_tags)
+        
+        # labels.append(item["label"])
+        coarse_labels.append(item['coarse_label'])
+        fine_labels.append(item['fine_label'])
         if remove_StopWord:
             words = [one.lower() for one in query.split(" ") if one not in stop_word]
         else:
@@ -292,6 +362,16 @@ def make_node2id_eng_text(dataset_name, remove_StopWord=False):
 
         word_list.append(" ".join(words))
         words_set.update(words)
+        
+        # update the phrase set with unseen phrases
+        phrase_list.append(" ".join(phrases))
+        phrases_set.update(phrases)
+        
+        # joined phrases
+        joined_phrases_set.update(["_".join(phrase.split()) for phrase in phrases])
+        joined_phrase_list.append(" ".join(["_".join(phrase.split()) for phrase in phrases]))
+        
+        assert len(phrases_set) == len(joined_phrases_set), print(phrases, ["_".join(phrase.split()) for phrase in phrases])
         if query:
             query_nodes.append(query)
         else:
@@ -299,6 +379,8 @@ def make_node2id_eng_text(dataset_name, remove_StopWord=False):
             print(query)
 
         test_idx.append(len(test_idx) + len(train_idx))
+    assert len(phrase_list) == len(joined_phrase_list)
+    assert len(phrases_set) == len(joined_phrases_set)
 
     print(tag_set)
     json.dump(
@@ -307,7 +389,7 @@ def make_node2id_eng_text(dataset_name, remove_StopWord=False):
         ensure_ascii=False,
     )
     ent_emb = []
-    TransE_emb_file = np.loadtxt("./pretrained_emb/NELL_KG/entity2vec.TransE")
+    TransE_emb_file = np.loadtxt("../pretrained_emb/NELL_KG/entity2vec.TransE")
     TransE_emb = []
 
     for i in range(len(TransE_emb_file)):
@@ -345,14 +427,19 @@ def make_node2id_eng_text(dataset_name, remove_StopWord=False):
 
     word_nodes = list(words_set)
     tag_nodes = list(tag_set)
+    phrase_nodes = list(phrases_set)
+    phrase_tag_nodes = list(phrase_tag_set)
     entity_nodes = list(entity_set)
+    joined_phrases_nodes = list(joined_phrases_set)
     # nodes_all = list(query_nodes | tag_nodes | entity_nodes)
-    nodes_all = query_nodes + tag_nodes + entity_nodes + word_nodes
-    nodes_num = len(query_nodes) + len(tag_nodes) + len(entity_nodes) + len(word_nodes)
+    nodes_all = query_nodes + tag_nodes + entity_nodes + word_nodes + phrase_nodes + phrase_tag_nodes
+    nodes_num = len(query_nodes) + len(tag_nodes) + len(entity_nodes) + len(word_nodes) + len(phrase_nodes) + len(phrase_tag_nodes)
     print("query", len(query_nodes))
     print("tag", len(tag_nodes))
     print("ent", len(entity_nodes))
     print("word", len(word_nodes))
+    print("phrase", len(phrase_nodes))
+    print("phrase_tag", len(phrase_tag_nodes))
 
     if len(nodes_all) != nodes_num:
         print("duplicate name error")
@@ -365,16 +452,32 @@ def make_node2id_eng_text(dataset_name, remove_StopWord=False):
     words_mapping = {key: value for value, key in enumerate(word_nodes)}
     adj_query2tag = tf_idf_transform(tag_list, tags_mapping)
     adj_tag = PMI(tag_list, tags_mapping, window_size=5, sparse=False)
+    
+    phrase_tags_mapping = {key: value for value, key in enumerate(phrase_tag_nodes)}
+    phrases_mapping = {key: value for value, key in enumerate(phrase_nodes)}
+    joined_phrases_mapping = {key: value for value, key in enumerate(joined_phrases_nodes)}
+    adj_query2phrase_tag = tf_idf_transform(phrase_tag_list, phrase_tags_mapping)
+    adj_phrase_tag = PMI(phrase_tag_list, phrase_tags_mapping, window_size=5, sparse=False)
+    
     pkl.dump(
         adj_query2tag, open("./{}_data/adj_query2tag.pkl".format(dataset_name), "wb")
     )
     pkl.dump(adj_tag, open("./{}_data/adj_tag.pkl".format(dataset_name), "wb"))
+    pkl.dump(adj_query2phrase_tag, open("./{}_data/adj_query2phrase_tag.pkl".format(dataset_name), "wb"))
+    pkl.dump(adj_phrase_tag, open("./{}_data/adj_phrase_tag.pkl".format(dataset_name), "wb"))
+    
     adj_query2word = tf_idf_transform(word_list, words_mapping, sparse=True)
     adj_word = PMI(word_list, words_mapping, window_size=5, sparse=True)
+    adj_query2phrase = tf_idf_transform(phrase_list, phrases_mapping, sparse=True)
+    adj_phrase = PMI(joined_phrase_list, joined_phrases_mapping, window_size=5, sparse=True)
+
     pkl.dump(
         adj_query2word, open("./{}_data/adj_query2word.pkl".format(dataset_name), "wb")
     )
     pkl.dump(adj_word, open("./{}_data/adj_word.pkl".format(dataset_name), "wb"))
+    pkl.dump(adj_query2phrase, open("./{}_data/adj_query2phrase.pkl".format(dataset_name), "wb"))
+    pkl.dump(adj_phrase, open("./{}_data/adj_phrase.pkl".format(dataset_name), "wb")) #
+
     json.dump(
         train_idx,
         open("./{}_data/train_idx.json".format(dataset_name), "w"),
@@ -386,18 +489,18 @@ def make_node2id_eng_text(dataset_name, remove_StopWord=False):
         ensure_ascii=False,
     )
 
-    label_map = {value: i for i, value in enumerate(set(labels))}
-    json.dump(
-        [label_map[label] for label in labels],
-        open("./{}_data/labels.json".format(dataset_name), "w"),
-        ensure_ascii=False,
-    )
-    # coarse_label_map = {value: i for i, value in enumerate(set(coarse_labels))}
-    # json.dump([coarse_label_map[coarse_label] for coarse_label in coarse_labels], open('./{}_data/coarse_labels.json'.format(dataset_name), 'w'),
-    #           ensure_ascii=False)
-    # fine_label_map = {value: i for i, value in enumerate(set(fine_labels))}
-    # json.dump([fine_label_map[fine_label] for fine_label in fine_labels], open('./{}_data/fine_labels.json'.format(dataset_name), 'w'),
-    #           ensure_ascii=False)
+    # label_map = {value: i for i, value in enumerate(set(labels))}
+    # json.dump(
+    #     [label_map[label] for label in labels],
+    #     open("./{}_data/labels.json".format(dataset_name), "w"),
+    #     ensure_ascii=False,
+    # )
+    coarse_label_map = {value: i for i, value in enumerate(set(coarse_labels))}
+    json.dump([coarse_label_map[coarse_label] for coarse_label in coarse_labels], open('./{}_data/coarse_labels.json'.format(dataset_name), 'w'),
+              ensure_ascii=False)
+    fine_label_map = {value: i for i, value in enumerate(set(fine_labels))}
+    json.dump([fine_label_map[fine_label] for fine_label in fine_labels], open('./{}_data/fine_labels.json'.format(dataset_name), 'w'),
+              ensure_ascii=False)
     json.dump(
         query_nodes,
         open("./{}_data/query_id2_list.json".format(dataset_name), "w"),
@@ -418,26 +521,51 @@ def make_node2id_eng_text(dataset_name, remove_StopWord=False):
         open("./{}_data/word_id2_list.json".format(dataset_name), "w"),
         ensure_ascii=False,
     )
+    json.dump(
+        phrase_nodes,
+        open("./{}_data/phrase_id2_list.json".format(dataset_name), "w"),
+        ensure_ascii=False,
+    )
+    json.dump(
+        phrase_tag_nodes,
+        open("./{}_data/phrase_tag_id2_list.json".format(dataset_name), "w"),
+        ensure_ascii=False,
+    )
 
-    glove_emb = pkl.load(open("./pretrained_emb/old_glove_6B/embedding_glove.p", "rb"))
-    vocab = pkl.load(open("./pretrained_emb/old_glove_6B/vocab.pkl", "rb"))
-    embs = []
+    # word embeddings
+    glove_emb = pkl.load(open("../pretrained_emb/old_glove_6B/embedding_glove.p", "rb"))
+    vocab = pkl.load(open("../pretrained_emb/old_glove_6B/vocab.pkl", "rb"))
+    word_embs = []
     err_count = 0
     for word in word_nodes:
         if word in vocab:
-            embs.append(glove_emb[vocab[word]])
+            word_embs.append(glove_emb[vocab[word]])
         else:
             err_count += 1
             # print('error:', word)
-            embs.append(np.zeros(300, dtype=np.float64))
+            word_embs.append(np.zeros(300, dtype=np.float64))
     print("unknown word in glove embedding", err_count)
     pkl.dump(
-        np.array(embs, dtype=np.float64),
+        np.array(word_embs, dtype=np.float64),
         open("./{}_data/word_emb.pkl".format(dataset_name), "wb"),
     )
+    
+    # phrase embeddings
+    phrasebert_model = SentenceTransformer("Deehan1866/finetuned-phrase-bert-large")
+    phrase_embs = []
+    for phrase in phrase_nodes:
+        phrase_embs.append(phrasebert_model.encode(phrase))
+    assert len(phrase_embs) == len(phrase_nodes)
+    assert len(phrase_embs) == adj_phrase.shape[0], print(len(phrase_embs), adj_phrase.shape[0])
+    pkl.dump(
+        np.array(phrase_embs, dtype=np.float64),
+        open("./{}_data/phrase_emb.pkl".format(dataset_name), "wb"),
+    )
+    
+    
 
 
-dataset_name = "medquad"
+dataset_name = "trec"
 if dataset_name in ["mr", "snippets", "tagmynews"]:
     remove_StopWord = True
 else:

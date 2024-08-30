@@ -3,3 +3,5 @@ pretrained_emb/
 */CYK-Parser
 .spacyt
 CNN_Text_Classification
+data
+data_orig
