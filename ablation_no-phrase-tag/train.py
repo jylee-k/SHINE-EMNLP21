@@ -38,7 +38,7 @@ if __name__ == '__main__':
     params = parser.parse_args()
     params.type_num_node = ['query', 'tag', 'word', 'phrase_tag', 'phrase', 'entity']
     params.data_path = params.data_path + './{}_data/'.format(params.dataset)
-    params.save_name = params.save_path + './result_torch_{}_no-ent.json'.format(params.dataset)
+    params.save_name = params.save_path + './result_torch_{}_no-phrase-tag.json'.format(params.dataset)
     if not params.disable_cuda and torch.cuda.is_available():
         params.device = torch.device('cuda:%d' % params.gpu)
     else:

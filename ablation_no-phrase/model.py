@@ -56,10 +56,15 @@ class SHINE(nn.Module):
                 temp_emb = torch.cat([gcn_output, 
                                       self.feature['phrase_emb']], 
                                      dim=-1)
-                output.append(temp_emb) 
+                # output.append(temp_emb)
+                output.append(0)
             elif i == 0:
                 temp_emb = F.dropout(self.GCNs_2[i](self.adj[str(i + 1) + str(i + 1)], # adj'11' = adj_tag
-                            self.GCNs[i](self.adj[str(i + 1) + str(i + 1)],self.feature[str(i + 1)], identity=True)), # feature['01'] = adj_query2tag
+                                                    self.GCNs[i](self.adj[str(i + 1) + str(i + 1)],
+                                                                 self.feature[str(i + 1)], 
+                                                                 identity=True
+                                                                 )
+                                                    ), # feature['01'] = adj_query2tag
                             p=self.drop_out, training=self.training)
                 output.append(temp_emb)
             elif i == 2:
@@ -71,14 +76,16 @@ class SHINE(nn.Module):
                 temp_emb = F.dropout(self.GCNs_2[i](self.adj[str(i + 1) + str(i + 1)], # adj55 = adj_entity
                                 self.GCNs[i](self.adj[str(i + 1) + str(i + 1)],self.feature[str(i + 1)])),
                                 p=self.drop_out, training=self.training)
-                # output.append(temp_emb)
+                output.append(temp_emb)
                 
                 
         refined_text_input = aggregate(self.adj, output, self.type_num - 1) 
+        # print("refined_text_input", len(refined_text_input))
         if norm:
             refined_text_input_normed = []
-            for i in range(self.type_num - 1):
-                if i == 4: continue
+            for i in range(self.type_num - 2):
+                # if i == 1: continue
+                # print(f"refined_text_input[{i}]", refined_text_input[i].shape)
                 refined_text_input_normed.append(refined_text_input[i] / (refined_text_input[i].norm(p=2, dim=-1,keepdim=True) + 1e-9))
         else:
             refined_text_input_normed = refined_text_input

@@ -11,8 +11,9 @@ def fetch_to_tensor(dicts, dict_type, device):
 def aggregate(adj_dict, input, other_type_num, softmax=False):
     aggregate_output = []
     for i in range(other_type_num):
-        if i == 4:
+        if i == 0:
             continue
+        # print('aggregating ',i)
         adj = adj_dict[str(0) + str(i + 1)]
 
         if softmax:

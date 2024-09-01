@@ -34,10 +34,12 @@ class Trainer(object):
         self.label_num = len(set(self.labels))
         self.labels = torch.tensor(self.labels).type(torch.LongTensor).to(self.device)
         self.out_features_dim = [self.label_num, self.hidden_size, self.hidden_size, self.hidden_size, self.hidden_size, self.hidden_size, self.hidden_size]
+        print(self.out_features_dim)
         in_fea_final = self.out_features_dim[1] + self.out_features_dim[2] + self.out_features_dim[3] + self.out_features_dim[4] #+ self.out_features_dim[5]
+        print('in_fea_final: ', in_fea_final)
         self.in_features_dim = [0, self.nums_node[1], self.nums_node[2], self.nums_node[4], self.nums_node[5], self.nums_node[-1], in_fea_final]
 
-        if self.concat_word_emb: self.in_features_dim[-1] += self.features_dict['word_emb'].shape[-1]
+        # if self.concat_word_emb: self.in_features_dim[-1] += self.features_dict['word_emb'].shape[-1]
         if self.concat_phrase_emb: self.in_features_dim[-1] += self.features_dict['phrase_emb'].shape[-1]
         self.model = SHINE(self.adj_dict, self.features_dict, self.in_features_dim, self.out_features_dim, params)
         self.model = self.model.to(self.device)
@@ -140,7 +142,7 @@ class Trainer(object):
             acc_test = torch.eq(torch.argmax(test_scores, dim=-1), test_labels).float().mean().item()
             macro_f1_test = metrics.f1_score(test_labels.detach().cpu().numpy(),torch.argmax(test_scores,-1).detach().cpu().numpy(),average='macro')
             macro_precision_test = metrics.precision_score(test_labels.detach().cpu().numpy(),torch.argmax(test_scores,-1).detach().cpu().numpy(),average='macro', zero_division=0)
-            macro_recall_test = metrics.recall_score(test_labels.detach().cpu().numpy(),torch.argmax(test_scores,-1).detach().cpu().numpy(),average='macro', zero_division=0)
+            macro_recall_test = metrics.recall_score(test_labels.detach().cpu().numpy(),torch.argmax(test_scores,-1).detach().cpu().numpy(),average='macro')
             # micro_f1_test = metrics.f1_score(test_labels.detach().cpu().numpy(),torch.argmax(test_scores,-1).detach().cpu().numpy(),average='micro')
             print('Test  loss: {:.4f} acc: {:.4f} macro f1: {:.4f} macro precision: {:.4f} macro recall: {:.4f} time: {:.4f}'.format(loss_test, acc_test, macro_f1_test, macro_precision_test, macro_recall_test, time.time() - t))
         self.model.training = True
@@ -174,12 +176,12 @@ class Trainer(object):
                     open(self.data_path + './adj_{}2{}.pkl'.format(self.type_names[0], self.type_names[i]), 'rb'))
             if i == 1 or i == 3: # add number of nodes for tags 
                 nums_node.append(adj_dict[str(0) + str(i)].shape[0]) # 
-                print(i, adj_dict[str(0) + str(i)].shape[0])
+                print(str(0) + str(i), adj_dict[str(0) + str(i)].shape)
             if i != 5: 
                 adj_dict[str(i) + str(i)] = pkl.load( # opens '11': adj_tag, '22': adj_word, '44': adj_phrase, '33': adj_phrase_tag
                     open(self.data_path + './adj_{}.pkl'.format(self.type_names[i]), 'rb'))
                 nums_node.append(adj_dict[str(i) + str(i)].shape[0])
-                print(i, adj_dict[str(i) + str(i)].shape[0])
+                print(str(i) + str(i), adj_dict[str(i) + str(i)].shape)
             if i == 5: # 'entity'
                 feature_dict[str(i)] = pkl.load( # opens '5': entity_emb
                     open(self.data_path + './{}_emb.pkl'.format(self.type_names[i]), 'rb'))
