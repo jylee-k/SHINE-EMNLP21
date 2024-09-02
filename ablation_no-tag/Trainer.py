@@ -217,8 +217,8 @@ class Trainer(object):
         train_set = json.load(open(self.data_path + './train_idx.json'))
         test_idx = json.load(open(self.data_path + './test_idx.json'))
         # labels = json.load(open(self.data_path + './labels.json'))
-        labels = json.load(open(self.data_path + './coarse_labels.json'))
-        # labels = json.load(open(self.data_path + './fine_labels.json'))
+        # labels = json.load(open(self.data_path + './coarse_labels.json'))
+        labels = json.load(open(self.data_path + './fine_labels.json'))
         
         train_idx, valid_idx = train_test_split(train_set, test_size=0.2, random_state=42)
         
