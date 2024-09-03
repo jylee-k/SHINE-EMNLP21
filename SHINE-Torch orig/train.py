@@ -36,7 +36,7 @@ if __name__ == '__main__':
     params = parser.parse_args()
     params.type_num_node = ['query', 'tag', 'word', 'entity']
     params.data_path = params.data_path + './{}_data/'.format(params.dataset)
-    params.save_name = params.save_path + './result_torch_{}.json'.format(params.dataset)
+    params.save_name = params.save_path + './result_torch_{}_fine_orig.json'.format(params.dataset)
     if not params.disable_cuda and torch.cuda.is_available():
         params.device = torch.device('cuda:%d' % params.gpu)
     else:
@@ -46,6 +46,6 @@ if __name__ == '__main__':
         params.weight_decay = 0.0003
     set_seed(params.seed)
     trainer = Trainer(params)
-    test_acc, best_f1 = trainer.train()
-    save_res(params, test_acc, best_f1)
+    best_test_f1, best_test_precision, best_test_recall = trainer.train()
+    save_res(params, best_test_f1, best_test_precision, best_test_recall)
     del trainer

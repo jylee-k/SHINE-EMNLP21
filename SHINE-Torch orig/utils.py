@@ -33,10 +33,10 @@ class MyEncoder(json.JSONEncoder):
             return str(obj, encoding='utf-8')
         return json.JSONEncoder.default(self,obj)
 
-def save_res(params, acc, f1):
+def save_res(params, best_test_f1, best_test_precision, best_test_recall):
     from collections import defaultdict
     result=defaultdict(list)
-    result[tuple([acc,f1])] = {'seed': params.seed,
+    result[tuple([best_test_f1, best_test_precision, best_test_recall])] = {'seed': params.seed,
                                'weigh_dacay': params.weight_decay, 
                                'lr': params.lr,
                                'drop_out': params.drop_out,

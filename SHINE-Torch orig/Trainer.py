@@ -52,6 +52,8 @@ class Trainer(object):
     def train(self):
         global_best_acc = 0
         global_best_f1 = 0
+        global_best_p = 0
+        global_best_r = 0
         global_best_epoch = 0
         best_test_acc = 0
         best_test_f1 = 0
@@ -66,6 +68,8 @@ class Trainer(object):
         f1_test = 0
         best_acc = 0
         best_f1 = 0
+        best_p = 0
+        best_r = 0
         for i in range(1, self.max_epoch + 1):
             t = time.time()
             output = self.model(i)
@@ -79,10 +83,12 @@ class Trainer(object):
             acc = torch.eq(torch.argmax(train_scores, dim=-1), train_labels).float().mean().item()
             print('Epoch {}  loss: {:.4f} acc: {:.4f} time{:.4f}'.format(i, loss, acc,time.time()-t))
             if i%5 == 0:
-                acc_valid, loss_valid, f1_valid, acc_test, loss_test, f1_test, y_pred, y_true = self.test(i) 
+                acc_valid, loss_valid, f1_valid, acc_test, loss_test, f1_test, macro_precision_test, macro_recall_test, y_pred, y_true = self.test(i) 
                 if acc_test > global_best_acc:
                     global_best_acc = acc_test
                     global_best_f1 = f1_test
+                    global_best_p = macro_precision_test
+                    global_best_r = macro_recall_test
                     global_best_epoch = i
                     #self.cm(y_true.cpu().numpy(), y_pred.cpu().numpy())
                 if acc_valid > best_valid_acc:
@@ -90,15 +96,19 @@ class Trainer(object):
                     best_valid_f1 = f1_valid 
                     best_test_acc = acc_test 
                     best_test_f1 = f1_test
+                    best_test_p = macro_precision_test
+                    best_test_r = macro_recall_test
                     best_valid_epoch = i
                 best_acc = global_best_acc
                 best_f1 = global_best_f1
+                best_p = global_best_p
+                best_r = global_best_r
                 best_epoch = global_best_epoch
             if i%50==0:
                 print('VALID: VALID ACC', best_valid_acc, ' VALID F1', best_valid_f1, 'EPOCH', best_valid_epoch) 
                 print('VALID: TEST ACC', best_test_acc, 'TEST F1', best_test_f1, 'EPOCH', best_valid_epoch)
                 print('GLOBAL: TEST ACC', global_best_acc, 'TEST F1', global_best_f1, 'EPOCH', global_best_epoch)
-        return best_acc, best_f1
+        return best_f1, best_p, best_r
 
     def test(self, epoch):
         t = time.time()
@@ -122,9 +132,12 @@ class Trainer(object):
             loss_test = F.cross_entropy(test_scores, test_labels).item()
             acc_test = torch.eq(torch.argmax(test_scores, dim=-1), test_labels).float().mean().item()
             f1_test = metrics.f1_score(test_labels.detach().cpu().numpy(),torch.argmax(test_scores,-1).detach().cpu().numpy(),average='macro')
+            macro_precision_test = metrics.precision_score(test_labels.detach().cpu().numpy(),torch.argmax(test_scores,-1).detach().cpu().numpy(),average='macro', zero_division=0)
+            macro_recall_test = metrics.recall_score(test_labels.detach().cpu().numpy(),torch.argmax(test_scores,-1).detach().cpu().numpy(),average='macro', zero_division=0)
+            
             print('Test  loss: {:.4f} acc: {:.4f} f1: {:.4f} time: {:.4f}'.format(loss_test, acc_test, f1_test, time.time() - t))
         self.model.training = True
-        return acc_valid, loss_valid, f1_valid, acc_test, loss_test, f1_test, y_pred, test_labels
+        return acc_valid, loss_valid, f1_valid, acc_test, loss_test, f1_test, macro_precision_test, macro_recall_test, y_pred, test_labels
     
     def cm(self, y_true, y_pred):
         cf_matrix = confusion_matrix(y_true, y_pred)
@@ -185,7 +198,7 @@ class Trainer(object):
         
         train_set = json.load(open(self.data_path + './train_idx.json'))
         test_set = json.load(open(self.data_path + './test_idx.json'))
-        labels = json.load(open(self.data_path + './labels.json'))
+        labels = json.load(open(self.data_path + './fine_labels.json'))
         
         data_index = train_set + test_set
         Sumofquery = len(data_index)

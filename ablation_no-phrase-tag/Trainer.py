@@ -142,7 +142,7 @@ class Trainer(object):
             acc_test = torch.eq(torch.argmax(test_scores, dim=-1), test_labels).float().mean().item()
             macro_f1_test = metrics.f1_score(test_labels.detach().cpu().numpy(),torch.argmax(test_scores,-1).detach().cpu().numpy(),average='macro')
             macro_precision_test = metrics.precision_score(test_labels.detach().cpu().numpy(),torch.argmax(test_scores,-1).detach().cpu().numpy(),average='macro', zero_division=0)
-            macro_recall_test = metrics.recall_score(test_labels.detach().cpu().numpy(),torch.argmax(test_scores,-1).detach().cpu().numpy(),average='macro')
+            macro_recall_test = metrics.recall_score(test_labels.detach().cpu().numpy(),torch.argmax(test_scores,-1).detach().cpu().numpy(),average='macro', zero_division=0)
             # micro_f1_test = metrics.f1_score(test_labels.detach().cpu().numpy(),torch.argmax(test_scores,-1).detach().cpu().numpy(),average='micro')
             print('Test  loss: {:.4f} acc: {:.4f} macro f1: {:.4f} macro precision: {:.4f} macro recall: {:.4f} time: {:.4f}'.format(loss_test, acc_test, macro_f1_test, macro_precision_test, macro_recall_test, time.time() - t))
         self.model.training = True
