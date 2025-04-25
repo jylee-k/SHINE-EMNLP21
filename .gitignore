@@ -5,3 +5,4 @@ pretrained_emb/
 CNN_Text_Classification
 data
 data_orig
+*.tex
