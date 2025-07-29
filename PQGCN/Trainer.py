@@ -8,7 +8,9 @@ import time
 import math
 from sklearn import metrics
 from utils import fetch_to_tensor
-from model import PQGCN
+from model_gat import PQGCN
+# from model import PQGCN
+
 
 from sklearn.metrics import confusion_matrix, classification_report, f1_score
 from sklearn.model_selection import train_test_split
@@ -113,7 +115,7 @@ class Trainer(object):
             if i%50==0:
                 print('Best validation: VALID ACC', best_valid_acc, ' MACRO F1', best_valid_macro_f1, 'MICRO F1', best_valid_micro_f1, 'EPOCH', best_valid_epoch) 
                 print('Best test: TEST ACC', best_test_acc, 'TEST F1', best_test_f1, 'TEST PRECISION', best_test_precision, 'TEST RECALL', best_test_recall, 'EPOCH', best_test_epoch)
-                self.cm(y_pred=y_pred, y_true=y_true)
+                # self.cm(y_pred=y_pred, y_true=y_true)
                 # print('GLOBAL: TEST ACC', global_best_acc, 'TEST F1', global_best_f1, 'EPOCH', global_best_epoch)
         return best_test_f1, best_test_precision, best_test_recall
 
@@ -160,7 +162,7 @@ class Trainer(object):
         plt.figure(figsize = (12,7))
         sn.heatmap(cm_df, annot=True, fmt='g')
         plt.title('Confusion Matrix')
-        plt.ylabel('Actal Values')
+        plt.ylabel('Actual Values')
         plt.xlabel('Predicted Values')
         plt.savefig('output.png')
 
@@ -215,8 +217,8 @@ class Trainer(object):
         
         train_set = json.load(open(self.data_path + './train_idx.json'))
         test_idx = json.load(open(self.data_path + './test_idx.json'))
-        # labels = json.load(open(self.data_path + './labels.json'))
-        labels = json.load(open(self.data_path + './coarse_labels.json'))
+        labels = json.load(open(self.data_path + './labels.json'))
+        # labels = json.load(open(self.data_path + './coarse_labels.json'))
         # labels = json.load(open(self.data_path + './fine_labels.json'))
         
         train_idx, valid_idx = train_test_split(train_set, test_size=0.2, random_state=42)
