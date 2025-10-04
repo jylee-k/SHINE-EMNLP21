@@ -183,14 +183,14 @@ def make_node2id_eng_text(dataset_name, remove_StopWord=False):
         # clean the text and split by whitespace to get words
         words = clean_str(item["text"]).split(" ")
         # count the word frequency
-        for one in words:
-            word_freq[one.lower()] += 1
+        for word in words:
+            word_freq[word.lower()] += 1
     for item in f_test.values():  # item is a text-label pair
         # clean the text and split by whitespace to get words
         words = clean_str(item["text"]).split(" ")
         # count the word frequency
-        for one in words:
-            word_freq[one.lower()] += 1
+        for word in words:
+            word_freq[word.lower()] += 1
 
     # filter words with frequency < 5
     freq_stop = 0
